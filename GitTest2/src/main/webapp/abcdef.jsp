@@ -7,10 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-	<script>
+	<h1>ㅎㅇ</h1>
 	
-	qwefwfqewfeqwfqefweqwqeffweqfwqe
-	</script>
 </body>
 </html>
