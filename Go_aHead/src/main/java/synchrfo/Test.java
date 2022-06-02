@@ -10,4 +10,8 @@ public class Test {
 		System.out.print("dasdasdasdas");
 		System.out.print("dasds");
 	}
+	
+	public void printy() {
+		System.out.print("aa");
+	}
 }
