@@ -1,7 +1,5 @@
 package synchrfo;
 
-import javax.swing.plaf.synth.SynthOptionPaneUI;
-
 public class Test {
 	// test중입니다.
 	// 원표씨 컴퓨터에서 수정중
