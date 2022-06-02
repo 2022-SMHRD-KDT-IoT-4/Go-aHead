@@ -7,5 +7,7 @@ public class Test {
 	
 	public void printName() {
 		System.out.println("이름 출력하기");
+		System.out.print("dasdasdasdas");
+		System.out.print("dasds");
 	}
 }
