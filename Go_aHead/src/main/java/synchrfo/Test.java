@@ -15,4 +15,8 @@ public class Test {
 		System.out.println("메서드 만들기");
 		System.out.println("test");
 	}
+	
+	public void printy() {
+		System.out.print("aa");
+	}
 }
