@@ -11,5 +11,8 @@ public class Test {
 		String name = "홍" + "원표";
 		System.out.println("수정한사람 " + name);
 		System.out.println("열심히 수정중입니다.");
+
+		System.out.print("dasdasdasdas");
+		System.out.print("dasds");
 	}
 }
