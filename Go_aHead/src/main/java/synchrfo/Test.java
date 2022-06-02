@@ -7,5 +7,9 @@ public class Test {
 	
 	public void printName() {
 		System.out.println("이름 출력하기");
+		System.out.println("원표씨 컴퓨터~");
+		String name = "홍" + "원표";
+		System.out.println("수정한사람 " + name);
+		System.out.println("열심히 수정중입니다.");
 	}
 }
