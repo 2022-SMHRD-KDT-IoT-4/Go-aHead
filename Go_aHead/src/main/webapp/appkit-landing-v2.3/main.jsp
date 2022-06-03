@@ -30,6 +30,11 @@
                     <span class="logo-icon-wrapper"><img class="logo-icon" src="assets/images/kick_icon_F.png" alt="iccon" style=" width: 40px; height: 40px;"></span>
                     <span class="text"><span class="highlight">GO</span>AHEAD</span></a>
             </h1><!--//logo-->
+            
+            
+            
+            
+            
             <nav class="main-nav navbar-expand-md float-right navbar-inverse" role="navigation">
                 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">
@@ -39,15 +44,44 @@
                         <span class="icon-bar"></span>
                     </button><!--//nav-toggle-->
                 
+          <% // if (로그인이 안됐을 때) { %> 
                 <div id="navbar-collapse">
                     <ul class="nav navbar-nav">
                     	<li class="nav-item"><a class="nav-link scrollto" onclick="location.href='join.jsp'">회원가입</a></li>
-                        <li class="nav-item"><a class="nav-link scrollto" href='join.jsp'>로그인</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='login.jsp'">로그인</a></li>
                         <li class="nav-item"><a class="nav-link scrollto" href="#">관리자</a></li>
-                        <li class="nav-item"><a class="nav-link scrollto" href="#">고객센터</a></li>                        
-
+                        <li class="nav-item"><a class="nav-link scrollto" href="#">고객센터</a></li>            
                     </ul><!--//nav-->
+                </div><!--//navabr-collapse-->     
+                                    
+
+			<%// } else if (userid로 로그인이 됐을때) {%> 
+		<!--                 
+                <div id="navbar-collapse">
+                    <ul class="nav navbar-nav">
+                    	<li class="nav-item"><a class="nav-link scrollto" onclick="location.href='join.jsp'">마이페이지</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='#'">킥보드</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="#">로그아웃</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="#">고객센터</a></li>
+					 </ul><!--//nav-->
                 </div><!--//navabr-collapse-->
+			
+			-->
+			
+			<%// } else {%>
+			
+			<!--  	 <div id="navbar-collapse">
+                    <ul class="nav navbar-nav">
+                    	<li class="nav-item"><a class="nav-link scrollto" onclick="location.href='join.jsp'">회원정보관리</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='login.jsp'">고객위치확인</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="#">킥보드</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="#">로그아웃</a></li>            
+                        <li class="nav-item"><a class="nav-link scrollto" href="#">고객센터</a></li>            
+					 </ul><!--//nav-->
+                </div><!--//navabr-collapse-->
+			 -->
+			 <%// } %> 
+                   
             </nav><!--//main-nav-->                     
         </div><!--//container-->
     </header><!--//header-->
@@ -183,6 +217,19 @@
         <div class="container text-center">
             <h2 class="section-title">GO AHEAD 이용하기!</h2>
             <p class="intro">You can use this section to list your product features. The screenshots used here were taken from <a href="https://www.uxfordev.com/appify/index.html" target="_blank">Bootstrap 4 admin theme Appify</a></p>
+            
+            <section id="safety" class="s-safety target-section"  >
+      
+              <div class="section-content" style=" padding-bottom: 100px; border-radius: 1rem">
+                  <div class="content-item"><span style="margin-right: 40px">✔ 헬멧 착용</span></div>
+                  <div class="content-item">✔ 운전면허증</div>
+                  <div class="content-item">✔ 동반탑승 금지</div>
+                  <div class="content-item">✔ 음주운전 금지</div>
+              </div>
+      
+          </section>
+           
+            
             
             <div class="tabbed-area row">
                 
