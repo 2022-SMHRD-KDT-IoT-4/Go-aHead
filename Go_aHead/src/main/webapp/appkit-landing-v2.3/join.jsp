@@ -101,7 +101,7 @@
             
             
             <div class="mb-3">
-              <label for="nickname">아이디</label>
+              <label for="id">아이디</label>
               <input type="text" class="form-control" id="id" name ="id" placeholder="" value="" required>
               <div class="invalid-feedback">
                 아이디를 입력해주세요.
@@ -109,7 +109,7 @@
             </div>
 
           <div class="mb-3">
-            <label for="email">비밀번호</label>
+            <label for="pw">비밀번호</label>
             <input type="password" class="form-control" id="pw" name ="pw" placeholder="" required>
             <div class="invalid-feedback">
              	비밀번호를 입력해주세요.
@@ -118,7 +118,7 @@
 		
 		   <div class="row">
             <div class="col-md-6 mb-3">
-              <label for="name">성별</label>
+              <label for="gender">성별</label>
               <select class="form-control" name="gender">
 					<option>여성</option>
 					<option>남성</option>
@@ -126,7 +126,7 @@
               </div>
               
               <div class="col-md-6 mb-3">
-              	<label for="nickname">혈액형</label>
+              	<label for="blood">혈액형</label>
               	<select class="form-control" name="blood">
 					<option>A</option>
 					<option>B</option>
@@ -137,16 +137,16 @@
            </div>
            
            <div class="mb-3">
-              <label for="nickname">생년월일</label>
-              <input type="datetime" class="form-control" id="birth" name ="birth" placeholder="" value="" required>
+              <label for="birth">생년월일</label>
+              <input type="date" class="form-control" id="birth" name ="birth" placeholder="" value="" required>
               <div class="invalid-feedback">
-                아이디를 입력해주세요.
+                생년월일을 입력해주세요.
               </div>
             </div>
            
           
 	        <div class="mb-3">
-            	<label for="email">연락처</label>
+            	<label for="phone">연락처</label>
             	<input type="text" class="form-control" id="phone" name ="phone" placeholder="" required>
             	<div class="invalid-feedback">
              	연락처를 입력해주세요.
@@ -155,7 +155,7 @@
 	        
 
 			 <div class="mb-3">
-	            <label for="address2">SOS 연락처</label>
+	            <label for="sos">SOS 연락처</label>
 	            <input type="text" class="form-control" placeholder="" name = "sos" required>
 	            <div class="invalid-feedback">
              	SOS 연락처를 입력해주세요.
