@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+  <mapper namespace="com.smhrd.dao.BoardDAO" >
+		
+
+		<insert id="boardInsert" parameterType="Board">
+    		insert into mboard(idx, memId, title, content, writer)
+    		values(mboard_idx.nextval,#{memId},#{title},#{content},#{writer})
+  		</insert>
+  		
+  		
+        </mapper>
