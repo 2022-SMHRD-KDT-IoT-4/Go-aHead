@@ -492,6 +492,7 @@ a:focus {
 }
 
 .testimonials-inner {
+	
   padding: 60px 30px;
   position: relative;
   max-width: 800px;
@@ -542,7 +543,7 @@ a:focus {
 
 /* ======= Testimonials Section ======= */
 .testimonials-section {
-  background: #40babd url("../images/map.png") no-repeat center center;
+  background: #cbf9fe;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -946,7 +947,6 @@ a:focus {
 .contact-section {
   padding-top: 90px;
   padding-bottom: 90px;
-  background: #494d55 url("../images/map.png") no-repeat center center;
   color: #fff;
 }
 
@@ -1075,4 +1075,48 @@ a:focus {
     bottom: 0;
     top: inherit;
   }
+  
+  .s-safety .section-header {
+	font-size: 4.8rem;
+	font-weight: bold;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 1.5;
+	letter-spacing: 0.036rem;
+	text-align: center;
+	color: #20232b;
+	color: var(--cool-black-100);
+}
+
+.s-safety .section-content {
+	width: 48rem;
+	padding: 3.8rem 6.4rem 17.4rem 6.4rem;
+	margin: 6.2rem auto 0 auto;
+	border-radius: 1rem 1rem 0 0;
+	background-color: #ffffff;
+	background-color: var(--white);
+	box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.25);
+}
+
+.s-safety .section-content .content-item {
+	width: 35.2rem;
+	border-bottom: 2px solid #f2f4f7;
+	border-color: var(--cool-black-5);
+	padding: 3.3rem 0 1.5rem 8.6rem;
+	margin: 0 auto 0 auto;
+	font-size: 3.2rem;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	line-height: 3.6rem;
+	letter-spacing: 0.024rem;
+	text-align: left;
+	color: #20232b;
+	color: var(--cool-black-100);
+	background-repeat: no-repeat;
+	background-position: 0rem 2.2rem;
+	background-image: url('../image/Icon_Check.png');
+	background-size: 6rem 6rem;
+}
+  
 }
