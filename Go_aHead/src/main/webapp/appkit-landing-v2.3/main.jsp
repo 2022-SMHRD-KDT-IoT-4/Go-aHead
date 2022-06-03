@@ -55,33 +55,7 @@
                 </div><!--//navabr-collapse-->     
                                     
 
-			<%// } else if (userid로 로그인이 됐을때) {%> 
-		<!--                 
-                <div id="navbar-collapse">
-                    <ul class="nav navbar-nav">
-                    	<li class="nav-item"><a class="nav-link scrollto" onclick="location.href='join.jsp'">마이페이지</a></li>
-                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='#'">킥보드</a></li>
-                        <li class="nav-item"><a class="nav-link scrollto" href="#">로그아웃</a></li>
-                        <li class="nav-item"><a class="nav-link scrollto" href="#">고객센터</a></li>
-					 </ul><!--//nav-->
-                </div><!--//navabr-collapse-->
-			
-			-->
-			
-			<%// } else {%>
-			
-			<!--  	 <div id="navbar-collapse">
-                    <ul class="nav navbar-nav">
-                    	<li class="nav-item"><a class="nav-link scrollto" onclick="location.href='join.jsp'">회원정보관리</a></li>
-                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='login.jsp'">고객위치확인</a></li>
-                        <li class="nav-item"><a class="nav-link scrollto" href="#">킥보드</a></li>
-                        <li class="nav-item"><a class="nav-link scrollto" href="#">로그아웃</a></li>            
-                        <li class="nav-item"><a class="nav-link scrollto" href="#">고객센터</a></li>            
-					 </ul><!--//nav-->
-                </div><!--//navabr-collapse-->
-			 -->
-			 <%// } %> 
-                   
+<!-- 상단바 바꿀 코드 작성하기! -->                   
             </nav><!--//main-nav-->                     
         </div><!--//container-->
     </header><!--//header-->
