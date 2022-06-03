@@ -6,7 +6,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
+import com.smhrd.dao.BoardDAO;
 import com.smhrd.domain.Board;
 
 
@@ -36,6 +38,18 @@ public class LoginController extends HttpServlet {
 		b.setMem_subphone(mem_subphone);
 		b.setMem_birth(mem_birth);
 		b.setDrivenum(mem_dirvenum);
+		
+		BoardDAO dao = new BoardDAO();
+		Board log = dao.checkLogin(b);
+		
+		if(log !=null) {
+			HttpSession session = request.getSession();
+			session.setAttribute("log", log);
+		}
+		
+		response.sendRedirect("main.jsp");
+	
+		
 		
 		
 	}
