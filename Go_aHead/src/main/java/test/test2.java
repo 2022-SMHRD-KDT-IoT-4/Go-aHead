@@ -15,6 +15,7 @@ public class test2 extends HttpServlet {
 		
 		
 		String name;
+		int num;
 	}
 
 }
