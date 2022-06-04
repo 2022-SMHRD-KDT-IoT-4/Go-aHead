@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
         
 
-  <mapper namespace="com.smhrd.dao.BoardDAO" >
+  <mapper namespace="com.smhrd.model.DAO" >
 		
 		<insert id="Join" parameterType="Member" >
 			insert into member
