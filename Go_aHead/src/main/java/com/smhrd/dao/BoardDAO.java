@@ -23,6 +23,7 @@ public class BoardDAO {
 	}//_db_
 	
 	public int Join(Member vo) {
+		
 		SqlSession session=sqlSessionFactory.openSession(true);
 		int row = session.insert("Join", vo);
 		session.close();
@@ -30,4 +31,11 @@ public class BoardDAO {
 		
 	}
 
+	public Member login(Member vo) {
+		SqlSession session=sqlSessionFactory.openSession(true);
+		Member result = session.selectOne("Login", vo);
+		session.close();
+		return result;
+	
+	}
 }

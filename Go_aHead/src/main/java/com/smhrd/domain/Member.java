@@ -9,10 +9,11 @@ import lombok.RequiredArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@RequiredArgsConstructor
 public class Member {
 	private int mem_num;
-	private String mem_id;
-	private String mem_pw;
+	@NonNull private String mem_id;
+	@NonNull private String mem_pw;
 	private String mem_name;
 	private String mem_gender;
 	private String mem_blood;
