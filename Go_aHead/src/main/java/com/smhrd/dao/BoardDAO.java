@@ -7,7 +7,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-import com.smhrd.domain.Board;
+import com.smhrd.domain.Member;
 
 public class BoardDAO {
 	private static SqlSessionFactory sqlSessionFactory;
@@ -22,11 +22,11 @@ public class BoardDAO {
 		}
 	}//_db_
 	
-	public Board checkLogin(Board b) {
-		SqlSession session=sqlSessionFactory.openSession();
-		Board log = session.selectOne("checkLogin", b);
+	public int Join(Member b) {
+		SqlSession session=sqlSessionFactory.openSession(true);
+		int row = session.insert("Join", b);
 		session.close();
-		return log;
+		return row;
 		
 	}
 

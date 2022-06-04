@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Board {
+public class Member {
 	private int mem_num;
 	private String mem_id;
 	private String mem_pw;

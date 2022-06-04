@@ -89,11 +89,11 @@
       <div class="input-form col-md-12 mx-auto">
         <h4 class="mb-3">회원가입</h4>
         <!-- 회원가입 컨트롤러 -->
-        <form class="validation-form" action="회원가입.java" novalidate>
+        <form class="validation-form" action="../JoinController" novalidate>
           
             <div class="mb-3">
               <label for="name">이름</label>
-              <input type="text" class="form-control" id="name" name ="name" required>
+              <input type="text" class="form-control" id="name" name ="mem_name" required>
               <div class="invalid-feedback">
                 이름을 입력해주세요.
               </div>
@@ -102,7 +102,7 @@
             
             <div class="mb-3">
               <label for="id">아이디</label>
-              <input type="text" class="form-control" id="id" name ="id" placeholder="" value="" required>
+              <input type="text" class="form-control" id="id" name ="mem_id" placeholder="" value="" required>
               <div class="invalid-feedback">
                 아이디를 입력해주세요.
               </div>
@@ -110,7 +110,7 @@
 
           <div class="mb-3">
             <label for="pw">비밀번호</label>
-            <input type="password" class="form-control" id="pw" name ="pw" placeholder="" required>
+            <input type="password" class="form-control" id="pw" name ="mem_pw" placeholder="" required>
             <div class="invalid-feedback">
              	비밀번호를 입력해주세요.
             </div>
@@ -119,7 +119,7 @@
 		   <div class="row">
             <div class="col-md-6 mb-3">
               <label for="gender">성별</label>
-              <select class="form-control" name="gender">
+              <select class="form-control" name="mem_gender">
 					<option>여성</option>
 					<option>남성</option>
 				</select>
@@ -127,7 +127,7 @@
               
               <div class="col-md-6 mb-3">
               	<label for="blood">혈액형</label>
-              	<select class="form-control" name="blood">
+              	<select class="form-control" name="mem_blood">
 					<option>A</option>
 					<option>B</option>
 					<option>AB</option>
@@ -138,7 +138,7 @@
            
            <div class="mb-3">
               <label for="birth">생년월일</label>
-              <input type="date" class="form-control" id="birth" name ="birth" placeholder="" value="" required>
+              <input type="date" class="form-control" id="birth" name ="mem_birth" placeholder="" value="" required>
               <div class="invalid-feedback">
                 생년월일을 입력해주세요.
               </div>
@@ -147,7 +147,7 @@
           
 	        <div class="mb-3">
             	<label for="phone">연락처</label>
-            	<input type="text" class="form-control" id="phone" name ="phone" placeholder="" required>
+            	<input type="text" class="form-control" id="phone" name ="mem_phone" placeholder="" required>
             	<div class="invalid-feedback">
              	연락처를 입력해주세요.
             	</div>
@@ -156,17 +156,22 @@
 
 			 <div class="mb-3">
 	            <label for="sos">SOS 연락처</label>
-	            <input type="text" class="form-control" placeholder="" name = "sos" required>
+	            <input type="text" class="form-control" placeholder="" name = "mem_subphone" required>
 	            <div class="invalid-feedback">
              	SOS 연락처를 입력해주세요.
             	</div>
 	          </div>
+	          
+	          <div class="mb-3">
+	            <label for="sos">면허번호</label>
+	            <input type="text" class="form-control" placeholder="" name = "drivenum" required>
+	            <div class="invalid-feedback">
+             	면허번호를 입력해주세요.
+            	</div>
+	          </div>
 
           <hr class="mb-4">
-          <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="aggrement" required>
-            <label class="custom-control-label" for="aggrement">개인정보 수집 및 이용에 동의합니다.</label>
-          </div>
+          
           <div class="mb-4"></div>
           <button class="btn btn-primary btn-lg btn-block" type="submit">가입 완료</button>
           
