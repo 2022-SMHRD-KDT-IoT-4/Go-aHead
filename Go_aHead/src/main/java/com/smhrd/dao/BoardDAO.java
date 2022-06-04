@@ -22,9 +22,9 @@ public class BoardDAO {
 		}
 	}//_db_
 	
-	public int Join(Member b) {
+	public int Join(Member vo) {
 		SqlSession session=sqlSessionFactory.openSession(true);
-		int row = session.insert("Join", b);
+		int row = session.insert("Join", vo);
 		session.close();
 		return row;
 		

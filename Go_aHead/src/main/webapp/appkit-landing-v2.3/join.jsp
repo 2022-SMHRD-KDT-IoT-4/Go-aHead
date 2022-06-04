@@ -1,3 +1,4 @@
+<%@page import="com.smhrd.domain.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -54,7 +55,9 @@
     
 </head> 
 
+
 <body>
+
  <!-- header 상단바 부분 --> 
     <header id="header" class="header">  
         <div class="container">       
@@ -89,7 +92,7 @@
       <div class="input-form col-md-12 mx-auto">
         <h4 class="mb-3">회원가입</h4>
         <!-- 회원가입 컨트롤러 -->
-        <form class="validation-form" action="../JoinController" novalidate>
+        <form class="validation-form" action="../JoinController" method="post" novalidate>
           
             <div class="mb-3">
               <label for="name">이름</label>
