@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.smhrd.dao.BoardDAO;
-import com.smhrd.domain.Member;
+import com.smhrd.model.DAO;
+import com.smhrd.model.Member;
 
 
 @WebServlet("/JoinController")
@@ -33,15 +33,23 @@ public class JoinController extends HttpServlet {
 		
 		Member vo = new Member(0, mem_id, mem_pw, mem_name, mem_gender, mem_blood, mem_phone, mem_subphone, mem_birth, drivenum);
 
-		BoardDAO dao = new BoardDAO();
+		DAO dao = new DAO();
 		int row = dao.Join(vo);
 				
-		if(row>0) {
-			RequestDispatcher rd = request.getRequestDispatcher("join.jsp");
-			 rd.forward(request, response);
-		System.out.println("회원가입 성공");
-		 }
+		String moveURL = "";
 		
+		
+		if(row > 0) {
+			
+			request.setAttribute("mem_id", mem_id);
+	
+			moveURL = "main.jsp";
+			System.out.println("회원가입성공!");
+		}else {
+			moveURL = "join.jsp";
+		}
+		RequestDispatcher rd= request.getRequestDispatcher(moveURL);
+		rd.forward(request, response);
 	}
 
 }
