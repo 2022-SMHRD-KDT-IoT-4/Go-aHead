@@ -34,7 +34,7 @@ background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 
 </head> 
 
 <body>
-<header id="header" class="header" style=bbackground-color: white;>  
+<header id="header" class="header" style=background-color: white;>  
         <div class="container">       
             <h1 class="logo">
                 <a class="scrollto" href="#hero">
