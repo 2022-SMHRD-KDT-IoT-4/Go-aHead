@@ -19,6 +19,8 @@ public class JoinController extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		request.setCharacterEncoding("UTF-8");
+		
 		String mem_id = request.getParameter("mem_id");
 		String mem_pw = request.getParameter("mem_pw");
 		String mem_name = request.getParameter("mem_name");
@@ -27,31 +29,18 @@ public class JoinController extends HttpServlet {
 		String mem_phone = request.getParameter("mem_phone");
 		String mem_subphone = request.getParameter("mem_subphone");
 		String mem_birth = request.getParameter("mem_birth");
-		String dirvenum = request.getParameter("drivenum");
+		String drivenum = request.getParameter("drivenum");
 		
-		Member b = new Member();
-		b.setMem_id(mem_id);
-		b.setMem_pw(mem_pw);
-		b.setMem_birth(mem_birth);
-		b.setMem_name(mem_name);
-		b.setMem_gender(mem_gender);
-		b.setMem_blood(mem_blood);
-		b.setMem_phone(mem_phone);
-		b.setMem_subphone(mem_subphone);
-		b.setMem_birth(mem_birth);
-		b.setDrivenum(dirvenum);
-		
+		Member vo = new Member(0, mem_id, mem_pw, mem_name, mem_gender, mem_blood, mem_phone, mem_subphone, mem_birth, drivenum);
+
 		BoardDAO dao = new BoardDAO();
-		int row = dao.Join(b);
-		
+		int row = dao.Join(vo);
+				
 		if(row>0) {
-			RequestDispatcher rd = request.getRequestDispatcher("main.jsp");
-			rd.forward(request, response);
-		}
-		
-	
-		
-		
+			RequestDispatcher rd = request.getRequestDispatcher("join.jsp");
+			 rd.forward(request, response);
+		System.out.println("회원가입 성공");
+		 }
 		
 	}
 
