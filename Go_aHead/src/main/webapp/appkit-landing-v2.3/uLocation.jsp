@@ -41,7 +41,7 @@
                 
                 <div id="navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="nav-item"><a class="nav-link scrollto" href="고객위치확인">고객위치확인</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewLogin.do'">고객위치확인</a></li>
                         <li class="nav-item"><a class="nav-link scrollto" href="킥보드위치확인">킥보드위치확인</a></li>
                         <li class="nav-item"><a class="nav-link scrollto" href="고객센터">고객센터</a></li>                        
                         <li class="nav-item"><a class="nav-link scrollto" href="Logout.do">로그아웃</a></li>                        

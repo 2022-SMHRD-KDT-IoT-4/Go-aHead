@@ -79,7 +79,7 @@
 							<li>회원가입을 축하합니다.</li>
 							<!-- request영역에 저장된 회원정보 중 이메일을 출력하시오. -->
 							<li>GO AHEAD의 새로운 아이디는<%=mem_id %>입니다.</li>
-							<li><button onclick='location.href="/Go_aHead/appkit-landing-v2.3/main.jsp"'>시작하기</button></li>
+							<li><button onclick='location.href="/Go_aHead/viewMain.do"'>시작하기</button></li>
 						</ul>
 					</nav>			
 			</div>
