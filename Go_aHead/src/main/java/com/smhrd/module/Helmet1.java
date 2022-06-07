@@ -32,7 +32,7 @@ public class Helmet1 extends HttpServlet {
 //			int angleY= Integer.parseInt((String)request.getParameter("angleY"));
 //			int angleZ= Integer.parseInt((String)request.getParameter("angleZ"));
 			System.out.println("press : "+press);
-//			int press = 0;			
+//	String press = 0;			
 //			int speedX = 0;
 //			int speedY = 0;
 //			int speedZ = 0;
