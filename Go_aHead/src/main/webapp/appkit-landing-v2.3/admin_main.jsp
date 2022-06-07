@@ -16,9 +16,9 @@
     <!-- FontAwesome JS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- Global CSS -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <link rel="stylesheet" href="appkit-landing-v2.3/assets/plugins/bootstrap/css/bootstrap.min.css">   
     <!-- Theme CSS -->  
-    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <link id="theme-style" rel="stylesheet" href="appkit-landing-v2.3/assets/css/styles.css">
     
 </head>
 <body>
@@ -27,7 +27,7 @@
         <div class="container">       
             <h1 class="logo">
                 <a class="scrollto" href="#hero">
-                    <span class="logo-icon-wrapper"><img class="logo-icon" src="assets/images/kick_icon_F.png" alt="iccon" style=" width: 40px; height: 40px;"></span>
+                    <span class="logo-icon-wrapper"><img class="logo-icon" src="appkit-landing-v2.3/assets/images/kick_icon_F.png" alt="iccon" style=" width: 40px; height: 40px;"></span>
                     <span class="text"><span class="highlight">GO</span>AHEAD</span></a>
             </h1><!--//logo-->
             
@@ -69,7 +69,7 @@
         		<div class="container">
             		<div class="row justify-content-end">
                 		<div class="figure-holder">
-                	        <img class="figure-image img-fluid" src="assets/images/Img_Home.png" alt="image" style="width: 1000px" />
+                	        <img class="figure-image img-fluid" src="appkit-landing-v2.3/assets/images/Img_Home.png" alt="image" style="width: 1000px" />
                         </div><!--//figure-holder-->
             		</div><!--//row-->
         		</div><!--//container-->
@@ -151,7 +151,7 @@
                 <div class="item col-md-4 col-12">
                     <div class="item-inner">
                         <div class="figure-holder">
-                            <img class="figure-image" src="assets/images/KICK3.png" alt="image" style="width: 300px">
+                            <img class="figure-image" src="appkit-landing-v2.3/assets/images/KICK3.png" alt="image" style="width: 300px">
                         </div><!--//figure-holder-->
                         <h3 class="item-title">GO AHEAD 1</h3>
                         <div class="item-desc mb-3">
@@ -163,7 +163,7 @@
                 <div class="item col-md-4 col-12">
                     <div class="item-inner">
                         <div class="figure-holder">
-                            <img class="figure-image" src="assets/images/KICK2.png" alt="image" style="width: 300px">
+                            <img class="figure-image" src="appkit-landing-v2.3/assets/images/KICK2.png" alt="image" style="width: 300px">
                         </div><!--//figure-holder-->
                         <h3 class="item-title">GO AHEAD 2</h3>
                         <div class="item-desc mb-3">
@@ -174,7 +174,7 @@
                 <div class="item col-md-4 col-12">
                     <div class="item-inner">
                         <div class="figure-holder">
-                            <img class="figure-image" src="assets/images/KICK1.png" alt="image" style="width: 300px">
+                            <img class="figure-image" src="appkit-landing-v2.3/assets/images/KICK1.png" alt="image" style="width: 300px">
                         </div><!--//figure-holder-->
                         <h3 class="item-title">GO AHEAD 3</h3>
                         <div class="item-desc mb-3">
@@ -225,7 +225,7 @@
                 <div class="item col-md-6 col-12">
                     <div class="item-inner">
                         <div class="profile mb-2">
-                            <img class="profile-image" src="assets/images/team-1.png" alt="Xiaoying Riley" />
+                            <img class="profile-image" src="appkit-landing-v2.3/assets/images/team-1.png" alt="Xiaoying Riley" />
                         </div>
                         
                         <div class="member-content">
@@ -249,7 +249,7 @@
                 <div class="item col-md-6 col-12">
                     <div class="item-inner">
                         <div class="profile mb-2">
-                            <img class="profile-image" src="assets/images/team-2.png" alt="Tom Najdek" />
+                            <img class="profile-image" src="appkit-landing-v2.3/assets/images/team-2.png" alt="Tom Najdek" />
                         </div>
                         
                         <div class="member-content">
@@ -347,10 +347,10 @@
     </footer>
      
     <!-- Javascript -->          
-    <script type="text/javascript" src="assets/plugins/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>     
-    <script type="text/javascript" src="assets/js/main.js"></script> 
+    <script type="text/javascript" src="appkit-landing-v2.3/assets/plugins/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="appkit-landing-v2.3/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="appkit-landing-v2.3/assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>     
+    <script type="text/javascript" src="appkit-landing-v2.3/assets/js/main.js"></script> 
     <script>
     
     var $hauntedText = $('[data-haunted-text]');

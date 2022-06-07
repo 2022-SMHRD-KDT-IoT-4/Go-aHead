@@ -31,15 +31,10 @@ public class JoinController implements Controller{
 		
 		int row = dao.Join(vo);
 		
-		String moveURL = "";
-		if(row > 0) {
-			request.setAttribute("mem_id", mem_id);
-			moveURL = "join_success";
-		}else {
-			moveURL = "main";
-		}
+		request.setAttribute("mem_id", mem_id);
+		return "join_success";	
 		
-		return moveURL;
 	}
-
 }
+
+		
