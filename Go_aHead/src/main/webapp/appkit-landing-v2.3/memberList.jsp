@@ -1,5 +1,9 @@
+<%@page import="com.smhrd.domain.Member"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.smhrd.dao.MemberDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -83,8 +87,10 @@
     
 </head>
 
-
 <body>
+<%
+ArrayList<Member> list = (ArrayList)request.getAttribute("list");
+%>
 
  <!-- header 상단바 부분 --> 
     <header id="header" class="header">  
@@ -118,13 +124,12 @@
 
 
 <div class="container mt-3" style= "padding-top : 150px;" !important">
-  <h2>GO AHEAD 고객정보조회</h2>
-  <p>The .table class adds basic styling (light padding and horizontal dividers) to a table:</p>            
+  <h2>GO AHEAD 고객정보조회</h2>     
   <table class="table">
     <thead>
       <tr>
+       	<th>ID</th>
         <th>NAME</th>
-        <th>ID</th>
         <th>GENDER</th>
         <th>B_TYPE</th>
         <th>PHONE</th>
@@ -133,44 +138,30 @@
       </tr>
     </thead>
     <tbody>
-<<<<<<< HEAD
-    <!--반복문작성하시면 될것같아 -->
-=======
-    <!--반복문작성하시면 될것같아여 -->
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-IoT-4/Go-aHead.git
-      <tr>
-        <td>이원주</td>
-        <td>wonju</td>
-        <td>여성</td>
-        <td>AB</td>
-        <td>010-0000-0000</td>
-        <td>010-1111-1111</td>
-        <td>18-17-001691-43</td>
+
+
+	<%
+	for(Member vo : list){
+		%>
+	 <tr>
+	  <td><%=vo.getMem_id() %></td>
+	 <td><%=vo.getMem_name() %></td>
+	 <td><%=vo.getMem_gender() %></td>
+	 <td><%=vo.getMem_blood() %></td>
+	 <td><%=vo.getMem_phone() %></td>
+	 <td><%=vo.getMem_subphone() %></td>
+	 <td><%=vo.getDrivenum() %></td>
+
       </tr>
+	
+	<%} %>
       
-      <tr>
-        <td>이원주</td>
-        <td>wonju</td>
-        <td>여성</td>
-        <td>AB</td>
-        <td>010-0000-0000</td>
-        <td>010-1111-1111</td>
-        <td>18-17-001691-43</td>
-      </tr>
-      <tr>
-        <td>이원주</td>
-        <td>wonju</td>
-        <td>여성</td>
-        <td>AB</td>
-        <td>010-0000-0000</td>
-        <td>010-1111-1111</td>
-        <td>18-17-001691-43</td>
-      </tr>
+     
     </tbody>
   </table>    
   
 
-		<a href="main.jsp" class="button next scrolly">되돌아가기</a>
+		<a href="main.do" class="button next scrolly">되돌아가기</a>
 
 	</div>
 
