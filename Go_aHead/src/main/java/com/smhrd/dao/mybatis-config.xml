@@ -5,6 +5,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <configuration>
    <typeAliases>
       <typeAlias type="com.smhrd.domain.Member" alias="Member"/>
+
    </typeAliases>
 
    <environments default="development">
@@ -21,6 +22,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
    <mappers>
       <mapper resource="com/smhrd/dao/MemberMapper.xml"/>
+      <mapper resource="com/smhrd/dao/ListMapper.xml"/>
    </mappers>
 
 
