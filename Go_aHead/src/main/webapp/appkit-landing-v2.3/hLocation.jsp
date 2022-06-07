@@ -18,8 +18,16 @@
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
     <style >
+
+	*{
+	
+	font-family: 'Jua', sans-serif;
+	}
+
 	.header {
 	
 	position: static;
@@ -43,6 +51,7 @@
 	 
 	 }
 	 
+	
     </style>
 </head>
 <body style="background-color: pink;">
@@ -67,7 +76,7 @@
                 <div id="navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewLogin.do'">고객위치확인</a></li>
-                        <li class="nav-item"><a class="nav-link scrollto" href="헬멧위치확인">헬멧위치확인</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="킥보드위치확인">헬멧위치확인</a></li>
                         <li class="nav-item"><a class="nav-link scrollto" href="고객센터">고객센터</a></li>
                         <li class="nav-item"><a class="nav-link scrollto" href="Logout.do">로그아웃</a></li>                        
 
@@ -79,23 +88,21 @@
     
 	
 	<div class="title">
-		<p class="title2">고객위치확인하기</p>
-		<div id="map" style="width:50%; height:350px;" ></div>
+		<p class="title2">헬멧위치확인하기</p>
+		<div id="map" style="width:50%;height:350px;" ></div>
 		
 		<div class="input-group mb-3 search" >
-	  		<input type="text" placeholder="이용번호를 입력하세요" style="border: 0px; width: 200px;">
+	  		<input type="text" placeholder="헬멧일련번호를 입력하세요" style="border: 0px; width: 200px;">
 	  		<div class="input-group-append">
 	    		<button class="btn btn-outline-light" type="submit" >Go</button>
 	  		</div>
 		</div>
 		
 	</div>
-
-	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=cf65f305eeffb142807ebc9a6025b896"></script>
+		<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=cf65f305eeffb142807ebc9a6025b896"></script>
 	<script>
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = { 
-		
         center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
         level: 3 // 지도의 확대 레벨
     };
@@ -104,7 +111,8 @@ var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니
 
 // 마커가 표시될 위치입니다 
 // 임의의 값 넣어주기? gps컬럼이 하나라 분리해서 넣어야할것같아여
-var markerPosition  = new kakao.maps.LatLng(33.450701, 126.570667); 
+var markerPosition  = new kakao.maps.LatLng(33.450701, 126.570667);
+
 
 // 마커를 생성합니다
 var marker = new kakao.maps.Marker({
