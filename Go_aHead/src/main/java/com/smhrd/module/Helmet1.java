@@ -24,14 +24,14 @@ public class Helmet1 extends HttpServlet {
 			downVO vo1 = new downVO();
 			// 아두이노에서 센서값 받아오기
 			// 자이로 3축(채우기)
-//			String press =request.getParameter("press");
+			String press =request.getParameter("press");
 //			int speedX= Integer.parseInt((String)request.getParameter("speedX"));
 //			int speedY= Integer.parseInt((String)request.getParameter("speedY"));
 //			int speedZ= Integer.parseInt((String)request.getParameter("speedZ"));
 //			int angleX= Integer.parseInt((String)request.getParameter("angleX"));
 //			int angleY= Integer.parseInt((String)request.getParameter("angleY"));
 //			int angleZ= Integer.parseInt((String)request.getParameter("angleZ"));
-			String press = "0";	
+			//String press = "0";	
 			System.out.println("press : "+press);
 		
 //			int speedX = 0;
