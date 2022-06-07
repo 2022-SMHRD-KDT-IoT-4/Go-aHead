@@ -5,6 +5,14 @@
  * Twitter: @3rdwave_themes
  * Website: https://themes.3rdwavemedia.com/
 */
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+html{
+	@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+	font-family: 'Jua', sans-serif;
+}
+
+
 body {
   font-family: 'Open Sans', arial, sans-serif;
   color: #494d55;
