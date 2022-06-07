@@ -136,7 +136,11 @@
 <<<<<<< HEAD
     <!--반복문작성하시면 될것같아 -->
 =======
+<<<<<<< HEAD
+    <!--반복문작성하시면 될것같아 -->
+=======
     <!--반복문작성하시면 될것같아여 -->
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-IoT-4/Go-aHead.git
 >>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-IoT-4/Go-aHead.git
       <tr>
         <td>이원주</td>
