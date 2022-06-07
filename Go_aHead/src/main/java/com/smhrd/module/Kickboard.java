@@ -15,7 +15,6 @@ import com.smhrd.domain.moduleVO;
 
 @WebServlet("/Kickboard.do")
 public class Kickboard extends HttpServlet {
-<<<<<<< HEAD
    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
          
       
@@ -34,25 +33,4 @@ public class Kickboard extends HttpServlet {
             
             
    }
-=======
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-			
-		
-		String alcohol = request.getParameter("alcohol");
-				
-				//System.out.println(alcohol);
-				PrintWriter out = response.getWriter();
-				String press = (String)request.getAttribute("press");
-				System.out.println(press);
-				
-				if(Integer.parseInt(press)>50) {
-					out.print("motorOn");
-				}else {
-					out.print("gogogo");
-				}
-				
-				
-	}
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-IoT-4/Go-aHead.git
-
 }
