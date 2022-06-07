@@ -15,22 +15,23 @@ import com.smhrd.domain.moduleVO;
 
 @WebServlet("/Kickboard.do")
 public class Kickboard extends HttpServlet {
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-				downVO vo1 = new downVO();
-				
-				String alcohol = (String)request.getParameter("alcohol");
-				//String magnetic = request.getParameter("magnetic");
-				//String motor = request.getParameter("motor");
-				
-				moduleVO vo = new moduleVO(alcohol);
-				PrintWriter out = response.getWriter();
-				String press = (String)request.getAttribute("press");
-				
-				//System.out.println("alcohol : " + vo.getAlcohol());
-				
-				out.print("motorOn");
-				
-				
-	}
+   protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+         
+      
+      String alcohol = request.getParameter("alcohol");
+            
+            //System.out.println(alcohol);
+            PrintWriter out = response.getWriter();
+            String press = (String)request.getAttribute("press");
+            System.out.println(press);
+            
+            if(Integer.parseInt(press)>50) {
+               out.print("motorOn");
+            }else {
+               out.print("gogogo");
+            }
+            
+            
+   }
 
 }
