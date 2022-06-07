@@ -27,10 +27,22 @@
 	
 	.title {
 	
-	padding-left: 200px;
-	padding-top: 100px;
+ 	margin-top: 10%; 
+ 	margin-left: 18%;
+	}
+	
+	#map {
+	
+	margin-bottom: 50px;
 	
 	}
+	
+	 .title2 {
+	 font-size: 30px;
+	 font-weight: bolder;
+	 
+	 }
+	
     </style>
 </head>
 <body style="background-color: pink;">
@@ -66,18 +78,18 @@
     </header><!--//header-->
     
 	
-	<h1 class = "title">고객위치확인하기</h1>
-	<div id="map" style="width:50%;height:350px; margin-top: 10%; margin-left: 5%;" ></div>
-	<form>
-  <div class="input-group">
-    <input type="text" class="form-control" placeholder="Search">
-    <div class="input-group-btn">
-      <button class="btn btn-default" type="submit">
-        <i class="glyphicon glyphicon-search"></i>
-      </button>
-    </div>
-  </div>
-</form>
+	<div class="title">
+		<p class="title2">고객위치확인하기</p>
+		<div id="map" style="width:50%;height:350px;" ></div>
+		
+		<div class="input-group mb-3 search" >
+	  		<input type="text" placeholder="이용번호를 입력하세요" style="border: 0px; width: 200px;">
+	  		<div class="input-group-append">
+	    		<button class="btn btn-outline-light" type="submit" >Go</button>
+	  		</div>
+		</div>
+		
+	</div>
 
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=cf65f305eeffb142807ebc9a6025b896"></script>
 	<script>
