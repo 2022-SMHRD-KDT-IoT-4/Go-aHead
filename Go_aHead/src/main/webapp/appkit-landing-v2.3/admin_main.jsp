@@ -22,7 +22,6 @@
     
 </head>
 <body>
-
 	 <!-- header 상단바 부분 --> 
     <header id="header" class="header">  
         <div class="container">       
@@ -31,6 +30,10 @@
                     <span class="logo-icon-wrapper"><img class="logo-icon" src="assets/images/kick_icon_F.png" alt="iccon" style=" width: 40px; height: 40px;"></span>
                     <span class="text"><span class="highlight">GO</span>AHEAD</span></a>
             </h1><!--//logo-->
+            
+            
+            
+            
             
             <nav class="main-nav navbar-expand-md float-right navbar-inverse" role="navigation">
                 
@@ -43,10 +46,11 @@
                 
                 <div id="navbar-collapse">
                     <ul class="nav navbar-nav">
-                    	<li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewJoin.do'">회원가입</a></li>
-                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewLogin.do'">로그인</a></li>
-                        <li class="nav-item"><a class="nav-link scrollto" href="#">관리자</a></li>
-                        <li class="nav-item"><a class="nav-link scrollto" href="#">고객센터</a></li>            
+                    	<li class="nav-item"><a class="nav-link scrollto" onclick="location.href='#'">회원정보관리</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='#'">고객위치확인</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="#">킥보드위치</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="#">고객센터</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="#">로그아웃</a></li>            
                     </ul><!--//nav-->
                 </div><!--//navabr-collapse-->     
                                     

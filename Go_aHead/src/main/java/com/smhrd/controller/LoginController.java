@@ -34,6 +34,7 @@ public class LoginController implements Controller {
 	if(result != null) {
 		HttpSession session = request.getSession();
 		session.setAttribute("member", result);
+		
 		moveURL = "main";
 	}else {
 		moveURL = "login";
