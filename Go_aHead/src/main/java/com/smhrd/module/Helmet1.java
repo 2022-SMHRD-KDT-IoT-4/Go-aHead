@@ -17,13 +17,12 @@ import com.smhrd.domain.moduleVO;
 public class Helmet1 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// ÀÚÀÌ·Î 3Ãà, ¾Ð·Â
+		// ï¿½ï¿½ï¿½Ì·ï¿½ 3ï¿½ï¿½, ï¿½Ð·ï¿½
 		
-			PrintWriter out = response.getWriter();
-			moduleVO vo = new moduleVO();
+//			PrintWriter out = response.getWriter();
+//			moduleVO vo = new moduleVO();
 			downVO vo1 = new downVO();
-			// ¾ÆµÎÀÌ³ë¿¡¼­ ¼¾¼­°ª ¹Þ¾Æ¿À±â
-			// ÀÚÀÌ·Î 3Ãà(Ã¤¿ì±â)
+			
 			String press =request.getParameter("press");
 //			int speedX= Integer.parseInt((String)request.getParameter("speedX"));
 //			int speedY= Integer.parseInt((String)request.getParameter("speedY"));
@@ -42,8 +41,7 @@ public class Helmet1 extends HttpServlet {
 //			int angleZ = 0;
 //			int down = 0;
 			
-			// moduleVO·Î µ¥ÀÌÅÍ °ª º¸³»ÁÖ±â
-			vo.setPress(press);
+//			vo.setPress(press);
 //			vo1.setAngleX(angleX);
 //			vo1.setAngleY(angleY);
 //			vo1.setAngleZ(angleZ);
@@ -51,6 +49,9 @@ public class Helmet1 extends HttpServlet {
 //			vo1.setSpeedY(speedY);
 //			vo1.setSpeedZ(speedZ);
 			
+			request.setAttribute("press", press);
+			RequestDispatcher rd = request.getRequestDispatcher("Kickboard.do");
+			rd.forward(request, response);
 		}
 
 }

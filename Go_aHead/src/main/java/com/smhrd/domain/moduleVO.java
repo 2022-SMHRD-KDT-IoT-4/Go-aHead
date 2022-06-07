@@ -9,14 +9,19 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class moduleVO {
 
-	String magnetic; // ºÙ¾îÀÖÀ» ¶§ 1, ¶³¾îÁ®ÀÖÀ» ¶§ 0
-	String alcohol; //À½ÁÖ ÃøÁ¤¿©ºÎ À½ÁÖÀÏ½Ã 1, À½ÁÖ°¡ ¾Æ´Ò½Ã 0
-	String press; //¾Ð·Â À¯ 1, ¾Ð·Â¹« 0
-	String GPS; //À§µµ°æµµ °ª 
-	//3Ãà ÀÚÀÌ·Î
+	String magnetic; // ï¿½Ù¾ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ 1, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ 0
+	String alcohol; //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï½ï¿½ 1, ï¿½ï¿½ï¿½Ö°ï¿½ ï¿½Æ´Ò½ï¿½ 0
+	String press; //ï¿½Ð·ï¿½ ï¿½ï¿½ 1, ï¿½Ð·Â¹ï¿½ 0
+	String GPS; //ï¿½ï¿½ï¿½ï¿½ï¿½æµµ ï¿½ï¿½ 
+	//3ï¿½ï¿½ ï¿½ï¿½ï¿½Ì·ï¿½
 	String camera;
 	String motor;
 	int piezo;
+	
+	
+	public moduleVO(String alcohol) {
+		this.alcohol = alcohol;
+	}
 	
 	
 
