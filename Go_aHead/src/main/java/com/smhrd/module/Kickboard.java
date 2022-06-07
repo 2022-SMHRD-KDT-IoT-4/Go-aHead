@@ -18,18 +18,18 @@ public class Kickboard extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 				downVO vo1 = new downVO();
 				
-				String alcohol = (String)request.getParameter("alcohol");
+				//String alcohol = (String)request.getParameter("alcohol");
 				//String magnetic = request.getParameter("magnetic");
 				//String motor = request.getParameter("motor");
 				
-				moduleVO vo = new moduleVO(alcohol);
+				//moduleVO vo = new moduleVO(alcohol);
 				PrintWriter out = response.getWriter();
 				String press = (String)request.getAttribute("press");
 				
-				System.out.println("alcohol : " + vo.getAlcohol());
-				if(press.equals("1")) {
+				//System.out.println("alcohol : " + vo.getAlcohol());
+				
 					out.print("motorOn");
-				}
+				
 				
 	}
 
