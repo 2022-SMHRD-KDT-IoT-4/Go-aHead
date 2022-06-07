@@ -31,6 +31,62 @@ body {
       background: -o-linear-gradient(bottom left, #92b5db 0%, #1d466c 100%);
       background: linear-gradient(to top right, #92b5db 0%, #1d466c 100%);
     }
+    .dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+ .header{
+ position : static;
+ }   
+ #map{
+ margin-top : 200px;
+ margin-left : 21%;
+ }
+ #kick1{
+ margin-top : 150px;
+ margin-left : 21%;
+ }
 </style>
 </head>
 <body>
@@ -53,7 +109,15 @@ body {
                 <div id="navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li class="nav-item"><a class="nav-link scrollto" href="마이페이지">마이페이지</a></li>
-                        <li class="nav-item"><a class="nav-link scrollto" href="kickboard.jsp">킥보드</a></li>
+                        <li class="nav-item">
+                              <div class="dropdown nav-link scrollt ">
+                          <p>킥보드</p>
+                          <div class="dropdown-content">
+                     <a href="#">이용시작</a>
+                     <a href="#">이용종료</a>
+                     <a href="#">블랙박스 확인</a>
+                    </div></div></a></li>
+                    
                         <li class="nav-item"><a class="nav-link scrollto" href="main.jsp">로그아웃</a></li>                        
 
                     </ul><!--//nav-->
@@ -61,6 +125,49 @@ body {
             </nav><!--//main-nav-->
         </div><!--//container-->
     </header><!--//header-->
+    <div id="kick">
+    <p id="kick1">킥보드 위치</p>
+<div id="map" style="width:30%;height:350px;">
+    </div>
+    </div>
+	
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=17b3f4afc77e1401ad704210c028726b"></script>
+<script>
+var mapContainer = document.getElementById('map'), // 지도를 표시할 div  
+    mapOption = { 
+        center: new kakao.maps.LatLng(35.110494, 126.877761), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+    };
 
+var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+ 
+// 마커를 표시할 위치와 title 객체 배열입니다 
+var positions = [
+    {
+        title: '킥보드01', 
+        latlng: new kakao.maps.LatLng(35.110494, 126.877761)
+    }
+];
+
+// 마커 이미지의 이미지 주소입니다
+var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png"; 
+    
+for (var i = 0; i < positions.length; i ++) {
+    
+    // 마커 이미지의 이미지 크기 입니다
+    var imageSize = new kakao.maps.Size(24, 35); 
+    
+    // 마커 이미지를 생성합니다    
+    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize); 
+    
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({
+        map: map, // 마커를 표시할 지도
+        position: positions[i].latlng, // 마커를 표시할 위치
+        title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+        image : markerImage // 마커 이미지 
+    });
+}
+</script>
 </body>
 </html>
