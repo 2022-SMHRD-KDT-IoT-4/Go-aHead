@@ -44,7 +44,6 @@
                         <span class="icon-bar"></span>
                     </button><!--//nav-toggle-->
                 
-          <% // if (로그인이 안됐을 때) { %> 
                 <div id="navbar-collapse">
                     <ul class="nav navbar-nav">
                     	<li class="nav-item"><a class="nav-link scrollto" onclick="location.href='join.jsp'">마이페이지</a></li>

@@ -19,11 +19,24 @@
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
     
+    <style >
+	.header {
+	
+	position: static;
+	}
+	
+	.title {
+	
+	padding-left: 200px;
+	padding-top: 100px;
+	
+	}
+    </style>
 </head>
-<body>
+<body style="background-color: pink;">
 	
 	 <!-- header 상단바 부분 --> 
-    <header id="header" class="header">  
+    <header id="header" class="header" >  
         <div class="container">       
             <h1 class="logo">
                 <a class="scrollto" href="#hero">
@@ -51,8 +64,48 @@
             </nav><!--//main-nav-->                     
         </div><!--//container-->
     </header><!--//header-->
+    
+	
+	<h1 class = "title">고객위치확인하기</h1>
+	<div id="map" style="width:50%;height:350px; margin-top: 10%; margin-left: 5%;" ></div>
+	<form>
+  <div class="input-group">
+    <input type="text" class="form-control" placeholder="Search">
+    <div class="input-group-btn">
+      <button class="btn btn-default" type="submit">
+        <i class="glyphicon glyphicon-search"></i>
+      </button>
+    </div>
+  </div>
+</form>
 
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=cf65f305eeffb142807ebc9a6025b896"></script>
+	<script>
+var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    mapOption = { 
+        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+    };
 
+var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
+// 마커가 표시될 위치입니다 
+// 임의의 값 넣어주기? gps컬럼이 하나라 분리해서 넣어야할것같아여
+var markerPosition  = new kakao.maps.LatLng(33.450701, 126.570667); 
+
+// 마커를 생성합니다
+var marker = new kakao.maps.Marker({
+    position: markerPosition
+});
+
+// 마커가 지도 위에 표시되도록 설정합니다
+marker.setMap(map);
+
+// 아래 코드는 지도 위의 마커를 제거하는 코드입니다
+// marker.setMap(null);    
+</script>
 </body>
 </html>
+
+
+
