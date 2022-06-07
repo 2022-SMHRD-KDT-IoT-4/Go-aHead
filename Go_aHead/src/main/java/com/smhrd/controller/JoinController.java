@@ -2,23 +2,18 @@ package com.smhrd.controller;
 
 import java.io.IOException;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-import com.smhrd.model.DAO;
-import com.smhrd.model.Member;
+import com.smhrd.dao.DAO;
+import com.smhrd.domain.Member;
 
+public class JoinController implements Controller{
 
-@WebServlet("/JoinController")
-public class JoinController extends HttpServlet {
-
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+	@Override
+	public String execute(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		
 		String mem_id = request.getParameter("mem_id");
@@ -32,24 +27,19 @@ public class JoinController extends HttpServlet {
 		String drivenum = request.getParameter("drivenum");
 		
 		Member vo = new Member(0, mem_id, mem_pw, mem_name, mem_gender, mem_blood, mem_phone, mem_subphone, mem_birth, drivenum);
-
 		DAO dao = new DAO();
+		
 		int row = dao.Join(vo);
-				
+		
 		String moveURL = "";
-		
-		
 		if(row > 0) {
-			
 			request.setAttribute("mem_id", mem_id);
-	
-			moveURL = "main.jsp";
-			System.out.println("회원가입성공!");
+			moveURL = "join_success";
 		}else {
-			moveURL = "join.jsp";
+			moveURL = "main";
 		}
-		RequestDispatcher rd= request.getRequestDispatcher(moveURL);
-		rd.forward(request, response);
+		
+		return moveURL;
 	}
 
 }

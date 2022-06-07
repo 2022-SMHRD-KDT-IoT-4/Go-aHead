@@ -22,6 +22,7 @@
     
 </head>
 <body>
+
 	 <!-- header 상단바 부분 --> 
     <header id="header" class="header">  
         <div class="container">       
@@ -47,8 +48,8 @@
           <% // if (로그인이 안됐을 때) { %> 
                 <div id="navbar-collapse">
                     <ul class="nav navbar-nav">
-                    	<li class="nav-item"><a class="nav-link scrollto" onclick="location.href='join.jsp'">회원가입</a></li>
-                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='login.jsp'">로그인</a></li>
+                    	<li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewJoin.do'">회원가입</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewLogin.do'">로그인</a></li>
                         <li class="nav-item"><a class="nav-link scrollto" href="#">관리자</a></li>
                         <li class="nav-item"><a class="nav-link scrollto" href="#">고객센터</a></li>            
                     </ul><!--//nav-->

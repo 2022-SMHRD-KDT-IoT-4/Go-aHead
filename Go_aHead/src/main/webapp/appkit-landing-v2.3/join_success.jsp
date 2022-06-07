@@ -1,3 +1,4 @@
+<%@page import="com.smhrd.domain.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -46,7 +47,7 @@
 	</style>
 	<body style="text-align: center;">
 		<%
-			String id = (String)session.getAttribute("member");
+			String mem_id = (String)request.getAttribute("mem_id");
 			
 		%>
 		<header id="header" class="header">  
@@ -77,8 +78,8 @@
 							<li><h1>환영합니다!</h1></li>
 							<li>회원가입을 축하합니다.</li>
 							<!-- request영역에 저장된 회원정보 중 이메일을 출력하시오. -->
-							<li>GO AHEAD의 새로운 아이디는<%=id %>입니다.</li>
-							<li><button onclick='location.href="main.jsp"'>시작하기</button></li>
+							<li>GO AHEAD의 새로운 아이디는<%=mem_id %>입니다.</li>
+							<li><button onclick='location.href="/Go_aHead/appkit-landing-v2.3/main.jsp"'>시작하기</button></li>
 						</ul>
 					</nav>			
 			</div>

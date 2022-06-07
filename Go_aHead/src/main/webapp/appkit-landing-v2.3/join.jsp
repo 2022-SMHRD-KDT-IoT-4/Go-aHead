@@ -1,4 +1,4 @@
-<%@page import="com.smhrd.model.Member"%>
+<%@page import="com.smhrd.domain.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -78,7 +78,7 @@
                 <div id="navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li class="nav-item"><a class="nav-link scrollto" href="회원가입">회원가입</a></li>
-                        <li class="nav-item"><a class="nav-link scrollto" href="로그인">로그인</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="login.jsp">로그인</a></li>
                         <li class="nav-item"><a class="nav-link scrollto" href="고객센터">고객센터</a></li>                        
 
                     </ul><!--//nav-->
@@ -92,7 +92,7 @@
       <div class="input-form col-md-12 mx-auto">
         <h4 class="mb-3">회원가입</h4>
         <!-- 회원가입 컨트롤러 -->
-        <form class="validation-form" action="../JoinController" method="post" novalidate>
+        <form class="validation-form" action="join.do" method="post" novalidate>
           
             <div class="mb-3">
               <label for="name">이름</label>

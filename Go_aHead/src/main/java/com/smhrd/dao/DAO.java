@@ -1,4 +1,4 @@
-package com.smhrd.model;
+package com.smhrd.dao;
 
 
 
@@ -7,7 +7,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.smhrd.dao.SqlSessionManager;
-import com.smhrd.model.Member;
+import com.smhrd.domain.Member;
 
 public class DAO {
 	private SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
@@ -17,7 +17,7 @@ public class DAO {
 		int row = 0;
 		try {
 		sqlSession = sqlSessionFactory.openSession(true);
-		row = sqlSession.insert("com.smhrd.model.DAO.Join", vo);
+		row = sqlSession.insert("com.smhrd.dao.DAO.Join", vo);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -31,7 +31,7 @@ public class DAO {
 		try {
 
 			sqlSession = sqlSessionFactory.openSession(true);
-			result = sqlSession.selectOne("com.smhrd.model.DAO.login", vo);
+			result = sqlSession.selectOne("com.smhrd.dao.DAO.Login", vo);
 
 		} catch (Exception e) {
 			e.printStackTrace();
