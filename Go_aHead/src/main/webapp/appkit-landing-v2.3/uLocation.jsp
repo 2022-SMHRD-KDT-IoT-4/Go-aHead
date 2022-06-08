@@ -95,11 +95,11 @@
     <div>
 		<div class="input-group mb-3 search title"  style=" display:block; margin-top: 60px; height: 800px; width: 300px; background-color:#9b979757;" >
 	  		
-	  		<form action="고객위치확인">
+	  		<form action="Kickusing.do">
 	  		<h4 style="margin-top: 20px; margin-left: 25px; font-weight: bold; font-size: 20px;">고객위치확인</h4>
 	  		<div class="input-group mb-3" style="margin-top: 5px; margin-left:25px; width: 250px">
 			  	
-				  	<input type="text" class="form-control" placeholder="?를 입력하세요" name="" style="">
+				  	<input type="text" class="form-control" placeholder="ID를 입력하세요" name="" style="">
 					<div class="input-group-append">
 					    <button class="btn btn-success" type="submit" style="background-color:Tomato; border: none; width: 50px;">Go</button>
 					</div>
@@ -120,7 +120,7 @@
 	<script>
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = { 
-        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+        center: new kakao.maps.LatLng(35.1107911, 126.8773435), // 지도의 중심좌표
         level: 3 // 지도의 확대 레벨
     };
 
@@ -128,7 +128,7 @@ var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니
 
 // 마커가 표시될 위치입니다 
 // 임의의 값 넣어주기? gps컬럼이 하나라 분리해서 넣어야할것같아여
-var markerPosition  = new kakao.maps.LatLng(33.450701, 126.570667); 
+var markerPosition  = new kakao.maps.LatLng(35.1107911, 126.8773435); 
 
 // 마커를 생성합니다
 var marker = new kakao.maps.Marker({
