@@ -3,7 +3,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Bootstrap 4 theme for developers and startups</title>
+
+	<title>Bootstrap 4 theme for developers and startups</title>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,8 +23,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
     
-    
-    <style >
+    <style>
 	*{
 	font-family: 'Jua', sans-serif;
 	}
@@ -57,7 +57,7 @@
 	 
     </style>
 </head>
-<body style="background-color: pink;">
+<body style="background-color: skyblue;">
 	
 	 <!-- header 상단바 부분 --> 
     <header id="header" class="header" >  
@@ -95,40 +95,72 @@
     <div>
 		<div class="input-group mb-3 search title"  style=" display:block; margin-top: 60px; height: 800px; width: 300px; background-color:#9b979757;" >
 	  		
-	  		<form action="Kickusing.do">
-	  		<h4 style="margin-top: 20px; margin-left: 25px; font-weight: bold; font-size: 20px;">고객위치확인</h4>
-	  		<div class="input-group mb-3" style="margin-top: 5px; margin-left:25px; width: 250px">
-			  	
-				  	<input type="text" class="form-control" placeholder="ID를 입력하세요" name="" style="">
-					<div class="input-group-append">
-					    <button class="btn btn-success" type="submit" style="background-color:Tomato; border: none; width: 50px;">Go</button>
-					</div>
+	  		<h4 style="margin-top: 30px; margin-left: 25px; font-weight: bold; font-size: 30px;">🚨SOS🚨<h4>
+	  		<br><br>
+	  		<table style='margin-left: 25px; height: 600px'>
+	  			
+	  			<tr>
+					<th>사고번호  </th>	  		
+					<td>143143</td>	  		
+	  			</tr>
+	  			
+	  			<tr>
+					<th>고객이름  </th>	  		
+					<td>김이름</td>	  		
+	  			</tr>
+	  			
+	  			<tr>
+					<th>아이디　  </th>	  		
+					<td>test</td>	  		
+	  			</tr>
+	  		
+				<tr>
+					<th>비상연락  </th>	  		
+					<td>010-3331-3333</td>	  		
+	  			</tr>	
+	  			
+	  			<tr>
+					<th>혈액형　  </th>	  		
+					<td>ab</td>	  		
+	  			</tr>
+	  			
+	  			<tr>
+					<th>사고유형  </th>	  		
+					<td>교통사고</td>	  		
+	  			</tr>
+						  		
+	  			<tr>
+					<th>이용번호  </th>	  		
+					<td>1431</td>	  		
+	  			</tr>
+	  			
+	  			<tr>
+					<th>발생시간  </th>	  		
+					<td>2021.06.08</td>	  		
+	  			</tr>
+
+	  		</table>
 			  	
 			</div>
-	  		</form>
 	  		
 	  		
 		</div>
     </div>
-		
-		
-		
-	
 		
 
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=cf65f305eeffb142807ebc9a6025b896"></script>
 	<script>
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = { 
-        center: new kakao.maps.LatLng(35.1107911, 126.8773435), // 지도의 중심좌표
+        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
         level: 3 // 지도의 확대 레벨
     };
 
 var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
 // 마커가 표시될 위치입니다 
-// 임의의 값 넣어주기? gps컬럼이 하나라 분리해서 넣어야할것같아여
-var markerPosition  = new kakao.maps.LatLng(35.1107911, 126.8773435); 
+// 위치좌표변경해주기~
+var markerPosition  = new kakao.maps.LatLng(33.450701, 126.570667); 
 
 // 마커를 생성합니다
 var marker = new kakao.maps.Marker({

@@ -97,7 +97,7 @@
                               <div class="dropdown nav-link scrollt ">
                           <p>킥보드</p>
                           <div class="dropdown-content">
-                     <a href="start.jsp">이용시작</a>
+                     <a href="viewUse.do">이용시작</a>
                      <a href="end.jsp">이용종료</a>
                      <a href="blackbox">블랙박스 확인</a>
                     </div></div></a></li>

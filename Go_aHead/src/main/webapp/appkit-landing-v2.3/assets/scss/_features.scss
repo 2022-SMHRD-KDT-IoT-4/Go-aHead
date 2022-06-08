@@ -15,9 +15,11 @@
         margin: 0 auto;
         margin-bottom: 60px;
         a {
+	        
 	        color: darken($text-grey, 15%);
 	        &:hover {
 		        color: $text-color;
+	        
 	        }
         }
     }
