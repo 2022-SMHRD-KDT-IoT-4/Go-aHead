@@ -9,15 +9,15 @@ import lombok.RequiredArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@RequiredArgsConstructor
+
 
 public class LocationVO {
 
-	@NonNull private int use_number;
-	@NonNull private int kick_using;
+	private int use_number;
+	private int kick_using;
 	private String kick_number;
-	@NonNull private String hel_number;
-	@NonNull private String mem_id;
+	private String hel_number;
+	private String mem_id;
 	private String start_loc_lat;
 	private String start_loc_long;
 	private String end_loc_lat;
