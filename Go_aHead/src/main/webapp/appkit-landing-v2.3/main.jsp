@@ -46,7 +46,7 @@
                     	<li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewJoin.do'">회원가입</a></li>
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewLogin.do'">로그인</a></li>
                         <li class="nav-item"><a class="nav-link scrollto" href="#">관리자</a></li>
-                        <li class="nav-item"><a class="nav-link scrollto" href="#">고객센터</a></li>            
+                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='faq.do'">고객센터</a></li>            
                     </ul><!--//nav-->
                 </div><!--//navabr-collapse-->     
                                     
