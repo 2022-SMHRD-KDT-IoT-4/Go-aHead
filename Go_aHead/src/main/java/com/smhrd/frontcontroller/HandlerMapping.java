@@ -6,6 +6,7 @@ import com.smhrd.controller.Controller;
 import com.smhrd.controller.JoinController;
 import com.smhrd.controller.LoginController;
 import com.smhrd.controller.MemberlistController;
+import com.smhrd.controller.ViewFAQController;
 import com.smhrd.controller.ViewJoinController;
 import com.smhrd.controller.ViewLoginController;
 import com.smhrd.controller.ViewMainController;
@@ -21,6 +22,7 @@ public class HandlerMapping {
 	mappings.put("/viewLogin.do", new ViewLoginController());
 	mappings.put("/login.do", new LoginController());
 	mappings.put("/memberlist.do", new MemberlistController());
+	mappings.put("/faq.do", new ViewFAQController());
 
 	
 	}

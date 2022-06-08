@@ -21,13 +21,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    
+    
     <style >
-
 	*{
-	
 	font-family: 'Jua', sans-serif;
 	}
-
+	
 	.header {
 	
 	position: static;
@@ -35,13 +35,17 @@
 	
 	.title {
 	
- 	margin-top: 10%; 
- 	margin-left: 18%;
+	background-color: pink;
+	position: absolute;
+	top: 0px;
+	left: 0px
+	
 	}
 	
 	#map {
 	
 	margin-bottom: 50px;
+	position: fixed!important;
 	
 	}
 	
@@ -51,7 +55,6 @@
 	 
 	 }
 	 
-	
     </style>
 </head>
 <body style="background-color: pink;">
@@ -76,7 +79,7 @@
                 <div id="navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewLogin.do'">고객위치확인</a></li>
-                        <li class="nav-item"><a class="nav-link scrollto" href="킥보드위치확인">헬멧위치확인</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" href="헬멧위치확인">헬멧위치확인</a></li>
                         <li class="nav-item"><a class="nav-link scrollto" href="고객센터">고객센터</a></li>
                         <li class="nav-item"><a class="nav-link scrollto" href="Logout.do">로그아웃</a></li>                        
 
@@ -86,20 +89,34 @@
         </div><!--//container-->
     </header><!--//header-->
     
-	
-	<div class="title">
-		<p class="title2">헬멧위치확인하기</p>
-		<div id="map" style="width:50%;height:350px;" ></div>
-		
-		<div class="input-group mb-3 search" >
-	  		<input type="text" placeholder="헬멧일련번호를 입력하세요" style="border: 0px; width: 200px;">
-	  		<div class="input-group-append">
-	    		<button class="btn btn-outline-light" type="submit" >Go</button>
-	  		</div>
+    
+    <div id="map" style=" width :100%;height:800px; "></div>
+    
+    <div>
+		<div class="input-group mb-3 search title"  style=" display:block; margin-top: 60px; height: 800px; width: 300px; background-color:#9b979757;" >
+	  		
+			<form action="헬멧위치확인">
+	  		<h4 style="margin-top: 20px; margin-left: 25px; font-weight: bold; font-size: 20px;">헬멧위치확인</h4>
+	  		<div class="input-group mb-3" style="margin-top: 5px; margin-left:25px; width: 250px">
+			  	
+				  	<input type="text" class="form-control" placeholder="헬멧번호를 입력하세요" name="" style="">
+					<div class="input-group-append">
+					    <button class="btn btn-success" type="submit" style="background-color:Tomato; border: none; width: 50px;">Go</button>
+					</div>
+			  	
+			</div>
+	  		</form>
+	  		
+	  		
 		</div>
+    </div>
 		
-	</div>
-		<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=cf65f305eeffb142807ebc9a6025b896"></script>
+		
+		
+	
+		
+
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=cf65f305eeffb142807ebc9a6025b896"></script>
 	<script>
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = { 
@@ -111,8 +128,7 @@ var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니
 
 // 마커가 표시될 위치입니다 
 // 임의의 값 넣어주기? gps컬럼이 하나라 분리해서 넣어야할것같아여
-var markerPosition  = new kakao.maps.LatLng(33.450701, 126.570667);
-
+var markerPosition  = new kakao.maps.LatLng(33.450701, 126.570667); 
 
 // 마커를 생성합니다
 var marker = new kakao.maps.Marker({
