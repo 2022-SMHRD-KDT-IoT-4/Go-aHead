@@ -79,15 +79,28 @@ body {
  .header{
  position : static;
  }   
- #map{
- margin-top : 200px;
- margin-left : 21%;
- }
- #kick1{
+ 
+ #kick{
  margin-top : 150px;
  margin-left : 21%;
  }
+ 
+ #btn1{
+    background-color: Tomato;
+    border: none;
+    width: 100px;
+    display: block;
+    position: absolute;
+   
+ }
+ #a1{
+ 
+ }
+ 
 </style>
+<script>
+
+</script>
 </head>
 <body>
 	<header id="header" class="header">  
@@ -125,11 +138,24 @@ body {
             </nav><!--//main-nav-->
         </div><!--//container-->
     </header><!--//header-->
-    <div id="kick">
-    <p id="kick1">킥보드 위치</p>
-<div id="map" style="width:30%;height:350px;">
-    </div>
-    </div>
+<!-- ------------------------------------------------------------------------------------------------------------------ -->
+
+<div id="a1" style="margin-top : 90px;">
+	<h3 style="margin-left:400px;">킥보드 위치확인</h3>
+<div id="map" style="width:55%;height:500px; margin-left:400px;"></div>
+</div>
+
+<div style="display: block; margin-top:30px" >
+<input type="text" class="form-control" placeholder="킥보드 번호를 입력하세요" name="" style="width:600px; margin-left: 650px;">
+<input type="text" class="form-control" placeholder="헬멧 번호를 입력하세요" name="" style="width:600px; margin-left: 650px;">
+			<button class="btn btn-success btn1" type="submit" 
+			style="background-color:Tomato; border: none; width: 50px;  left: 900px; 
+		    border: none;
+		    width: 100px;
+		    display: block;
+		    position: absolute;">이용시작</button>
+</div>
+		
 	
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=17b3f4afc77e1401ad704210c028726b"></script>
 <script>
