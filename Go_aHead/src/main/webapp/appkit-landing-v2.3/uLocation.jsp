@@ -56,8 +56,32 @@
 	 font-weight: bolder;
 	 
 	 }
-	 
     </style>
+    
+    <script type="text/javascript">
+    
+    	function uLocationView() {
+			
+    		$.ajax({
+    			url: "Ulocation.do",
+    			type : "get",
+    			data : mem_id,
+    			dataType : "json",
+    			success : uView,
+    			error : function uview() {
+					alert("오류!")
+				}
+    		})
+    		
+    		
+		}
+    	
+    	function uview() {
+				
+    	
+		}
+    
+    </script>
 </head>
 <body style="background-color: pink;">
 	
@@ -109,13 +133,13 @@
     <div>
 		<div class="input-group mb-3 search title"  style=" display:block; margin-top: 60px; height: 800px; width: 300px; background-color:#9b979757;" >
 	  		
-	  		<form action="Ulocation.do">
+	  		<form action="">
 	  		<h4 style="margin-top: 20px; margin-left: 25px; font-weight: bold; font-size: 20px;">고객위치확인</h4>
 	  		<div class="input-group mb-3" style="margin-top: 5px; margin-left:25px; width: 250px">
 			  	
 				  	<input type="text" class="form-control" placeholder="ID를 입력하세요" name="mem_id" style="">
 					<div class="input-group-append">
-					    <button class="btn btn-success" type="submit" style="background-color:Tomato; border: none; width: 50px;">Go</button>
+					    <button class="btn btn-success" type="submit" style="background-color:Tomato; border: none; width: 50px;" onclick="location.href='javascript:uLocationView()'">Go</button>
 					</div>
 			  	
 			</div>
