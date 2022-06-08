@@ -18,7 +18,7 @@ protected void service(HttpServletRequest request, HttpServletResponse response)
 	
 //	if(request.getParameter("alcohol") != null) {
 //		alcohol = Integer.parseInt(request.getParameter("alcohol"));
-//	}
+//	  }
 	
 	
 	if(request.getParameter("press") != null) {
