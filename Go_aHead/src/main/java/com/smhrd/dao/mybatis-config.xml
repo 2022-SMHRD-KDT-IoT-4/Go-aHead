@@ -5,7 +5,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <configuration>
    <typeAliases>
       <typeAlias type="com.smhrd.domain.Member" alias="Member"/>
-	  <typeAlias type="com.smhrd.domain.useVO" alias="useVO"/>
+	  <typeAlias type="com.smhrd.domain.UseVO" alias="UseVO"/>
+	  <typeAlias type="com.smhrd.domain.AccVO" alias="AccVO"/>
    </typeAliases>
 
    <environments default="development">
