@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-//3Ãà ÀÚÀÌ·Î
+//3ï¿½ï¿½ ï¿½ï¿½ï¿½Ì·ï¿½
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
