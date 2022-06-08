@@ -23,6 +23,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
    <mappers>
       <mapper resource="com/smhrd/dao/MemberMapper.xml"/>
       <mapper resource="com/smhrd/dao/ListMapper.xml"/>
+      <mapper resource="com/smhrd/dao/UseMapper.xml"/>
    </mappers>
 
 
