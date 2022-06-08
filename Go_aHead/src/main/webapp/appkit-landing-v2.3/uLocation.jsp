@@ -18,8 +18,16 @@
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    
     
     <style >
+	*{
+	font-family: 'Jua', sans-serif;
+	}
+	
 	.header {
 	
 	position: static;
@@ -27,13 +35,17 @@
 	
 	.title {
 	
- 	margin-top: 10%; 
- 	margin-left: 18%;
+	background-color: pink;
+	position: absolute;
+	top: 0px;
+	left: 0px
+	
 	}
 	
 	#map {
 	
 	margin-bottom: 50px;
+	position: fixed!important;
 	
 	}
 	
@@ -77,25 +89,37 @@
         </div><!--//container-->
     </header><!--//header-->
     
-	
-	<div class="title">
-		<p class="title2">고객위치확인하기</p>
-		<div id="map" style="width:50%; height:350px;" ></div>
-		
-		<div class="input-group mb-3 search" >
-	  		<input type="text" placeholder="이용번호를 입력하세요" style="border: 0px; width: 200px;">
-	  		<div class="input-group-append">
-	    		<button class="btn btn-outline-light" type="submit" >Go</button>
-	  		</div>
+    
+    <div id="map" style=" width :100%;height:800px; "></div>
+    
+    <div>
+		<div class="input-group mb-3 search title"  style=" display:block; margin-top: 60px; height: 800px; width: 300px; background-color:#9b979757;" >
+	  		
+	  		<form action="고객위치확인">
+	  		<h4 style="margin-top: 20px; margin-left: 25px; font-weight: bold; font-size: 20px;">고객위치확인</h4>
+	  		<div class="input-group mb-3" style="margin-top: 5px; margin-left:25px; width: 250px">
+			  	
+				  	<input type="text" class="form-control" placeholder="?를 입력하세요" name="" style="">
+					<div class="input-group-append">
+					    <button class="btn btn-success" type="submit" style="background-color:Tomato; border: none; width: 50px;">Go</button>
+					</div>
+			  	
+			</div>
+	  		</form>
+	  		
+	  		
 		</div>
+    </div>
 		
-	</div>
+		
+		
+	
+		
 
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=cf65f305eeffb142807ebc9a6025b896"></script>
 	<script>
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = { 
-		
         center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
         level: 3 // 지도의 확대 레벨
     };
