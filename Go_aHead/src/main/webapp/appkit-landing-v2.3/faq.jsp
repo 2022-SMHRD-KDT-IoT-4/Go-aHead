@@ -14,7 +14,6 @@
 	href='https://files.krve.io/f/eyespot.css'>
 <link rel='stylesheet prefetch'
 	href='https://cdn.cloudcache.dk/materialdesignicons/1.6.50/css/materialdesignicons.min.css'>
-<link rel="stylesheet" href="appkit-landing-v2.3/assets/scss/faq.scss">
 
 
 </head>
@@ -25,9 +24,8 @@
 			<h1 class="logo">
 				<a class="scrollto" href="viewMain.do"> <span
 					class="logo-icon-wrapper"><img class="logo-icon"
-						src="assets/images/kick_icon_F.png" alt="iccon"
-						style="width: 40px; height: 40px;"></span> <span class="text"><span
-						class="highlight">GO</span>AHEAD</span></a>
+						src="appkit-landing-v2.3/assets/images/kick_icon_F.png" alt="iccon"
+						style="width: 40px; height: 40px;"></span> <span class="text"><span	class="highlight">GO</span>AHEAD</span></a>
 			</h1>
 			<!--//logo-->
 			</nav>
@@ -43,7 +41,7 @@
 			<ul class="list-group help-group">
 				<div class="faq-list list-group nav nav-tabs">
 					<a href="#tab1" class="list-group-item active" role="tab"data-toggle="tab">이용안내시간</a>
-					<a href="#tab2"	class="list-group-item actiove" role="tab" data-toggle="tab">요금결제</a>
+					<a href="#tab2"	class="list-group-item " role="tab" data-toggle="tab">요금결제</a>
 					<a href="#tab3" class="list-group-item" role="tab" data-toggle="tab"><i class="mdi mdi-account-settings"></i>가입로그인</a>
 					<a href="#tab4" class="list-group-item" role="tab" data-toggle="tab"><i class="mdi mdi-star"></i>고장장애</a>
 					<a href="#tab5" class="list-group-item" role="tab" data-toggle="tab"><i	class="mdi mdi-cart"></i> 안전수칙</a>
@@ -214,6 +212,5 @@
 				<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
 				<script
 					src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
-				<script src="appkit-landing-v2.3/assets/js/faq.js"></script>
 </body>
 </html>
