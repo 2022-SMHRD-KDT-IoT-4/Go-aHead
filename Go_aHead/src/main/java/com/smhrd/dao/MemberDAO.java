@@ -6,6 +6,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.smhrd.domain.Member;
+import com.smhrd.domain.UlocationVO;
 
 
 
@@ -27,6 +28,19 @@ public class MemberDAO {
 		}
 		return list;
 	}
-	
+
+
+	public UlocationVO Ulocation(String mem_id) {
+		UlocationVO vo = new UlocationVO();
+		try {
+			sqlSession = sqlSessionFactory.openSession(true);
+			vo = sqlSession.selectOne("com.smhrd.dao.MemberDAO.Ulocation", mem_id);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		return vo;
+	}
 
 }

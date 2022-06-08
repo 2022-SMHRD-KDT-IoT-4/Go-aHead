@@ -32,6 +32,7 @@ public class JoinController implements Controller{
 		int row = dao.Join(vo);
 		
 		request.setAttribute("mem_id", mem_id);
+		
 		return "join_success";	
 		
 	}

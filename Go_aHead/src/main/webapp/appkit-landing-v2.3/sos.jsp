@@ -1,10 +1,10 @@
-<%@page import="com.smhrd.domain.UlocationVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<title>Bootstrap 4 theme for developers and startups</title>
+
+	<title>Bootstrap 4 theme for developers and startups</title>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,17 +16,14 @@
     <!-- FontAwesome JS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- Global CSS -->
-    <link rel="stylesheet" href="appkit-landing-v2.3/assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
     <!-- Theme CSS -->  
-    <link id="theme-style" rel="stylesheet" href="appkit-landing-v2.3/assets/css/styles.css">
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     
-
-    <style >
+    <style>
 	*{
 	font-family: 'Jua', sans-serif;
 	}
@@ -57,55 +54,17 @@
 	 font-weight: bolder;
 	 
 	 }
+	 
     </style>
-    
-    <script type="text/javascript">
-    
-    	function uLocationView() {
-			
-    		$.ajax({
-    			url: "Ulocation.do",
-    			type : "get",
-    			data : mem_id,
-    			dataType : "json",
-    			success : function () {
-					alert("됨")
-				},
-    			error : function () {
-					alert("오류!")
-				}
-    		})
-    		
-    		
-		}
-    	
-    	function uview() {
-				"<p>"+obj.hel_number + "</p>""
-    	
-		}
-    
-    </script>
 </head>
-<body style="background-color: pink;">
+<body style="background-color: skyblue;">
 	
-	<%
-    UlocationVO vo = (UlocationVO)session.getAttribute("vo");
-	
-	 if(vo!=null) {
-		    
-		 out.print(vo.getHel_number());   
-		 
-	    }
-		
-    %>
-    
-   
 	 <!-- header 상단바 부분 --> 
     <header id="header" class="header" >  
         <div class="container">       
             <h1 class="logo">
                 <a class="scrollto" href="#hero">
-                    <span class="logo-icon-wrapper"><img class="logo-icon" src="appkit-landing-v2.3/assets/images/kick_icon_F.png" alt="iccon" style=" width: 40px; height: 40px;"></span>
+                    <span class="logo-icon-wrapper"><img class="logo-icon" src="assets/images/kick_icon_F.png" alt="iccon" style=" width: 40px; height: 40px;"></span>
                     <span class="text"><span class="highlight">GO</span>AHEAD</span></a>
             </h1><!--//logo-->
             <nav class="main-nav navbar-expand-md float-right navbar-inverse" role="navigation">
@@ -136,40 +95,72 @@
     <div>
 		<div class="input-group mb-3 search title"  style=" display:block; margin-top: 60px; height: 800px; width: 300px; background-color:#9b979757;" >
 	  		
-	  		<form action="">
-	  		<h4 style="margin-top: 20px; margin-left: 25px; font-weight: bold; font-size: 20px;">고객위치확인</h4>
-	  		<div class="input-group mb-3" style="margin-top: 5px; margin-left:25px; width: 250px">
-			  	
-				  	<input type="text" class="form-control" placeholder="ID를 입력하세요" name="mem_id" style="">
-					<div class="input-group-append">
-					    <a href='javascript:uLocationView()'><button class="btn btn-success" type="submit" style="background-color:Tomato; border: none; width: 50px;">Go</button></a>
-					</div>
+	  		<h4 style="margin-top: 30px; margin-left: 25px; font-weight: bold; font-size: 30px;">🚨SOS🚨<h4>
+	  		<br><br>
+	  		<table style='margin-left: 25px; height: 600px'>
+	  			
+	  			<tr>
+					<th>사고번호  </th>	  		
+					<td>143143</td>	  		
+	  			</tr>
+	  			
+	  			<tr>
+					<th>고객이름  </th>	  		
+					<td>김이름</td>	  		
+	  			</tr>
+	  			
+	  			<tr>
+					<th>아이디　  </th>	  		
+					<td>test</td>	  		
+	  			</tr>
+	  		
+				<tr>
+					<th>비상연락  </th>	  		
+					<td>010-3331-3333</td>	  		
+	  			</tr>	
+	  			
+	  			<tr>
+					<th>혈액형　  </th>	  		
+					<td>ab</td>	  		
+	  			</tr>
+	  			
+	  			<tr>
+					<th>사고유형  </th>	  		
+					<td>교통사고</td>	  		
+	  			</tr>
+						  		
+	  			<tr>
+					<th>이용번호  </th>	  		
+					<td>1431</td>	  		
+	  			</tr>
+	  			
+	  			<tr>
+					<th>발생시간  </th>	  		
+					<td>2021.06.08</td>	  		
+	  			</tr>
+
+	  		</table>
 			  	
 			</div>
-	  		</form>
 	  		
 	  		
 		</div>
     </div>
 		
-	
-	
+
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=cf65f305eeffb142807ebc9a6025b896"></script>
 	<script>
-	
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = { 
-        center: new kakao.maps.LatLng(35.1107911, 126.8773435), // 지도의 중심좌표
+        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
         level: 3 // 지도의 확대 레벨
     };
 
 var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
 // 마커가 표시될 위치입니다 
-// 임의의 값 넣어주기? gps컬럼이 하나라 분리해서 넣어야할것같아여
-		
-		
-var markerPosition  = new kakao.maps.LatLng(35.1107911, 126.8773435); 
+// 위치좌표변경해주기~
+var markerPosition  = new kakao.maps.LatLng(33.450701, 126.570667); 
 
 // 마커를 생성합니다
 var marker = new kakao.maps.Marker({
