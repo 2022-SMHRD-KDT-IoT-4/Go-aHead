@@ -19,7 +19,7 @@ public class returnMotor extends HttpServlet {
 		out.println(module.press);
 		//out.println(module.alcohol);
 		if (module.press > 100) {
-			out.println("pressOn");
+			out.println("p");
 //			System.out.println("presson");
 		} else {
 			out.println("pressOff");
