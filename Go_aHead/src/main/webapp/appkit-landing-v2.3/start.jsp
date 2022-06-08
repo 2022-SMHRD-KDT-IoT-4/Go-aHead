@@ -147,8 +147,8 @@ body {
 
 <div style="display: block; margin-top:30px" >
 <form action="use.do" method="post">
-	<input type="text" class="form-control" placeholder="킥보드 번호를 입력하세요" name="kick_num" style="width:600px; margin-left: 650px;">
-	<input type="text" class="form-control" placeholder="헬멧 번호를 입력하세요" name="hel_num" style="width:600px; margin-left: 650px;">
+	<input type="text" class="form-control" placeholder="킥보드 번호를 입력하세요." name="kick_num" style="width:600px; margin-left: 650px;">
+	<input type="text" class="form-control" placeholder="헬멧 번호를 입력하세요." name="hel_num" style="width:600px; margin-left: 650px;">
 				<button class="btn btn-success btn1" type="submit" 
 				style="background-color:Tomato; border: none; width: 50px;  left: 900px; 
 			    border: none;
