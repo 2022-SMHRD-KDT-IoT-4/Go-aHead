@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        
+        
+<mapper namespace="com.smhrd.dao.UseDAO">
+	<insert id="useInsert" parameterType="useVO">
+		INSERT INTO use_list(use_number, kick_number, hel_number, mem_id)
+		VALUES (use_sqe.NEXTVAL, #{kick_num}, #{hel_num}, #{mem_id})
+	</insert>
+
+
+
+
+</mapper> 

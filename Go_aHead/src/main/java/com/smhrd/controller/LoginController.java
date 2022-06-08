@@ -34,6 +34,7 @@ public class LoginController implements Controller {
 	if(result != null) {
 		HttpSession session = request.getSession();
 		session.setAttribute("member", result);
+		session.setAttribute("mem_id", mem_id);
 	
 		if(result.getMem_num()==1) {
 	moveURL = "admin_main";
