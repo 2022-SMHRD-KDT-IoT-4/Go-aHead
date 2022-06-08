@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -98,8 +99,10 @@ body {
  }
  
 </style>
-<script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	
 </script>
 </head>
 <body>
@@ -146,16 +149,14 @@ body {
 </div>
 
 <div style="display: block; margin-top:30px" >
-<form action="use.do" method="post">
-	<input type="text" class="form-control" placeholder="킥보드 번호를 입력하세요" name="kick_num" style="width:600px; margin-left: 650px;">
-	<input type="text" class="form-control" placeholder="헬멧 번호를 입력하세요" name="hel_num" style="width:600px; margin-left: 650px;">
-				<button class="btn btn-success btn1" type="submit" 
-				style="background-color:Tomato; border: none; width: 50px;  left: 900px; 
-			    border: none;
-			    width: 100px;
-			    display: block;
-			    position: absolute;">이용시작</button>
-</form>
+<input type="text" class="form-control" placeholder="킥보드 번호를 입력하세요" name="" style="width:600px; margin-left: 650px;">
+<input type="text" class="form-control" placeholder="헬멧 번호를 입력하세요" name="" style="width:600px; margin-left: 650px;">
+			<button class="btn btn-success btn1" type="submit" 
+			style="background-color:Tomato; border: none; width: 50px;  left: 900px; 
+		    border: none;
+		    width: 100px;
+		    display: block;
+		    position: absolute;">이용시작</button>
 </div>
 		
 	
