@@ -8,7 +8,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="appkit-landing-v2.3/assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<title>Bootstrap 4 theme for developers and startups</title>
@@ -23,9 +23,9 @@
     <!-- FontAwesome JS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- Global CSS -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <link rel="stylesheet" href="appkit-landing-v2.3/assets/plugins/bootstrap/css/bootstrap.min.css">   
     <!-- Theme CSS -->  
-    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <link id="theme-style" rel="stylesheet" href="appkit-landing-v2.3/assets/css/styles.css">
      <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -54,7 +54,7 @@
         <div class="container">       
             <h1 class="logo">
                 <a class="scrollto" href="#hero">
-                    <span class="logo-icon-wrapper"><img class="logo-icon" src="assets/images/kick_icon_F.png" alt="iccon" style=" width: 40px; height: 40px;"></span>
+                    <span class="logo-icon-wrapper"><img class="logo-icon" src="appkit-landing-v2.3/assets/images/kick_icon_F.png" alt="iccon" style=" width: 40px; height: 40px;"></span>
                     <span class="text"><span class="highlight">GO</span>AHEAD</span></a>
             </h1><!--//logo-->
             <nav class="main-nav navbar-expand-md float-right navbar-inverse" role="navigation">
@@ -84,13 +84,13 @@
 					</nav>			
 			</div>
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
+			<script src="appkit-landing-v2.3/assets/js/jquery.min.js"></script>
+			<script src="appkit-landing-v2.3/assets/js/jquery.scrolly.min.js"></script>
+			<script src="appkit-landing-v2.3/assets/js/jquery.scrollex.min.js"></script>
+			<script src="appkit-landing-v2.3/assets/js/skel.min.js"></script>
+			<script src="appkit-landing-v2.3/assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+			<script src="appkit-landing-v2.3/assets/js/main.js"></script>
 	</body>
 </html>
 
