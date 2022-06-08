@@ -13,7 +13,11 @@
 		</insert>
 		<select id="Login" parameterType="Member" resultType="Member">
 			select * from member where mem_id = #{mem_id} and mem_pw = #{mem_pw}
+		</select>
 		
+		<select id="Location" parameterType="LocationVO" resultType="LocationVO">
+		 	select mem_id from use_list
+		 	where mem_id=#{mem_id} and kick_using==1
 		</select>
 		
   		
