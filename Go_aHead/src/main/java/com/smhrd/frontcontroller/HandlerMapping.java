@@ -6,6 +6,7 @@ import com.smhrd.controller.AccController;
 import com.smhrd.controller.Controller;
 import com.smhrd.controller.JoinController;
 import com.smhrd.controller.LoginController;
+import com.smhrd.controller.LogoutController;
 import com.smhrd.controller.MemberlistController;
 import com.smhrd.controller.UlocationController;
 import com.smhrd.controller.FAQController;
@@ -34,6 +35,8 @@ public class HandlerMapping {
 	mappings.put("/viewUse.do", new ViewUseController());
 	mappings.put("/viewUlocation.do", new ViewUlocationController());
 	mappings.put("/acc.do", new AccController());
+	mappings.put("/logout.do", new LogoutController());
+
 
 	}
 	

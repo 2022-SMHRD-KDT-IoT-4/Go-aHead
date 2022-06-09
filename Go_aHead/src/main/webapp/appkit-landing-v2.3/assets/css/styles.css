@@ -1,18 +1,3 @@
-/*   
- * Template Name: Appkit Landing - Responsive Website Template for Developers
- * Version: 2.3
- * Author: Xiaoying Riley
- * Twitter: @3rdwave_themes
- * Website: https://themes.3rdwavemedia.com/
-*/
-@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
-
-html{
-	@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
-	font-family: 'Jua', sans-serif;
-}
-
-
 body {
   font-family: 'Open Sans', arial, sans-serif;
   color: #494d55;
@@ -1126,5 +1111,7 @@ a:focus {
 	background-image: url('../image/Icon_Check.png');
 	background-size: 6rem 6rem;
 }
+  
+  
   
 }

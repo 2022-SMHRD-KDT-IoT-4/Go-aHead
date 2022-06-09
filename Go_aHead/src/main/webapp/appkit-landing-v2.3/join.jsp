@@ -18,51 +18,29 @@
     <!-- Global CSS -->
     <link rel="stylesheet" href="appkit-landing-v2.3/assets/plugins/bootstrap/css/bootstrap.min.css">   
     <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="appkit-landing-v2.3/assets/css/other.css">
     <link id="theme-style" rel="stylesheet" href="appkit-landing-v2.3/assets/css/styles.css">
      <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <style>
-    body {
-      min-height: 100vh;
+   
 
-      background: -webkit-gradient(linear, left bottom, right top, from(#92b5db), to(#1d466c));
-      background: -webkit-linear-gradient(bottom left, #92b5db 0%, #1d466c 100%);
-      background: -moz-linear-gradient(bottom left, #92b5db 0%, #1d466c 100%);
-      background: -o-linear-gradient(bottom left, #92b5db 0%, #1d466c 100%);
-      background: linear-gradient(to top right, #92b5db 0%, #1d466c 100%);
-    }
-
-    .input-form {
-      max-width: 680px;
-
-      margin-top: 80px;
-      padding: 32px;
-
-      background: #fff;
-      -webkit-border-radius: 10px;
-      -moz-border-radius: 10px;
-      border-radius: 10px;
-      -webkit-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
-      -moz-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
-      box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15)
-    }
+  
   </style>
 </head>
     
-    
-    
 </head>
 
 
-<body>
+<body class="join_body">
 
  <!-- header 상단바 부분 --> 
     <header id="header" class="header">  
         <div class="container">       
             <h1 class="logo">
-                <a class="scrollto" href="#hero">
+                <a class="scrollto" href="Viewmain.do">
                     <span class="logo-icon-wrapper"><img class="logo-icon" src="appkit-landing-v2.3/assets/images/kick_icon_F.png" alt="iccon" style=" width: 40px; height: 40px;"></span>
                     <span class="text"><span class="highlight">GO</span>AHEAD</span></a>
             </h1><!--//logo-->
@@ -77,9 +55,9 @@
                 
                 <div id="navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="nav-item"><a class="nav-link scrollto" href="회원가입">회원가입</a></li>
-                        <li class="nav-item"><a class="nav-link scrollto" href="login.jsp">로그인</a></li>
-                        <li class="nav-item"><a class="nav-link scrollto" href="고객센터">고객센터</a></li>                        
+                        <li class="nav-item"><a class="nav-link scrollto" onclick='location.href="viewJoin.do"'>회원가입</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" onclick='location.href="viewLogin.do"'>로그인</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" onclick='location.href="faq.do"'>고객센터</a></li>                        
 
                     </ul><!--//nav-->
                 </div><!--//navabr-collapse-->
@@ -176,7 +154,7 @@
           <hr class="mb-4">
           
           <div class="mb-4"></div>
-          <button class="btn btn-primary btn-lg btn-block" type="submit">가입 완료</button>
+          <button class="btn btn-primary btn-lg btn-block btncolor" type="submit">가입 완료</button>
           
           
           </div>

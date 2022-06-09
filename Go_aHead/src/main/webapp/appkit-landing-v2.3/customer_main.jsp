@@ -102,7 +102,7 @@
                      <a href="blackbox">블랙박스 확인</a>
                     </div></div></a></li>
                     
-                        <li class="nav-item"><a class="nav-link scrollto" href="main.jsp">로그아웃</a></li>                        
+                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='logout.do'">로그아웃</a></li>                        
 
                     </ul><!--//nav-->
                 </div><!--//navabr-collapse-->     
