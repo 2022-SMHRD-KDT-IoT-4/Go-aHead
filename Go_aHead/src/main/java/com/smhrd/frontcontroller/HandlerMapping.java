@@ -31,7 +31,7 @@ public class HandlerMapping {
 	mappings.put("/faq.do", new FAQController());
 	mappings.put("/use.do", new UseController());
 	mappings.put("/viewUse.do", new ViewUseController());
-	mappings.put("/Ulocation.do", new UlocationController());
+	//mappings.put("/Ulocation.do", new UlocationController());
 	mappings.put("/viewUlocation.do", new ViewUlocationController());
 
 	}
