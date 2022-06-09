@@ -103,6 +103,7 @@
 		
 		console.log(lat)
 		console.log(long)
+		
 		alert( data.mem_id +'님의 위치 확인');
 		lat = data.hel_loc_lat;
 		long = data.hel_loc_long;
