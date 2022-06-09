@@ -15,7 +15,7 @@ public class MemberDAO {
 	private SqlSession sqlSession = null;
 	
 	
-
+	//회원관리 메소드
 	public ArrayList<Member> getAllList() {
 		ArrayList<Member> list = new ArrayList<Member>();
 		try {
@@ -29,7 +29,7 @@ public class MemberDAO {
 		return list;
 	}
 
-
+	// 사용자 위치 메소드 
 	public UlocationVO Ulocation(String mem_id) {
 		UlocationVO vo = new UlocationVO();
 		try {

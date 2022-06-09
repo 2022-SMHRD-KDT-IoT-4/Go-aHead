@@ -13,6 +13,7 @@ public class DAO {
 	private SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
 	private SqlSession sqlSession = null;
 	
+	// 회원가입 메소드
 	public int Join(Member vo) {
 		int row = 0;
 		try {
@@ -25,6 +26,8 @@ public class DAO {
 		}
 		return row;
 	}
+	
+	// 로그인 메소드
 
 	public Member login(Member vo) {
 		Member result = null;
@@ -40,4 +43,5 @@ public class DAO {
 		}
 		return result;
 	}
+	
 }
