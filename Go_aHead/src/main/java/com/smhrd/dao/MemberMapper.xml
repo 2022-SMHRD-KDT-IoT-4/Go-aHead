@@ -13,8 +13,8 @@
 		</insert>
 		<select id="Login" parameterType="Member" resultType="Member">
 			select * from member where mem_id = #{mem_id} and mem_pw = #{mem_pw}
-		
 		</select>
 		
+
   		
         </mapper>

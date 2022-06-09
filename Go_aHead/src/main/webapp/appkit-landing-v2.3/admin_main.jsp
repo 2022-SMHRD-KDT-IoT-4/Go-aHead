@@ -43,10 +43,10 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button><!--//nav-toggle-->
-                
+                	`
                 <div id="navbar-collapse">
                     <ul class="nav navbar-nav">
-                    	<li class="nav-item"><a class="nav-link scrollto" onclick="location.href='#'">회원정보관리</a></li>
+                    	<li class="nav-item"><a class="nav-link scrollto" onclick="location.href='memberlist.do'">회원정보관리</a></li>
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='#'">고객위치확인</a></li>
                         <li class="nav-item"><a class="nav-link scrollto" href="#">킥보드위치</a></li>
                         <li class="nav-item"><a class="nav-link scrollto" href="#">고객센터</a></li>
