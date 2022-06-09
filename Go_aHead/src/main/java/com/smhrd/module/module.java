@@ -12,23 +12,21 @@ public class module extends HttpServlet {
 
 	public static int alcohol = 0;
 	public static int press = 0;
-	
+	public static int magnetic = 0;
 
 protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
-//	if(request.getParameter("alcohol") != null) {
-//		alcohol = Integer.parseInt(request.getParameter("alcohol"));
-//	  }
 	
 	
 	if(request.getParameter("press") != null) {
 		press = Integer.parseInt(request.getParameter("press"));
+		System.out.println("press:"+press);
 	}
 
-//	System.out.println(alcohol);
-//	System.out.println(press);
+	if(request.getParameter("magnetic") != null) {
+		magnetic = Integer.parseInt(request.getParameter("magnetic"));
+		System.out.println("magnetic : "+magnetic);
+	}
 	
-
 
 	
 }
