@@ -5,24 +5,16 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
 public class moduleVO {
-
-	String magnetic; // �پ����� �� 1, ���������� �� 0
-	String alcohol; //���� �������� �����Ͻ� 1, ���ְ� �ƴҽ� 0
-	String press; //�з� �� 1, �з¹� 0
-	String GPS; //�����浵 �� 
-	//3�� ���̷�
-	String camera;
-	String motor;
-	int piezo;
+	String gps_lat;
+	String gps_long;
 	
-	
-	public moduleVO(String alcohol) {
-		this.alcohol = alcohol;
+	public moduleVO(String gps_lat, String gps_long) {
+		super();
+		this.gps_lat = gps_lat;
+		this.gps_long = gps_long;
 	}
 	
-	
-
+ 
 }

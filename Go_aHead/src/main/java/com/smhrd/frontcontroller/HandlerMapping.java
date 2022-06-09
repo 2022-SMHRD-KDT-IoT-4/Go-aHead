@@ -16,6 +16,8 @@ import com.smhrd.controller.ViewLoginController;
 import com.smhrd.controller.ViewMainController;
 import com.smhrd.controller.ViewUlocationController;
 import com.smhrd.controller.ViewUseController;
+import com.smhrd.controller.moduleController;
+import com.smhrd.dao.moduleDAO;
 
 import test.UseController;
 
@@ -38,6 +40,7 @@ public class HandlerMapping {
 	mappings.put("/acc.do", new AccController());
 	mappings.put("/logout.do", new LogoutController());
 	mappings.put("/viewHlocation.do", new ViewHlocationController());
+	mappings.put("/module.do", new moduleController());
 
 	}
 	
