@@ -16,13 +16,14 @@
     <!-- FontAwesome JS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- Global CSS -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <link rel="stylesheet" href="appkit-landing-v2.3/assets/plugins/bootstrap/css/bootstrap.min.css">   
     <!-- Theme CSS -->  
-    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <link id="theme-style" rel="stylesheet" href="appkit-landing-v2.3/assets/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     
 
     <style >
@@ -56,8 +57,34 @@
 	 font-weight: bolder;
 	 
 	 }
-	 
     </style>
+    
+    <script type="text/javascript">
+    
+    	function uLocationView() {
+			
+    		$.ajax({
+    			url: "Ulocation.do",
+    			type : "get",
+    			data : mem_id,
+    			dataType : "json",
+    			success : function () {
+					alert("됨")
+				},
+    			error : function () {
+					alert("오류!")
+				}
+    		})
+    		
+    		
+		}
+    	
+    	function uview() {
+				"<p>"+obj.hel_number + "</p>""
+    	
+		}
+    
+    </script>
 </head>
 <body style="background-color: pink;">
 	
@@ -78,7 +105,7 @@
         <div class="container">       
             <h1 class="logo">
                 <a class="scrollto" href="#hero">
-                    <span class="logo-icon-wrapper"><img class="logo-icon" src="assets/images/kick_icon_F.png" alt="iccon" style=" width: 40px; height: 40px;"></span>
+                    <span class="logo-icon-wrapper"><img class="logo-icon" src="appkit-landing-v2.3/assets/images/kick_icon_F.png" alt="iccon" style=" width: 40px; height: 40px;"></span>
                     <span class="text"><span class="highlight">GO</span>AHEAD</span></a>
             </h1><!--//logo-->
             <nav class="main-nav navbar-expand-md float-right navbar-inverse" role="navigation">
@@ -109,13 +136,13 @@
     <div>
 		<div class="input-group mb-3 search title"  style=" display:block; margin-top: 60px; height: 800px; width: 300px; background-color:#9b979757;" >
 	  		
-	  		<form action="Ulocation.do">
+	  		<form action="">
 	  		<h4 style="margin-top: 20px; margin-left: 25px; font-weight: bold; font-size: 20px;">고객위치확인</h4>
 	  		<div class="input-group mb-3" style="margin-top: 5px; margin-left:25px; width: 250px">
 			  	
 				  	<input type="text" class="form-control" placeholder="ID를 입력하세요" name="mem_id" style="">
 					<div class="input-group-append">
-					    <button class="btn btn-success" type="submit" style="background-color:Tomato; border: none; width: 50px;">Go</button>
+					    <a href='javascript:uLocationView()'><button class="btn btn-success" type="submit" style="background-color:Tomato; border: none; width: 50px;">Go</button></a>
 					</div>
 			  	
 			</div>
