@@ -7,8 +7,13 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class useVO {
-	private String kick_num;
-	private String hel_num;
+public class AccVO {
+	
+	private String mem_name;
 	private String mem_id;
+	private String mem_phone;
+	private String mem_subphone;
+	private String mem_blood;
+	private String use_number;
+	
 }

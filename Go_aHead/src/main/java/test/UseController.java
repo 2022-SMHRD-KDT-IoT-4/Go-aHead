@@ -11,7 +11,7 @@ import org.apache.catalina.Session;
 
 import com.smhrd.controller.Controller;
 import com.smhrd.dao.UseDAO;
-import com.smhrd.domain.useVO;
+import com.smhrd.domain.UseVO;
 
 public class UseController implements Controller {
 
@@ -26,7 +26,7 @@ public class UseController implements Controller {
 		
 		
 		System.out.println(mem_id);
-		useVO vo = new useVO(kick_num, hel_num, mem_id);
+		UseVO vo = new UseVO(kick_num, hel_num, mem_id);
 		UseDAO dao = new UseDAO();
 		int row = dao.useInsert(vo);
 		
