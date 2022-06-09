@@ -9,6 +9,7 @@ import com.smhrd.controller.LoginController;
 import com.smhrd.controller.LogoutController;
 import com.smhrd.controller.MemberlistController;
 import com.smhrd.controller.UlocationController;
+import com.smhrd.controller.ViewHlocationController;
 import com.smhrd.controller.FAQController;
 import com.smhrd.controller.ViewJoinController;
 import com.smhrd.controller.ViewLoginController;
@@ -36,7 +37,7 @@ public class HandlerMapping {
 	mappings.put("/viewUlocation.do", new ViewUlocationController());
 	mappings.put("/acc.do", new AccController());
 	mappings.put("/logout.do", new LogoutController());
-
+	mappings.put("/viewHlocation.do", new ViewHlocationController());
 
 	}
 	

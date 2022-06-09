@@ -16,5 +16,8 @@
 		 	where h.hel_number = u.hel_number and mem_id = #{mem_id} and kick_using = 1
 		</select>
 		
+  		<select id="Hlocation" parameterType="String" resultType="HelmetVO">
+  			select * from helmet where hel_number=#{hel_number}
+  		</select>
   		
         </mapper>
