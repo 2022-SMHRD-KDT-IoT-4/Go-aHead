@@ -15,7 +15,7 @@ public class returnMotor extends HttpServlet {
 	public static int alcohol = 0;
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		int motor=0;
+		int motor=1;
 		
 		if(request.getParameter("alcohol") != null) {
 			alcohol = Integer.parseInt(request.getParameter("alcohol"));

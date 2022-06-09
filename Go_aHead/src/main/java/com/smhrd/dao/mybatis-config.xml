@@ -9,6 +9,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	  <typeAlias type="com.smhrd.domain.UseVO" alias="UseVO"/>
 	  <typeAlias type="com.smhrd.domain.AccVO" alias="AccVO"/>
 	  <typeAlias type="com.smhrd.domain.UlocationVO" alias="UlocationVO"/>
+	   <typeAlias type="com.smhrd.domain.moduleVO" alias="moduleVO"/>
    </typeAliases>
 
    <environments default="development">
@@ -27,6 +28,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
       <mapper resource="com/smhrd/dao/MemberMapper.xml"/>
       <mapper resource="com/smhrd/dao/ListMapper.xml"/>
       <mapper resource="com/smhrd/dao/UseMapper.xml"/>
+      <mapper resource="com/smhrd/dao/moduleMapper.xml"/>
    </mappers>
 
 

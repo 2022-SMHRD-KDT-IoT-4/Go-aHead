@@ -13,7 +13,8 @@ public class module extends HttpServlet {
 	public static int alcohol = 0;
 	public static int press = 0;
 	public static int magnetic = 0;
-
+	public static String gps_lat = "23.4";
+	public static String gps_long = "44.1";
 protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
 	
