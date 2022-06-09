@@ -11,4 +11,5 @@ public class UseVO {
 	private String kick_num;
 	private String hel_num;
 	private String mem_id;
+
 }
