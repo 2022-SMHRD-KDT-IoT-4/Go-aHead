@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
+import com.smhrd.domain.HelmetVO;
 import com.smhrd.domain.Member;
 import com.smhrd.domain.UlocationVO;
 
@@ -40,6 +41,20 @@ public class MemberDAO {
 		} finally {
 			sqlSession.close();
 		}
+		return vo;
+	}
+	
+	public HelmetVO whereHelmet(String hel_number) {
+		HelmetVO vo = new HelmetVO();
+		try {
+			sqlSession = sqlSessionFactory.openSession(true);
+			vo = (HelmetVO)sqlSession.selectOne("com.smhrd.dao.MemberDAO.Hlocation", hel_number);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		
 		return vo;
 	}
 
