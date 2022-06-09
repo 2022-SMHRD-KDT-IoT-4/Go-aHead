@@ -19,26 +19,14 @@
     <link rel="stylesheet" href="appkit-landing-v2.3/assets/plugins/bootstrap/css/bootstrap.min.css">   
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="appkit-landing-v2.3/assets/css/styles.css">
-    
-    <style>
-    .gradient-custom {
-/* fallback for old browsers */
-background: #6a11cb;
-
-/* Chrome 10-25, Safari 5.1-6 */
-background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
-
-/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
-}
-    </style>
+    <link id="theme-style" rel="stylesheet" href="appkit-landing-v2.3/assets/css/other.css">
 </head> 
 
-<body>
+<body class="login_body">
 <%
 	Member vo = (Member)session.getAttribute("member");
 %>
-<header id="header" class="header" style=background-color: white;>  
+	<header id="header" class="header" style=background-color: white;>  
         <div class="container">       
             <h1 class="logo">
                 <a class="scrollto" href="#hero">
@@ -65,7 +53,8 @@ background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 
             </nav><!--//main-nav-->                     
         </div><!--//container-->
     </header><!--//header-->
-<section class="vh-100 gradient-custom">
+    
+<section class="gradient-custom">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-12 col-md-8 col-lg-6 col-xl-5">
