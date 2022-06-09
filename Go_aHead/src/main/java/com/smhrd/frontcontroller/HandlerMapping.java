@@ -2,6 +2,7 @@ package com.smhrd.frontcontroller;
 
 import java.util.HashMap;
 
+import com.smhrd.controller.AccController;
 import com.smhrd.controller.Controller;
 import com.smhrd.controller.JoinController;
 import com.smhrd.controller.LoginController;
@@ -32,6 +33,7 @@ public class HandlerMapping {
 	mappings.put("/use.do", new UseController());
 	mappings.put("/viewUse.do", new ViewUseController());
 	mappings.put("/viewUlocation.do", new ViewUlocationController());
+	mappings.put("/acc.do", new AccController());
 
 	}
 	

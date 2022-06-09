@@ -1,9 +1,11 @@
+<%@page import="com.smhrd.domain.AccVO"%>
+<%@page import="com.smhrd.domain.UseVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-
+<% AccVO vo = (AccVO)session.getAttribute("acc_vo"); %>
 	<title>Bootstrap 4 theme for developers and startups</title>
     <!-- Meta -->
     <meta charset="utf-8">
@@ -16,9 +18,9 @@
     <!-- FontAwesome JS -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- Global CSS -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <link rel="stylesheet" href="appkit-landing-v2.3/assets/plugins/bootstrap/css/bootstrap.min.css">   
     <!-- Theme CSS -->  
-    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <link id="theme-style" rel="stylesheet" href="appkit-landing-v2.3/assets/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
@@ -64,7 +66,7 @@
         <div class="container">       
             <h1 class="logo">
                 <a class="scrollto" href="#hero">
-                    <span class="logo-icon-wrapper"><img class="logo-icon" src="assets/images/kick_icon_F.png" alt="iccon" style=" width: 40px; height: 40px;"></span>
+                    <span class="logo-icon-wrapper"><img class="logo-icon" src="appkit-landing-v2.3/assets/images/kick_icon_F.png" alt="iccon" style=" width: 40px; height: 40px;"></span>
                     <span class="text"><span class="highlight">GO</span>AHEAD</span></a>
             </h1><!--//logo-->
             <nav class="main-nav navbar-expand-md float-right navbar-inverse" role="navigation">
@@ -99,44 +101,35 @@
 	  		<br><br>
 	  		<table style='margin-left: 25px; height: 600px'>
 	  			
-	  			<tr>
-					<th>사고번호  </th>	  		
-					<td>143143</td>	  		
-	  			</tr>
-	  			
+
 	  			<tr>
 					<th>고객이름  </th>	  		
-					<td>김이름</td>	  		
+					<td><%= vo.getMem_name() %></td>	  		
 	  			</tr>
 	  			
 	  			<tr>
 					<th>아이디　  </th>	  		
-					<td>test</td>	  		
+					<td><%= vo.getMem_id() %></td>	  		
 	  			</tr>
 	  		
 				<tr>
-					<th>비상연락  </th>	  		
-					<td>010-3331-3333</td>	  		
+					<th>고객연락처 </th>	  		
+					<td><%= vo.getMem_phone() %></td>	  		
 	  			</tr>	
 	  			
 	  			<tr>
 					<th>혈액형　  </th>	  		
-					<td>ab</td>	  		
+					<td><%= vo.getMem_blood() %></td>	  		
 	  			</tr>
 	  			
 	  			<tr>
-					<th>사고유형  </th>	  		
-					<td>교통사고</td>	  		
+					<th>비상연락망  </th>	  		
+					<td><%= vo.getMem_subphone() %>)</td>	  		
 	  			</tr>
 						  		
 	  			<tr>
 					<th>이용번호  </th>	  		
-					<td>1431</td>	  		
-	  			</tr>
-	  			
-	  			<tr>
-					<th>발생시간  </th>	  		
-					<td>2021.06.08</td>	  		
+					<td><%= vo.getUse_number() %></td>	  		
 	  			</tr>
 
 	  		</table>

@@ -27,7 +27,7 @@ public class UseDAO {
 		AccVO vo = null;
 		try {
 			sqlSession = sqlSessionFactory.openSession(true);
-			vo = (AccVO)sqlSession.selectOne("com.smhrd.dao.UseDAO.accView", hel_num);
+			vo = (AccVO)sqlSession.selectOne("com.smhrd.dao.UseDAO.accSelectOne", hel_num);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
