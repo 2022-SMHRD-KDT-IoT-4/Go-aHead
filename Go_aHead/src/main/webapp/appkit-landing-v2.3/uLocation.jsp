@@ -19,49 +19,19 @@
     <link rel="stylesheet" href="appkit-landing-v2.3/assets/plugins/bootstrap/css/bootstrap.min.css">   
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="appkit-landing-v2.3/assets/css/styles.css">
+    <link id="theme-style" rel="stylesheet" href="appkit-landing-v2.3/assets/css/other.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   	<script src="http://code.jquery.com/jquery-latest.js"></script>
     
 
     <style >
-	*{
-	font-family: 'Jua', sans-serif;
-	}
 	
-	.header {
 	
-	position: static;
-	}
-	
-	.title {
-	
-	background-color: pink;
-	position: absolute;
-	top: 0px;
-	left: 0px
-	
-	}
-	
-	#map {
-	
-	margin-bottom: 50px;
-	position: fixed!important;
-	
-	}
-	
-	 .title2 {
-	 font-size: 30px;
-	 font-weight: bolder;
-	 
-	 }
     </style>
     
     <script type="text/javascript">
-    
-    
     
     $(document).ready(function() {
     	mapload();
@@ -121,27 +91,22 @@
 			list += "</tr>"
 			
 			list += "<tr>"
-				list += "<td>헬멋번호</td>"
+				list += "<td> 헬멋번호</td>"
 				list += "<td>"+data.hel_number+"</td>"
 			list += "</tr>"
 
 			list +="</table>"
 		
 		$('#list').html(list);
-
 			
 	}
 
-			
-    	
-    
     </script>
 </head>
-<body style="background-color: pink;">
-	
-   
+
+<body>
 	 <!-- header 상단바 부분 --> 
-    <header id="header" class="header" >  
+    <header id="header" class="header lo-header" >  
         <div class="container">       
             <h1 class="logo">
                 <a class="scrollto" href="#hero">
@@ -157,36 +122,32 @@
                         <span class="icon-bar"></span>
                     </button><!--//nav-toggle-->
                 
-                <div id="navbar-collapse">
+ 				<div id="navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewLogin.do'">고객위치확인</a></li>
-                        <li class="nav-item"><a class="nav-link scrollto" href="헬멧위치확인">헬멧위치확인</a></li>
-                        <li class="nav-item"><a class="nav-link scrollto" href="고객센터">고객센터</a></li>
-                        <li class="nav-item"><a class="nav-link scrollto" href="Logout.do">로그아웃</a></li>                        
-
+                       <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='#회원정보관리'">회원정보관리</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewUlocation.do'">고객위치확인</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewHlocation.do'">킥보드위치</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='faq.do'">고객센터</a></li>            
+                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='logout.do'">로그아웃</a></li>            
                     </ul><!--//nav-->
-                </div><!--//navabr-collapse-->
+                </div><!--//navabr-collapse-->     
             </nav><!--//main-nav-->                     
         </div><!--//container-->
     </header><!--//header-->
     
     
-    <div id="map" style=" width :100%;height:800px; "></div>
+    <div id="map"></div>
     
     <div>
-		<div class="input-group mb-3 search title"  style=" display:block; margin-top: 60px; height: 800px; width: 300px; background-color:#9b979757;" >
-	  		
-	  		<h4 style="margin-top: 20px; margin-left: 25px; font-weight: bold; font-size: 20px;">고객위치확인</h4>
-	  		<div   class="input-group mb-3" style="margin-top: 5px; margin-left:25px; width: 250px">
-			  	
-				  	<input id = "inputbox" type="text" class="form-control" placeholder="ID를 입력하세요">
-					<div class="input-group-append">
-					   <button id="inputbtn"class="btn btn-success" type="submit" style="background-color:Tomato; border: none; width: 50px;">Go</button>
-					</div>
+		<div class="input-group mb-3 search left-box">
+	  		<h4 class="lo-title">고객위치확인</h4>
+	  		<div class="input-group mb-3 lo-input">
+				<input id = "inputbox" type="text" class="form-control" placeholder="아이디를 입력하세요">
+				<div class="input-group-append">
+					<button id="inputbtn" class="btn btn-primary disabled lo-btn" type="submit">Go</button>
+				</div>
 			</div>
-	  		
 	  		<div id ="list"></div>
-	  		
 		</div>
     </div>
 		
