@@ -20,29 +20,55 @@
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="appkit-landing-v2.3/assets/css/styles.css">
     <link id="theme-style" rel="stylesheet" href="appkit-landing-v2.3/assets/css/other.css">
-    
-<style>
- 
- #kick{
- margin-top : 150px;
- margin-left : 21%;
- }
- 
- #btn1{
-    background-color: Tomato;
-    border: none;
-    width: 100px;
-    display: block;
-    position: absolute;
-   
- }
- #a1{
- 
- }
- 
-</style>
-
+    <link rel="stylesheet" href="appkit-landing-v2.3/assets/startmodal.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  	<script src="http://code.jquery.com/jquery-latest.js"></script>
 </head>
+
+<script>
+	
+$(document).ready(function() {
+	$('#start-btn').click(function() {
+		kickStart();
+	})
+})
+
+
+function kickStart() {
+
+	$.ajax({
+		url : "use.do",
+		type : "get",
+		dataType : "json",
+		data : {
+			"kick_num" : $('#kick_num_input').val(),
+			"hel_num" : $('#het_num_input').val()
+			
+		},
+		
+		success : useList,
+			
+		error: function () {
+			alert('error');
+		}
+		
+	})
+
+	
+}
+
+	function useList() {
+		alert('성공');
+		
+	}
+
+
+
+</script>
+
+
 
  <body>
     <!-- header 상단바 부분 --> 
@@ -83,34 +109,63 @@
 
 
 
+<div id="map"></div>
+ <div class="start-section">
 
-
-<div id="a1" style="margin-top : 90px;">
-   <h3 style="margin-left:400px;">킥보드 위치확인</h3>
-<div id="map" style="width:55%;height:500px; margin-left:400px;"></div>
+<div class ="start-tag">
+   		<input type="text" class="form-control start-input" id ="kick_num_input" placeholder="킥보드 번호를 입력하세요." name="kick_num">
+   		<input type="text" class="form-control start-input" id ="het_num_input" placeholder="헬멧 번호를 입력하세요." name="hel_num">
+   		<button id="show" type="submit" class="btn btn-success" id ="start-btn">이용시작</button>           
 </div>
+ 
+ 
+ 
+<div class="background">
+  <div class="window">
+    <div class="popup">
+	<table>
+	
+		<tr>
+			<td>테스트</td>
+			<td>이용시작한 시간</td>
+		</tr>
+		
+				<tr>
+			<td>테스트</td>
+			<td>킥보드 번호</td>
+		</tr>
+		
+				<tr>
+			<td>테스트</td>
+			<td>내아이디</td>
+		</tr>
+		
+	</table>
+     <button id="close" type="submit" class="btn btn-success" id ="stop-btn" >이용종료</button>  
+    </div>
+  </div>
+</div>
+ 
+<!-- 
+이용시작 -> 
+mem_id
+kick_num
+het_num
+ -->
 
+ 
+ 
+ 
+ 
+ </div>  
+
+<h3 class="use-title">킥보드 위치확인</h3>
+   
+   
 <div style="display: block; margin-top:30px" >
-<form action="use.do?motor=1" method="post">
-   <input type="text" class="form-control" placeholder="킥보드 번호를 입력하세요." name="kick_num" style="width:600px; margin-left: 650px;">
-   <input type="text" class="form-control" placeholder="헬멧 번호를 입력하세요." name="hel_num" style="width:600px; margin-left: 650px;">
-            <button class="btn btn-success btn1" type="submit" 
-            style="background-color:Tomato; border: none; width: 50px;  left: 900px; 
-             border: none;
-             width: 100px;
-             display: block;
-             position: absolute;">이용시작</button>
-</form>
+
 </div>
       
-
-
-
-
-
-
-
-
 
 
    
@@ -151,6 +206,22 @@ for (var i = 0; i < positions.length; i ++) {
         image : markerImage // 마커 이미지 
     });
 }
+
+
+// 모달팝업 자스
+
+function show () {
+  document.querySelector(".background").className = "background show";
+}
+
+function close () { 
+  document.querySelector(".background").className = "background";
+}
+
+document.querySelector("#show").addEventListener('click', show);
+document.querySelector("#close").addEventListener('click', close);
+
+
 </script>
 </body>
 </html>

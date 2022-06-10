@@ -52,7 +52,9 @@
 			url : "Ulocation.do",
 			type : "get",
 			dataType : "json",
-			data : {"mem_id" : $('#inputbox').val()},
+			data : {
+				"mem_id" : $('#inputbox').val()
+				},
 			
 			// 데이터보내기 성공 받는것부터 오류ㅜ..인것같음
 			success : uLoList,
