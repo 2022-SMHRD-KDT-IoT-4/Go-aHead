@@ -30,7 +30,7 @@ public class UseController extends HttpServlet {
 		
 		String hel_num = request.getParameter("hel_num");
 		String kick_num = request.getParameter("kick_num");
-		String mem_id = (String) session.getAttribute("mem_id");
+		String mem_id = (String)session.getAttribute("mem_id");
 		System.out.println("ajax통신 성공");
 		
 		System.out.println(mem_id);
@@ -38,9 +38,16 @@ public class UseController extends HttpServlet {
 		System.out.println(kick_num);
 		
 		UseVO vo = new UseVO(kick_num, hel_num, mem_id);
+		
 		UseDAO dao = new UseDAO();
 		int row = dao.useInsert(vo);
+
 		UseVO result = dao.useList(mem_id);
+		
+		System.out.println(result.getStart_time());
+		System.out.println(result.getHel_num());
+		System.out.println(result.getKick_num());
+		System.out.println(result.getMem_id());
 		
 		Gson g = new Gson();
 		String json = g.toJson(result);

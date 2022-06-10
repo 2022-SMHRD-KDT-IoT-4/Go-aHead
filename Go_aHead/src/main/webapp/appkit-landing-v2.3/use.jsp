@@ -1,3 +1,4 @@
+<%@page import="com.smhrd.domain.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -27,12 +28,20 @@
   	<script src="http://code.jquery.com/jquery-latest.js"></script>
 </head>
 
+ <% Member member = (Member)session.getAttribute("member"); %>
+
 <script>
 	
 $(document).ready(function() {
 	$('#start-btn').click(function() {
 		kickStart();
+		
 	})
+	
+	$('#stop-btn').click(function() {
+		kickStop();
+	})
+
 })
 
 
@@ -44,28 +53,76 @@ function kickStart() {
 		dataType : "json",
 		data : {
 			"kick_num" : $('#kick_num_input').val(),
-			"hel_num" : $('#het_num_input').val()
+			"hel_num" : $('#het_num_input').val(),
 			
 		},
 		
-		success : useList,
+		success : useList, 
 			
 		error: function () {
 			alert('error');
 		}
 		
 	})
-
 	
 }
 
-	function useList() {
-		alert('성공');
+	function useList(data) {
+		
 		console.log("성공")
+		console.log(data)
+
+		document.querySelector(".background").className = "background show";
+		
+		var list = "<table>";
+		
+		list += "<tr>"
+			list += "<td>이용시작 시간</td>"
+			list += "<td>"+data.start_time+"</td>"
+		list += "</tr>"
+		
+		list += "<tr>"
+			list += "<td>헬멧번호</td>"
+			list += "<td>"+data.hel_number+"</td>"
+		list += "</tr>"
+		
+			list += "<tr>"
+				list += "<td>아이디</td>"
+				list += "<td>"+data.mem_id+"</td>"
+			list += "</tr>"
+
+		list +="</table>"
+	
+		$('#useListTable').html(list)
+
 		
 	}
 
 
+	function kickStop() {
+		   
+		   $.ajax({
+		      url : "stop.do",
+		      type : "get",
+		      data : {
+		         "mem_id" : $('#mem_id').val()
+		      },
+		      
+		      success : stop, 
+		         
+		      error: function () {
+		         alert('error');
+		      }
+		      
+		   })
+		   
+		}
+	
+	
+	function stop () { 
+		console.log('종료완료');
+	  	document.querySelector(".background").className = "background";
+	}
 
 </script>
 
@@ -116,6 +173,7 @@ function kickStart() {
 <div class ="start-tag">
    		<input type="text" class="form-control start-input" id ="kick_num_input" placeholder="킥보드 번호를 입력하세요." name="kick_num">
    		<input type="text" class="form-control start-input" id ="het_num_input" placeholder="헬멧 번호를 입력하세요." name="hel_num">
+   		<input type="hidden" id="mem_id" value=<%=member.getMem_id()%>>
    		<button  type="button" class="btn btn-success" id ="start-btn">이용시작</button>           
 </div>
  
@@ -124,35 +182,15 @@ function kickStart() {
 <div class="background">
   <div class="window">
     <div class="popup">
-	<table>
 	
-		<tr>
-			<td>테스트</td>
-			<td>이용시작한 시간</td>
-		</tr>
-		
-				<tr>
-			<td>테스트</td>
-			<td>킥보드 번호</td>
-		</tr>
-		
-				<tr>
-			<td>테스트</td>
-			<td>내아이디</td>
-		</tr>
-		
-	</table>
-     <button id="close" type="submit" class="btn btn-success" id ="stop-btn" >이용종료</button>  
+	<div id ="useListTable">
+	</div>
+	
+     <button type="submit" class="btn btn-success" id ="stop-btn" >이용종료</button>  
     </div>
   </div>
 </div>
  
-<!-- 
-이용시작 -> 
-mem_id
-kick_num
-het_num
- -->
 
  
  
@@ -209,18 +247,6 @@ for (var i = 0; i < positions.length; i ++) {
 }
 
 
-// 모달팝업 자스
-
-function show () {
-  document.querySelector(".background").className = "background show";
-}
-
-function close () { 
-  document.querySelector(".background").className = "background";
-}
-
-document.querySelector("#show").addEventListener('click', show);
-document.querySelector("#close").addEventListener('click', close);
 
 
 </script>
