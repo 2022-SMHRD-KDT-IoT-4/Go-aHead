@@ -16,13 +16,18 @@ public class module extends HttpServlet {
 	public static int magnetic = 0;
 	public static String gps_lat = "";
 	public static String gps_long = "";
-
+	public static int shock= 0;
 protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
 	HttpSession session = request.getSession();
 	//int motor = Integer.parseInt((String)session.getAttribute("motor"));
 	//System.out.println(motor);
 
+	//자이로
+	if(request.getParameter("shock") != null) {
+		shock = Integer.parseInt(request.getParameter("shock"));
+		System.out.println("shock:"+shock);
+	}
 	// GPS 위도
 	if(request.getParameter("gps_lat") != null) {
 		gps_lat = request.getParameter("gps_lat");
