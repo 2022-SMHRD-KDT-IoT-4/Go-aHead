@@ -29,12 +29,15 @@ public class stopController extends HttpServlet {
 		System.out.println(mem_id);
 		
 		UseDAO dao = new UseDAO();
-		int row = dao.stop(mem_id);
+		dao.stop(mem_id);
 		
-		System.out.println("json성공!");
-	       PrintWriter out =response.getWriter();
-	       response.setContentType("text/json;charset=utf-8");
-	       out.println(row);
+		//Gson g = new Gson();
+//		String json = g.toJson(result);
+//		System.out.println("json성공!");
+//	    PrintWriter out =response.getWriter();
+//	    response.setContentType("text/json;charset=utf-8");
+//	    out.println(json);
+
 	
 	
 	
