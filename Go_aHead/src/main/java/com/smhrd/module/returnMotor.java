@@ -17,7 +17,10 @@ public class returnMotor extends HttpServlet {
 	public static int alcohol = 0;
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
-		int motor = Integer.parseInt((String)session.getAttribute("motor"));
+		int motor = 0;
+		if((String)session.getAttribute("motor")!=null) {
+		motor = Integer.parseInt((String)session.getAttribute("motor"));
+		}
 		System.out.println(motor);
 		
 		if(request.getParameter("alcohol") != null) {
@@ -29,10 +32,10 @@ public class returnMotor extends HttpServlet {
 		
 		if (module.press > 10&&motor==1) {
 			out.println("1");
-			//System.out.println("presson");
+			System.out.println("presson");
 		} else if(motor==0) {
 			out.println("2");
-//			System.out.println("pressoff");
+			System.out.println("motorStop");
 		} else {
 			out.println("0");
 //			System.out.println("pressoff");
