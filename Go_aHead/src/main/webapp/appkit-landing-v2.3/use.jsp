@@ -35,6 +35,7 @@
 $(document).ready(function() {
 	$('#start-btn').click(function() {
 		kickStart();
+		motorStart();
 		
 	})
 	
@@ -65,6 +66,18 @@ function kickStart() {
 		
 	})
 	
+}
+
+function motorStart() {
+	$.ajax({
+		url : "returnMotor",
+		type : "get",
+		data : {"motor" : 1},
+		success : console.log("success"),
+		error : function(){
+			alert('error');
+		}
+	})
 }
 
 	function useList(data) {
