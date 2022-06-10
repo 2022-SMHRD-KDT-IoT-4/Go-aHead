@@ -16,8 +16,7 @@ import javax.servlet.http.HttpSession;
 public class returnMotor extends HttpServlet {
 	public static int alcohol = 0;
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HttpSession session = request.getSession();
-		int motor = Integer.parseInt((String)session.getAttribute("motor"));
+		int motor = Integer.parseInt((String)request.getAttribute("motor"));
 		System.out.println(motor);
 		
 		if(request.getParameter("alcohol") != null) {

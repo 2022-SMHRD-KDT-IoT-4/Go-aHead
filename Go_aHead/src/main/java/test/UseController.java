@@ -2,6 +2,7 @@ package test;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -25,12 +26,19 @@ public class UseController implements Controller {
 		String kick_num = request.getParameter("kick_num");
 		String hel_num = request.getParameter("hel_num");
 		
-		session.setAttribute("motor", motor);
+		if (motor != null) {
+			System.out.println("motor는 있다!");
+		}
+		
+//		session.setAttribute("motor", motor);
 		UseVO vo = new UseVO(kick_num, hel_num, mem_id);
 		UseDAO dao = new UseDAO();
 		int row = dao.useInsert(vo);
 		
 		if (row > 0) {
+			request.setAttribute("motor", motor);
+			RequestDispatcher rd = request.getRequestDispatcher("returnMortor");
+			rd.forward(request, response);
 			
 		}
 		
