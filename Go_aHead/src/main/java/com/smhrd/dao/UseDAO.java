@@ -54,4 +54,25 @@ public class UseDAO {
 		return result;
 		
 	}
+
+	public int stop(String mem_id) {
+		
+		int row = 0;
+		
+		try {
+			
+			sqlSession = sqlSessionFactory.openSession(true);
+			row =sqlSession.update("com.smhrd.dao.UseDAO.stop", mem_id);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		
+		}finally {
+			sqlSession.close();
+		}
+		
+		return row;
+		
+		
+	}
 }

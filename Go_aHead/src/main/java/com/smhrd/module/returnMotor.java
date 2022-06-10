@@ -16,8 +16,10 @@ import javax.servlet.http.HttpSession;
 public class returnMotor extends HttpServlet {
 	public static int alcohol = 0;
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		HttpSession session = request.getSession();
 		int motor = 0;
+		
 		if((String)session.getAttribute("motor")!=null) {
 		motor = Integer.parseInt((String)session.getAttribute("motor"));
 		}
