@@ -31,54 +31,20 @@ public class UseController extends HttpServlet {
 		String hel_number = request.getParameter("hel_num");
 		String kick_number = request.getParameter("kick_num");
 		String mem_id = (String)session.getAttribute("mem_id");
-		System.out.println("ajax통신 성공");
-		
-		System.out.println(mem_id);
-		System.out.println(hel_number);
-		System.out.println(kick_number);
 		
 		UseVO vo = new UseVO(kick_number, hel_number, mem_id);
 		
 		UseDAO dao = new UseDAO();
-		int row = dao.useInsert(vo);
+		dao.useInsert(vo);
 
 		UseVO result = dao.useList(mem_id);
-		
-		System.out.println(result.getStart_time());
-		System.out.println(result.getHel_number());
-		System.out.println(result.getKick_number());
-		System.out.println(result.getMem_id());
+
 		
 		Gson g = new Gson();
 		String json = g.toJson(result);
-		System.out.println("json성공!");
 	    PrintWriter out =response.getWriter();
 	    response.setContentType("text/json;charset=utf-8");
 	    out.println(json);
-
-		
-//		System.out.println(vo.getHel_loc_lat());
-//		response.setContentType("text/json;charset=utf-8");
-//	    PrintWriter out =response.getWriter();
-//	    out.println(json);
-//		
-		
-
-//		
-//		String motor = request.getParameter("motor");
-//		String mem_id = (String)session.getAttribute("mem_id");
-//		String kick_num = request.getParameter("kick_num");
-//		String hel_num = request.getParameter("hel_num");
-		
-//		session.setAttribute("motor", motor);
-//		UseVO vo = new UseVO(kick_num, hel_num, mem_id);
-//		UseDAO dao = new UseDAO();
-//		int row = dao.useInsert(vo);
-//		
-//		if (row > 0) {
-//			
-//		}
-//		
 	}
 
 }

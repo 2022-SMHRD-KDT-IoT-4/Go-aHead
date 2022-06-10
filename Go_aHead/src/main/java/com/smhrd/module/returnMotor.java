@@ -17,19 +17,15 @@ public class returnMotor extends HttpServlet {
 	public static int alcohol = 0;
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		HttpSession session = request.getSession();
-		int motor = 0;
-		
-		if((String)session.getAttribute("motor")!=null) {
-		motor = Integer.parseInt((String)session.getAttribute("motor"));
-		}
-		System.out.println(motor);
+		int motor = Integer.parseInt(request.getParameter("motor"));
+		System.out.println("success");
+		System.out.println("motor : " + motor);
 		
 		if(request.getParameter("alcohol") != null) {
 			alcohol = Integer.parseInt(request.getParameter("alcohol"));
 //		    System.out.println(alcohol);
 		}
-		System.out.println(module.press);
+		System.out.println("press값 :" + module.press);
 		PrintWriter out = response.getWriter();
 		
 		if (module.press > 10&&motor==1) {
