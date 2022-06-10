@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @WebServlet("/module")
 public class module extends HttpServlet {
@@ -15,8 +16,13 @@ public class module extends HttpServlet {
 	public static int magnetic = 0;
 	public static String gps_lat = "";
 	public static String gps_long = "";
+
 protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
+	HttpSession session = request.getSession();
+	int motor = Integer.parseInt((String)session.getAttribute("motor"));
+	System.out.println(motor);
+
 	// GPS 위도
 	if(request.getParameter("gps_lat") != null) {
 		gps_lat = request.getParameter("gps_lat");
@@ -41,8 +47,6 @@ protected void service(HttpServletRequest request, HttpServletResponse response)
 		magnetic = Integer.parseInt(request.getParameter("magnetic"));
 		System.out.println("magnetic : "+magnetic);
 	}
-	
-
 	
 }
 
