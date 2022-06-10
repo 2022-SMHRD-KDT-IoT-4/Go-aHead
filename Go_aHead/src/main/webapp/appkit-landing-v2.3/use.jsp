@@ -53,12 +53,10 @@ function kickStart() {
 		dataType : "json",
 		data : {
 			"kick_num" : $('#kick_num_input').val(),
-			"hel_num" : $('#het_num_input').val(),
-			
+			"hel_num" : $('#het_num_input').val()
 		},
 		
 		success : useList, 
-			
 		error: function () {
 			alert('error');
 		}
@@ -107,9 +105,8 @@ function kickStart() {
 		      data : {
 		         "mem_id" : $('#mem_id').val()
 		      },
-		      
+		      dataType : "json",
 		      success : stop, 
-		         
 		      error: function () {
 		         alert('error');
 		      }

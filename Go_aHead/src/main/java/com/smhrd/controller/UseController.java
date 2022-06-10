@@ -28,16 +28,16 @@ public class UseController extends HttpServlet {
 		response.setContentType("text/json;charset=utf-8");
 		HttpSession session = request.getSession();
 		
-		String hel_num = request.getParameter("hel_num");
-		String kick_num = request.getParameter("kick_num");
+		String hel_number = request.getParameter("hel_num");
+		String kick_number = request.getParameter("kick_num");
 		String mem_id = (String)session.getAttribute("mem_id");
 		System.out.println("ajax통신 성공");
 		
 		System.out.println(mem_id);
-		System.out.println(hel_num);
-		System.out.println(kick_num);
+		System.out.println(hel_number);
+		System.out.println(kick_number);
 		
-		UseVO vo = new UseVO(kick_num, hel_num, mem_id);
+		UseVO vo = new UseVO(kick_number, hel_number, mem_id);
 		
 		UseDAO dao = new UseDAO();
 		int row = dao.useInsert(vo);
@@ -45,8 +45,8 @@ public class UseController extends HttpServlet {
 		UseVO result = dao.useList(mem_id);
 		
 		System.out.println(result.getStart_time());
-		System.out.println(result.getHel_num());
-		System.out.println(result.getKick_num());
+		System.out.println(result.getHel_number());
+		System.out.println(result.getKick_number());
 		System.out.println(result.getMem_id());
 		
 		Gson g = new Gson();

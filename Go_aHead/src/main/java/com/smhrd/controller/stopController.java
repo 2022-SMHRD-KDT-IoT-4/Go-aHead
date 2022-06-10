@@ -26,13 +26,12 @@ public class stopController extends HttpServlet {
 		
 		String mem_id = request.getParameter("mem_id");
 		System.out.println("ajax통신 성공");
+		System.out.println(mem_id);
 		
 		UseDAO dao = new UseDAO();
 		dao.stop(mem_id);
 		
 		//Gson g = new Gson();
-		
-		
 //		String json = g.toJson(result);
 //		System.out.println("json성공!");
 //	    PrintWriter out =response.getWriter();
