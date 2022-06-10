@@ -25,7 +25,7 @@ public class returnMotor extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		
 		
-		if (module.press > 50&&motor==1) {
+		if (module.press > 10&&motor==1) {
 			out.println("1");
 			//System.out.println("presson");
 		} else if(motor==0) {
