@@ -18,7 +18,6 @@ public class LogoutController implements Controller {
 			throws ServletException, IOException {
 		
 		HttpSession session = request.getSession();
-		
 		session.invalidate();
 	
 	return "main";

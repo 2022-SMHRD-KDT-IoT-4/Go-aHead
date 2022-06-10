@@ -20,8 +20,8 @@ public class module extends HttpServlet {
 protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
 	HttpSession session = request.getSession();
-	int motor = Integer.parseInt((String)session.getAttribute("motor"));
-	System.out.println(motor);
+	//int motor = Integer.parseInt((String)session.getAttribute("motor"));
+	//System.out.println(motor);
 
 	// GPS 위도
 	if(request.getParameter("gps_lat") != null) {

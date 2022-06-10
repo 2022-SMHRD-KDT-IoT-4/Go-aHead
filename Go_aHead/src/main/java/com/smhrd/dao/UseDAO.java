@@ -1,5 +1,6 @@
 package com.smhrd.dao;
 
+import org.apache.coyote.http11.upgrade.UpgradeServletOutputStream;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
@@ -34,5 +35,44 @@ public class UseDAO {
 			sqlSession.close();
 		}
 		return vo;
+	}
+
+	public UseVO useList(String mem_id) {
+		UseVO result = new UseVO();			
+		
+		try {
+			sqlSession = sqlSessionFactory.openSession(true);
+			result = sqlSession.selectOne("com.smhrd.dao.UseDAO.useList", mem_id);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		
+		}finally {
+			sqlSession.close();
+		}
+		
+		return result;
+		
+	}
+
+	public int stop(String mem_id) {
+		
+		int row = 0;
+		
+		try {
+			
+			sqlSession = sqlSessionFactory.openSession(true);
+			row =sqlSession.update("com.smhrd.dao.UseDAO.stop", mem_id);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		
+		}finally {
+			sqlSession.close();
+		}
+		
+		return row;
+		
+		
 	}
 }
