@@ -23,16 +23,7 @@
      <!-- Bootstrap CSS -->
   	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-  <style>
-   
-
-  
-  </style>
 </head>
-    
-</head>
-
 
 <body class="join_body">
 
@@ -40,7 +31,7 @@
     <header id="header" class="header">  
         <div class="container">       
             <h1 class="logo">
-                <a class="scrollto" href="Viewmain.do">
+                <a class="scrollto" href="viewMain.do">
                     <span class="logo-icon-wrapper"><img class="logo-icon" src="appkit-landing-v2.3/assets/images/kick_icon_F.png" alt="iccon" style=" width: 40px; height: 40px;"></span>
                     <span class="text"><span class="highlight">GO</span>AHEAD</span></a>
             </h1><!--//logo-->
@@ -68,7 +59,7 @@
    <div class="container">
     <div class="input-form-backgroud row">
       <div class="input-form col-md-12 mx-auto">
-        <h4 class="mb-3">회원가입</h4>
+        <h4 class="mb-3 join_title">회원가입</h4>
         <!-- 회원가입 컨트롤러 -->
         <form class="validation-form" action="join.do" method="post" novalidate>
           

@@ -19,55 +19,10 @@
     <link rel="stylesheet" href="appkit-landing-v2.3/assets/plugins/bootstrap/css/bootstrap.min.css">   
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="appkit-landing-v2.3/assets/css/styles.css">
-    <style>
-    .dropbtn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
+	<link id="theme-style" rel="stylesheet" href="appkit-landing-v2.3/assets/css/other.css">
 
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-  background-color: #3e8e41;
-}
-    </style>
 </head>
-<body>
+<body class="main-body">
 	 <!-- header 상단바 부분 --> 
     <header id="header" class="header">  
         <div class="container">       
@@ -77,12 +32,7 @@
                     <span class="text"><span class="highlight">GO</span>AHEAD</span></a>
             </h1><!--//logo-->
             
-            
-            
-            
-            
             <nav class="main-nav navbar-expand-md float-right navbar-inverse" role="navigation">
-                
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
@@ -98,97 +48,92 @@
                           <p>킥보드</p>
                           <div class="dropdown-content">
                      <a href="viewUse.do">이용시작</a>
-                     <a href="end.jsp">이용종료</a>
                      <a href="blackbox">블랙박스 확인</a>
                     </div></div></a></li>
-                    
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='logout.do'">로그아웃</a></li>                        
-
                     </ul><!--//nav-->
                 </div><!--//navabr-collapse-->     
-                                    
-
-<!-- 상단바 바꿀 코드 작성하기! -->                   
             </nav><!--//main-nav-->                     
         </div><!--//container-->
     </header><!--//header-->
     
-    <!-- header 상단바 아래 이미지+소개글 부분 -->
+ <!-- header 상단바 아래 이미지+소개글 부분 -->
     <div id="hero" class="hero-section">
         
         <div id="hero-carousel" class="hero-carousel carousel carousel-fade slide" data-ride="carousel" data-interval="10000">
             
             <div class="figure-holder-wrapper">
-        		<div class="container">
-            		<div class="row justify-content-end">
-                		<div class="figure-holder">
-                	        <img class="figure-image img-fluid" src="appkit-landing-v2.3/assets/images/Img_Home.png" alt="image" style="width: 1000px" />
+              <div class="container">
+                  <div class="row justify-content-end">
+                      <div class="figure-holder">
+                           <img class="figure-image img-fluid" src="appkit-landing-v2.3/assets/images/Img_Home.png" alt="image" style="width: 1000px" />
                         </div><!--//figure-holder-->
-            		</div><!--//row-->
-        		</div><!--//container-->
-    		</div><!--//figure-holder-wrapper-->
+                  </div><!--//row-->
+              </div><!--//container-->
+          </div><!--//figure-holder-wrapper-->
             
-			<!-- Indicators -->
-			<ol class="carousel-indicators">
-				<li class="active" data-slide-to="0" data-target="#hero-carousel"></li>
-				<li data-slide-to="1" data-target="#hero-carousel"></li>
-				<li data-slide-to="2" data-target="#hero-carousel"></li>
-			</ol>
-			
-			<!-- Wrapper for slides -->
-			<div class="carousel-inner">
-    			
-				<div class="carousel-item item-1 active">
-					<div class="item-content container">
-    					<div class="item-content-inner">
-    				        
-				            <h2 class="heading">GO AHEAD <br class="d-none d-md-block">킥보드에 안전을 더하다</h2>
-				            <p class="intro">
-				            사고가 걱정되시나요?
-				            <br>블랙박스에대한 장점 부각
-				            <br>블라블라2
-				            <br>블라블라2</p>
-				            <a class="btn btn-primary btn-cta" href="if(로그인==바로대여.java) else if (로그인!= 로그인페이지.java) /" target="_blank">바로 대여</a>
-    				        
-    					</div><!--//item-content-inner-->
-					</div><!--//item-content-->
-				</div><!--//item-->
-				
-				<div class="carousel-item item-2">
-					<div class="item-content container">
-						<div class="item-content-inner">
-    				        
-				            <h2 class="heading" style="color: black">GO AHEAD</h2>
-				            <p class="intro" style="color: black">안전이 걱정되시나요?
-				            <br>낙상감지기능 부각
-				            <br>골든타임을 확보할 수 있습니다~!!
-				            </p>
-							<a class="btn btn-primary btn-cta" href="if(로그인==바로대여.java) else if (로그인!= 로그인페이지.java)/" target="_blank">바로 대여</a>    				        
-    					</div><!--//item-content-inner-->
-					</div>
-				</div><!--//item-->
-				
-				<div class="carousel-item item-3">
-					<div class="item-content container">
-						<div class="item-content-inner">
-  							<h2 class="haunted-text" class="heading" data-haunted-text>GO AHEAD</h2>
-				            <p class="intro">장점또쓰기~</p>
-				            <a class="btn btn-primary btn-cta" href="if(로그인==바로대여.java) else if (로그인!= 로그인페이지.java)/" target="_blank">Get Started</a>
-    				        
-    					</div><!--//item-content-inner-->
-					</div>
-				</div><!--//item-->
-			</div><!--//carousel-inner-->
+         <!-- Indicators -->
+         <ol class="carousel-indicators">
+            <li class="active" data-slide-to="0" data-target="#hero-carousel"></li>
+            <li data-slide-to="1" data-target="#hero-carousel"></li>
+            <li data-slide-to="2" data-target="#hero-carousel"></li>
+         </ol>
+         
+         <!-- Wrapper for slides -->
+         <div class="carousel-inner">
+             
+            <div class="carousel-item item-1 active">
+               <div class="item-content container">
+                   <div class="item-content-inner">
+                        
+                        <h2 class="heading">GO AHEAD<br class="d-none d-md-block"></h2>
+                        <p class="intro">
+                        <br>
+                        <br></p>
+                        <a class="btn btn-primary btn-cta" href="if(로그인==바로대여.java) else if (로그인!= 로그인페이지.java) /" target="_blank">대여하기</a>
+                        
+                   </div><!--//item-content-inner-->
+               </div><!--//item-content-->
+            </div><!--//item-->
+            
+            <div class="carousel-item item-2">
+               <div class="item-content container">
+                  <div class="item-content-inner">
+                        
+                        <h2 class="heading">GO AHEAD<br class="d-none d-md-block"></h2>
+                        <p class="intro">
+                        <br>
+                        <br>
+                        </p>
+                     <a class="btn btn-primary btn-cta" href="if(로그인==바로대여.java) else if (로그인!= 로그인페이지.java)/" target="_blank">대여하기</a>                        
+                   </div><!--//item-content-inner-->
+               </div>
+            </div><!--//item-->
+            
+            <div class="carousel-item item-3">
+               <div class="item-content container">
+                  <div class="item-content-inner">
+                       <h2 class="haunted-text" class="heading" data-haunted-text>GO AHEAD</h2>
+                        <p class="intro">
+                        <br><br></p>
+                        <a class="btn btn-primary btn-cta" href="if(로그인==바로대여.java) else if (로그인!= 로그인페이지.java)/" target="_blank">대여하기</a>
+                        
+                   </div><!--//item-content-inner-->
+               </div>
+            </div><!--//item-->
+         </div><!--//carousel-inner-->
 
-		</div><!--//carousel-->
+      </div><!--//carousel-->
     </div><!--//hero-->
     
     
     
     <div id="about" class="about-section">
         <div class="container text-center">
-            <h2 class="section-title">GO ADHEAD</h2>
-            <p class="intro">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <h2 class="section-title">킥보드에 안전을 더하다</h2>
+            <p class="intro">이동의 패러다임을 바꾸는 GO AHEAD<br>가고 싶은 곳으로 언제든 갈 수 있도록, 하고 싶었던 것을 언제든 할 수 있도록👌<br>
+            다양한 공유킥보드가 나왔지만 GO AHEAD는 더욱 안전을 위해👌<br>교통혼잡, 대기오염, 주차공간 부족과 같은 문제 개선에 적극 기여하며 <br>
+사람과 도시를 연결하기 위하여 오늘도 노력합니다.<br> 우리는 이동을 통해 아낀 시간이 우리의 삶을 조금 더 나아지게 할 수 있다고 믿습니다.</p>
            
            
             <!-- 필요여부 확인해볼게요 
@@ -206,9 +151,9 @@
                         <div class="figure-holder">
                             <img class="figure-image" src="appkit-landing-v2.3/assets/images/KICK3.png" alt="image" style="width: 300px">
                         </div><!--//figure-holder-->
-                        <h3 class="item-title">GO AHEAD 1</h3>
+                        <h3 class="item-title">분실 방지</h3>
                         <div class="item-desc mb-3">
-                            List one of your product's benefits here. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
+                            GPS를 이용해 헬멧 분실시 고객센터 문의를 통해 위치를 찾아 낼 수 있습니다!
                         </div><!--//item-desc-->
                       <!--  <a class="btn btn-primary" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/appkit-landing-free-bootstrap-theme-for-developers-and-startups/" target="_blank">Find out more</a>-->
                     </div><!--//item-inner-->
@@ -218,9 +163,10 @@
                         <div class="figure-holder">
                             <img class="figure-image" src="appkit-landing-v2.3/assets/images/KICK2.png" alt="image" style="width: 300px">
                         </div><!--//figure-holder-->
-                        <h3 class="item-title">GO AHEAD 2</h3>
+                        <h3 class="item-title">SOS </h3>
                         <div class="item-desc mb-3">
-                            List one of your product's benefits here. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. </div><!--//item-desc-->
+                           헬멧을 통해 사고를 감지하여 일정 시간내 반응이 없을시 가입시 입력한 비상연락망과 119에 도움을 요청합니다!
+                            </div><!--//item-desc-->
                         <!-- <a class="btn btn-primary" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/appkit-landing-free-bootstrap-theme-for-developers-and-startups/" target="_blank">Find out more</a> -->
                     </div><!--//item-inner-->
                 </div><!--//item-->
@@ -229,9 +175,10 @@
                         <div class="figure-holder">
                             <img class="figure-image" src="appkit-landing-v2.3/assets/images/KICK1.png" alt="image" style="width: 300px">
                         </div><!--//figure-holder-->
-                        <h3 class="item-title">GO AHEAD 3</h3>
+                        <h3 class="item-title">블랙박스</h3>
                         <div class="item-desc mb-3">
-                            List one of your product's benefits here. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. </div><!--//item-desc-->
+                            사고 발생 시 사용자가 홈페이지에서 SD카드에 자동 저장되는 블랙박스를 확인하여 처리 할 수 있다!
+                            </div><!--//item-desc-->
                        <!-- <a class="btn btn-primary" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/appkit-landing-free-bootstrap-theme-for-developers-and-startups/" target="_blank">Find out more</a> -->
                     </div><!--//item-inner-->
                 </div><!--//item-->
@@ -243,15 +190,15 @@
     <div id="features" class="features-section" style="background-color: pink">
         <div class="container text-center">
             <h2 class="section-title">GO AHEAD 이용하기!</h2>
-            <p class="intro">You can use this section to list your product features. The screenshots used here were taken from <a href="https://www.uxfordev.com/appify/index.html" target="_blank">Bootstrap 4 admin theme Appify</a></p>
+            <p class="intro">GO AHEAD의 대표적 기능</p>
             
             <section id="safety" class="s-safety target-section"  >
       
               <div class="section-content" style=" padding-bottom: 100px; border-radius: 1rem">
-                  <div class="content-item"><span style="margin-right: 40px">✔ 헬멧 착용</span></div>
-                  <div class="content-item">✔ 운전면허증</div>
-                  <div class="content-item">✔ 동반탑승 금지</div>
-                  <div class="content-item">✔ 음주운전 금지</div>
+                  <div class="content-item"><span style="margin-right: 40px">✔ 사고 감지</span></div>
+                  <div class="content-item">✔ sos 상태확인</div>
+                  <div class="content-item">✔ 블랙 박스</div>
+                  <div class="content-item">✔ 착용 감지</div>
               </div>
       
           </section>
@@ -270,9 +217,22 @@
     
     <div class="team-section" id="team">
         <div class="container text-center">
-            <h2 class="section-title">Our Team</h2>
+            <h2 class="section-title">GO AHEAD Team</h2>
             <div class="story">
-                <p>Introduce your team here. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue</p>
+                <p><strong>▶우리는 빠르게 성장하고 발전합니다 -</strong>
+               그래서 매일 조금씩 더 나아지기 위해 노력합니다.<br><br>
+               <strong>▷우리는 모두 리더입니다 -</strong>
+               내가 시작한 작은 행동이 우리의 모습을 만듭니다.<br><br>
+               <strong>▶우리는 전문가입니다 -</strong>
+               치밀하게 일하는 섬세함이 우리의 경쟁력입니다.<br><br>
+               <strong>▷우리는 서로 이해하기 위해 소통합니다 -</strong>
+               의견을 말할 때 이유와 대안을 충분히 설명합니다.<br><br>
+               <strong>▶우리는 동료와 함께 일합니다 -</strong>
+               혼자 할 수 없는 일도 팀으로는 가능합니다.<br><br>
+               <strong>▷우리는 빠르게 실행합니다 -</strong>
+               깊게 고민했다면 즉시 공유하고 움직입니다.<br><br>
+               <strong>▶우리는 모두 리더입니다 -</strong>
+               GO AHEAD와 라이더님의 행복을 위해 노력합니다.</p>
             </div>
             <div class="members-wrapper row">
                 <div class="item col-md-6 col-12">
@@ -324,76 +284,15 @@
                 </div><!--//item-->
             </div><!--//members-wrapper-->
             <div class="text-center mt-5">
-	            <a class="btn btn-cta btn-primary" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/appkit-landing-free-bootstrap-theme-for-developers-and-startups/" target="_blank">Contact Us</a>
+               <a class="btn btn-cta btn-primary" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/appkit-landing-free-bootstrap-theme-for-developers-and-startups/" target="_blank">Contact Us</a>
             </div>
         </div>
     </div><!--//team-section-->
     
-    <div id="pricing" class="pricing-section">
-        <div class="container text-center">
-            <h2 class="section-title">로그인</h2>
-            <div class="intro">AppKit Landing's future updates are 100% FREE for existing customers</div>
-            <div class="pricing-wrapper row">
-                <div class="item item-1 col-md-4 col-12">
-                    <div class="item-inner">
-                        <h3 class="item-heading">FREE<br><span class="item-heading-desc">(Attribution Required)</span></h3>
-                        <div class="price-figure">
-                            <span class="currency">$</span><span class="number">0</span>
-                        </div><!--//price-figure-->
-                        <ul class="list-unstyled mb-3">
-	                        <li class="mb-2"><i class="fas fa-check"></i> Single installation</li>
-	                        <li class="mb-2"><i class="fas fa-check"></i> Multiple installations</li>
-                            <li class="mb-2"><i class="fas fa-times"></i> Use without attribution link</li>
-                        </ul>
-                        <div class="mb-3"><a href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/appkit-landing-free-bootstrap-theme-for-developers-and-startups/" target="_blank">License Details</a></div>
-                        <a class="btn btn-inverse btn-cta" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/appkit-landing-free-bootstrap-theme-for-developers-and-startups/">Get it now</a>
-                        
-                    </div><!--//item-inner-->
-                </div><!--//item-->
-                <div class="item item-2 col-md-4 col-12">
-                    <div class="item-inner">
-                        <h3 class="item-heading">Single Application<br><span class="item-heading-desc">(Commercial License)</span></h3>
-                       
-                        <div class="price-figure">
-                            <span class="currency">$</span><span class="number">29</span>
-                        </div><!--//price-figure-->
-                        <ul class="list-unstyled mb-3">
-	                        <li class="mb-2"><i class="fas fa-check"></i> Single installation</li>
-	                        <li class="mb-2"><i class="fas fa-times"></i> Multiple installations</li>
-	                        <li class="mb-2"><i class="fas fa-check"></i> Use without attribution link</li>
-                        </ul>
-                        <div class="mb-3"><a href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/appkit-landing-free-bootstrap-theme-for-developers-and-startups/" target="_blank">License Details</a></div>
-                        <a class="btn btn-inverse btn-cta" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/appkit-landing-free-bootstrap-theme-for-developers-and-startups/">Get it now</a>
-                        
-                    </div><!--//item-inner-->
-                </div><!--//item-->
-                
-                <div class="item item-3 col-md-4 col-12">
-                    <div class="item-inner">
-                        <h3 class="item-heading">Multiple Applications<br><span class="item-heading-desc">(Commercial License)</span></h3>
-                        <div class="price-figure">
-                            <span class="currency">$</span><span class="number">99</span>
-                        </div><!--//price-figure-->
-                        <ul class="list-unstyled mb-3">
-	                        <li class="mb-2"><i class="fas fa-check"></i> Single installation</li>
-	                        <li class="mb-2"><i class="fas fa-check"></i> Multiple installations</li>
-	                        <li class="mb-2"><i class="fas fa-check"></i> Use without attribution link</li>
-                        </ul>
-                        <div class="mb-3"><a href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/appkit-landing-free-bootstrap-theme-for-developers-and-startups/" target="_blank">License Details</a></div>
-                        <a class="btn btn-inverse btn-cta" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/appkit-landing-free-bootstrap-theme-for-developers-and-startups/" target="_blank">Get it now</a>
-                        
-                    </div><!--//item-inner-->
-                </div><!--//item-->
-            </div><!--//pricing-wrapper-->
-            
-        </div><!--//container-->
-    </div><!--//pricing-section-->
-   
-    
     <footer class="footer text-center">
         <div class="container">
             <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
-            <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a href="https://themes.3rdwavemedia.com/" target="_blank">Xiaoying Riley</a> for developers</small>
+            <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a href="https://themes.3rdwavemedia.com/" target="_blank">GO AHEAD TEAM</a> for users</small>
             
             
         </div><!--//container-->
@@ -448,6 +347,7 @@
     var getRandomValue = function(min, max) {
       return Math.floor(Math.random() * (max - min + 1)) + min;
     }
+    
     </script>
 </body>
 </html>
