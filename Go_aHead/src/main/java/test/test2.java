@@ -14,8 +14,8 @@ public class test2 extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		
-		String name;
-		int num;
+		int motor = Integer.parseInt(request.getParameter("motorState"));
+		System.out.println(motor);
 	}
 
 }

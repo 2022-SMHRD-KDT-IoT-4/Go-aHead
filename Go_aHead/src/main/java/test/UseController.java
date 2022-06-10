@@ -20,12 +20,12 @@ public class UseController implements Controller {
 			throws ServletException, IOException {
 		HttpSession session = request.getSession();
 		
+		String motor = request.getParameter("motor");
 		String mem_id = (String)session.getAttribute("mem_id");
 		String kick_num = request.getParameter("kick_num");
 		String hel_num = request.getParameter("hel_num");
 		
-		
-		System.out.println(mem_id);
+		session.setAttribute("motor", motor);
 		UseVO vo = new UseVO(kick_num, hel_num, mem_id);
 		UseDAO dao = new UseDAO();
 		int row = dao.useInsert(vo);
@@ -38,3 +38,4 @@ public class UseController implements Controller {
 	}
 
 }
+
