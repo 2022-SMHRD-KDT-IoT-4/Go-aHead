@@ -12,7 +12,7 @@ public class ViewUseController implements Controller {
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
-		return "start";
+		return "use";
 	}
 
 }

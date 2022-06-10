@@ -237,7 +237,7 @@ body {
 	margin-top : 50px;
 }
 
- .start-btn{
+ #start-btn{
     border-radius: 0px;
     position: relative;
     left: 189px;
@@ -256,9 +256,9 @@ body {
   background-color: #c1c1c1b8;
   }   
   
-  .stop-btn{
+  #stop-btn{
   	position: relative;
-    top: 80%;
+    top: 70%;
     left: 45%;
   
   }
