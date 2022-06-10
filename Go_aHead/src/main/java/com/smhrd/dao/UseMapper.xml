@@ -7,7 +7,7 @@
 <mapper namespace="com.smhrd.dao.UseDAO">
 	<insert id="useInsert" parameterType="UseVO">
 		INSERT INTO use_list(use_number, kick_number, hel_number, mem_id)
-		VALUES (use_seq.NEXTVAL, #{kick_num}, #{hel_num}, #{mem_id})
+		VALUES (use_seq.NEXTVAL, #{kick_number}, #{hel_number}, #{mem_id})
 	</insert>
 	
 	<select id="accSelectOne" parameterType="String" resultType="AccVO">
