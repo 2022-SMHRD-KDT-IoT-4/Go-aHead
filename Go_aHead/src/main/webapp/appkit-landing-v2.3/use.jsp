@@ -61,6 +61,7 @@ function kickStart() {
 
 	function useList() {
 		alert('성공');
+		console.log("성공")
 		
 	}
 
@@ -115,7 +116,7 @@ function kickStart() {
 <div class ="start-tag">
    		<input type="text" class="form-control start-input" id ="kick_num_input" placeholder="킥보드 번호를 입력하세요." name="kick_num">
    		<input type="text" class="form-control start-input" id ="het_num_input" placeholder="헬멧 번호를 입력하세요." name="hel_num">
-   		<button id="show" type="submit" class="btn btn-success" id ="start-btn">이용시작</button>           
+   		<button  type="button" class="btn btn-success" id ="start-btn">이용시작</button>           
 </div>
  
  
