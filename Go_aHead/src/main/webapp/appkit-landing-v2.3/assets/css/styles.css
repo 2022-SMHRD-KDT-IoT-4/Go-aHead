@@ -379,7 +379,8 @@ a:focus {
 }
 
 .hero-carousel .carousel-inner .item-1 {
-  background-color: skyblue;
+  /*background-image: url("../images/hero-1.jpg");*/
+  background-color : skyblue;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -387,7 +388,7 @@ a:focus {
 }
 
 .hero-carousel .carousel-inner .item-2 {
-   background: linear-gradient(rgb(198 240 255),#d1f2ff);
+   background: linear-gradient(rgb(135, 235, 230),lightCyan);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -395,7 +396,7 @@ a:focus {
 }
 
 .hero-carousel .carousel-inner .item-3 {
-   background-color : rgb(199, 232, 245);
+   background-color : skyblue;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

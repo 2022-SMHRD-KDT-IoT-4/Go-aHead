@@ -1,3 +1,4 @@
+<%@page import="com.smhrd.domain.Member"%>
 <%@page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -22,6 +23,8 @@
     <link id="theme-style" rel="stylesheet" href="appkit-landing-v2.3/assets/css/other.css">
     
 </head>
+
+
 <body class="main-body">
 
     <!-- header 상단바 부분 --> 
@@ -35,7 +38,7 @@
 
             <nav class="main-nav navbar-expand-md float-right navbar-inverse" role="navigation">
                 
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -43,11 +46,44 @@
                     </button><!--//nav-toggle-->
                 
                 <div id="navbar-collapse">
+                    <% Member member = (Member)session.getAttribute("member"); %>
+                    <%if (member == null) {%>
+                    <!-- 로그인 전 -->
                     <ul class="nav navbar-nav">
                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewJoin.do'">회원가입</a></li>
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewLogin.do'">로그인</a></li>
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='faq.do'">고객센터</a></li>            
                     </ul><!--//nav-->
+                    
+                    <%} else if (member.getMem_num() == 1) { %>
+                    
+                    <!-- admin 로그인 -->
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='memberlist.do'">회원정보관리</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewUlocation.do'">고객위치확인</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewHlocation.do'">킥보드위치</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='faq.do'">고객센터</a></li>            
+                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='logout.do'">로그아웃</a></li>            
+                    </ul><!--//nav-->
+                    
+                    <%} else {%>
+                    
+                    <!-- user 로그인 -->
+                    
+                     <ul class="nav navbar-nav">
+                        <li class="nav-item"><a class="nav-link scrollto" href="마이페이지">마이페이지</a></li>
+                        <li class="nav-item">
+                              <div class="dropdown nav-link scrollt ">
+                          <p>킥보드</p>
+                          <div class="dropdown-content">
+                     <a href="viewUse.do">이용시작</a>
+                     <a href="blackbox">블랙박스 확인</a>
+                    </div></div></a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='logout.do'">로그아웃</a></li>                        
+                    </ul><!--//nav-->
+                    
+                    <%} %>
+                    
                 </div><!--//navabr-collapse-->     
             </nav><!--//main-nav-->                     
         </div><!--//container-->
