@@ -17,9 +17,13 @@ import com.smhrd.domain.moduleVO;
 public class returnMotor extends HttpServlet {
 	static HttpServletRequest requset;
 	public static int alcohol = 0;
-	public static moduleVO vo = (moduleVO)requset.getAttribute("motorVO"); 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int motor = vo.getMotor();
+		HttpSession session = request.getSession();
+		int motor = 0;
+		if (session.getAttribute("motorState") != null) {
+			motor = Integer.parseInt((String)session.getAttribute("motorState"));
+		}
+		
 		int press = module.press;
 		
 		if(request.getParameter("alcohol") != null) {
