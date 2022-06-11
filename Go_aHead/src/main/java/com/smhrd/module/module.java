@@ -17,38 +17,36 @@ public class module extends HttpServlet {
 	public static String gps_lat = "";
 	public static String gps_long = "";
 	public static int shock= 0;
-protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
-	//자이로
-	if(request.getParameter("shock") != null) {
-		shock = Integer.parseInt(request.getParameter("shock"));
-		System.out.println("shock:"+shock);
-	}
-	// GPS 위도
-	if(request.getParameter("gps_lat") != null) {
-		gps_lat = request.getParameter("gps_lat");
-		System.out.println("gps_lat:"+gps_lat);
-	}
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+	//	//자이로
+	//	if(request.getParameter("shock") != null) {
+	//		shock = Integer.parseInt(request.getParameter("shock"));
+	//		System.out.println("shock:"+shock);
+	//	}
+	//	// GPS 위도
+	//	if(request.getParameter("gps_lat") != null) {
+	//		gps_lat = request.getParameter("gps_lat");
+	//		System.out.println("gps_lat:"+gps_lat);
+	//	}
+	//	
+	//	// GPS 경도
+	//	if(request.getParameter("gps_long") != null) {
+	//		gps_long = request.getParameter("gps_long");
+	//		System.out.println("gps_long:"+gps_long);
+	//	}
+		
+		// 압력 센서
+		if(request.getParameter("press") != null) {
+			press = Integer.parseInt(request.getParameter("press"));
+			System.out.println("press:"+press);
+		}
+		// 마그네틱 센서
+		if(request.getParameter("magnetic") != null) {
+			magnetic = Integer.parseInt(request.getParameter("magnetic"));
+			System.out.println("magnetic : "+magnetic);
+		}
 	
-	// GPS 경도
-	if(request.getParameter("gps_long") != null) {
-		gps_long = request.getParameter("gps_long");
-		System.out.println("gps_long:"+gps_long);
 	}
-	
-	// 압력 센서
-	if(request.getParameter("press") != null) {
-		press = Integer.parseInt(request.getParameter("press"));
-		System.out.println("press:"+press);
-	}
-
-	
-	// 마그네틱 센서
-	if(request.getParameter("magnetic") != null) {
-		magnetic = Integer.parseInt(request.getParameter("magnetic"));
-		System.out.println("magnetic : "+magnetic);
-	}
-	
-}
-
 }
