@@ -45,12 +45,13 @@ public class returnMotor extends HttpServlet {
 		if (press > 10&&motor==1) {
 			out.println("1");
 			System.out.println("presson");
-		} else if(motor==2) {
+		} if(motor==2) {
 			out.println("2");
 			System.out.println("motorStop");
-		} else {
+		} 
+			else {
 			out.println("0");
-//			System.out.println("pressoff");
+			System.out.println("nononono");
 		}
 	}
 }
