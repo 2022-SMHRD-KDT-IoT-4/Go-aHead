@@ -26,7 +26,15 @@ public class returnMotor extends HttpServlet {
 		}
 		
 		System.out.println("success");
-		System.out.println("motor : " + motor);
+		System.out.println("first motor data : " + motor);
+		
+		while (true) {
+			System.out.println("while문 motor date : " + motor);
+			
+			if (motor == 0) {
+				break;
+			}
+		}
 		
 		if(request.getParameter("alcohol") != null) {
 			alcohol = Integer.parseInt(request.getParameter("alcohol"));
