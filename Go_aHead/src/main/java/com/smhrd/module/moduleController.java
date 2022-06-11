@@ -21,18 +21,11 @@ public class moduleController extends HttpServlet {
 		System.out.println("moduleController motor data : " + motor);
 		
 		moduleVO vo = new moduleVO(motor);
-		int motorState = vo.getMotor();
+		int motorState1 = vo.getMotor();
+		String motorState = String.valueOf(motorState1);
+		System.out.println("motorState : " + motorState);
 		
-		while (true) {
-			if (motorState == 1) {
-				session.setAttribute("motorState", motorState);
-			} else if (motorState == 0) {
-				session.setAttribute("motorState", motorState);
-				break;
-			}
-			
-		}
-
+		session.setAttribute("motorState", motorState);
 	}
 
 }
