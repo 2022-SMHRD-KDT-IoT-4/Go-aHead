@@ -269,6 +269,16 @@ body {
     background-color: skyblue;
     border-color: skyblue;
   
+  }
+  
+  .bboxdiv{
+      box-sizing: border-box;
+      text-align: center;
+      height: 1000px;
+  }
   
   
+  .bbox {
+  width: 72%;
+  height: 600px;
   }

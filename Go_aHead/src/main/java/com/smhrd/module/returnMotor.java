@@ -18,5 +18,6 @@ public class returnMotor extends HttpServlet {
 		HttpSession session = request.getSession();
 		String motorState = (String)session.getAttribute("motorState");
 		System.out.println(motorState);
+
 	}
 }
