@@ -19,10 +19,6 @@ public class module extends HttpServlet {
 	public static int shock= 0;
 protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
-	HttpSession session = request.getSession();
-	//int motor = Integer.parseInt((String)session.getAttribute("motor"));
-	//System.out.println(motor);
-
 	//자이로
 	if(request.getParameter("shock") != null) {
 		shock = Integer.parseInt(request.getParameter("shock"));
