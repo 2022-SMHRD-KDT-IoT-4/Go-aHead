@@ -19,7 +19,9 @@ public class returnMotor extends HttpServlet {
 		
 		
 		int motor =0;
+		int press = module.press;
 		if(request.getParameter("motor") != null) {
+			
 			 motor = Integer.parseInt(request.getParameter("motor"));
 		    System.out.println("motor : " + motor);
 		    
@@ -28,13 +30,10 @@ public class returnMotor extends HttpServlet {
 		System.out.println("success");
 		System.out.println("first motor data : " + motor);
 		
-		while (true) {
+		
 			System.out.println("while문 motor date : " + motor);
 			
-			if (motor == 0) {
-				break;
-			}
-		}
+		
 		
 		if(request.getParameter("alcohol") != null) {
 			alcohol = Integer.parseInt(request.getParameter("alcohol"));
@@ -43,10 +42,10 @@ public class returnMotor extends HttpServlet {
 //		System.out.println("press값 :" + module.press);
 		PrintWriter out = response.getWriter();
 		
-		if (module.press > 10&&motor==1) {
+		if (press > 10&&motor==1) {
 			out.println("1");
 			System.out.println("presson");
-		} else if(motor==0) {
+		} else if(motor==2) {
 			out.println("2");
 			System.out.println("motorStop");
 		} else {
