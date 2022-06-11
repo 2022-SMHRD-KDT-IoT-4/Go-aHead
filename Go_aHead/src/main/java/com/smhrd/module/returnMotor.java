@@ -17,7 +17,16 @@ public class returnMotor extends HttpServlet {
 	public static int alcohol = 0;
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		int motor = Integer.parseInt(request.getParameter("motor"));
+		
+		int motor =0;
+		int press = module.press;
+		if(request.getParameter("motor") != null) {
+			
+			 motor = Integer.parseInt(request.getParameter("motor"));
+		    System.out.println("motor : " + motor);
+		    
+		}
+		
 		System.out.println("success");
 		System.out.println("first motor data : " + motor);
 		
@@ -25,14 +34,14 @@ public class returnMotor extends HttpServlet {
 			alcohol = Integer.parseInt(request.getParameter("alcohol"));
 //		    System.out.println(alcohol);
 		}
-		
+
 		System.out.println("press값 :" + module.press);
 		PrintWriter out = response.getWriter();
 		
-		if (module.press > 10&&motor==1) {
+		if (press > 10&&motor==1) {
 			out.println("1");
 			System.out.println("presson");
-		} else if(motor==0) {
+		} else if(motor==2) {
 			out.println("2");
 			System.out.println("motorStop");
 		} else {
