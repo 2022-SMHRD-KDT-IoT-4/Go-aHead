@@ -18,13 +18,31 @@ public class returnMotor extends HttpServlet {
 	static HttpServletRequest requset;
 	public static int alcohol = 0;
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HttpSession session = request.getSession();
-		int motor = 0;
-		if (session.getAttribute("motorState") != null) {
-			motor = Integer.parseInt((String)session.getAttribute("motorState"));
-		}
+		
 		
 		int press = module.press;
+		HttpSession session = request.getSession();
+		int motor = 2;
+		boolean btn_state = false;
+		if((moduleVO)session.getAttribute("returnMotor")!=null){
+			moduleVO vo =(moduleVO)session.getAttribute("returnMotor");
+			int motorgo=vo.getMotor();
+			
+			if(press>0&&(motorgo==1)) {
+				 btn_state= true;
+				  System.out.println("11111111");
+			}else if(motorgo==2) {
+				btn_state = false;
+				System.out.println("22222222222");
+			}
+		}
+		
+		if (session.getAttribute("motorState") != null) {
+			motor = Integer.parseInt((String)session.getAttribute("motorState"));
+			
+		}
+		
+		
 		
 		if(request.getParameter("alcohol") != null) {
 			alcohol = Integer.parseInt(request.getParameter("alcohol"));
@@ -32,17 +50,19 @@ public class returnMotor extends HttpServlet {
 		}
 //		System.out.println("press값 :" + module.press);
 		PrintWriter out = response.getWriter();
-		
-		if (press > 10 && motor==1) {
-			out.println("1");
-			System.out.println("presson");
-		} if(motor == 2) {
-			out.println("2");
-			System.out.println("motorStop");
-		} else {
-			out.println("0");
-			System.out.println("nononono");
-		}
+		////----------------------
+//		
+//		if (btn_state) {
+//			out.println("1");
+//			System.out.println("presson");
+//		}else if(btn_state==false) {
+//			out.println("2");
+//			System.out.println("motorStop");
+//		}
+//		 else {
+//			out.println("0");
+//			System.out.println("nononono");
+//		}
 	}
 
 }
