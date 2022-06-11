@@ -68,7 +68,7 @@ function kickStart() {
 
 function motorStart() {
 	$.ajax({
-		url : "returnMotor",
+		url : "moduleController",
 		type : "get",
 		data : {"motor" : 1},
 		success : console.log("success"),
