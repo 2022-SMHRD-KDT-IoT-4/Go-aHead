@@ -10,16 +10,19 @@ public class moduleDAO {
 	private SqlSession sqlSession = null;
 	private SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
 	
-	public int updateGPS(String gps_lat,String gps_long) {
-		moduleVO vo = new moduleVO(gps_lat, gps_long);
+	public int updateGPS(moduleVO vo) {
+		
 		int row =0;
 		try {
 			sqlSession = sqlSessionFactory.openSession(true);
-			row = sqlSession.update("updateGPS", vo);
+			row = sqlSession.update("com.smhrd.dao.moduleDAO.updateGPS", vo);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			sqlSession.close();
+		}
+		if(row>0) {
+			System.out.println("updateGPS 성공");
 		}
 		return row;
 		

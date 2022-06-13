@@ -22,7 +22,7 @@ public class returnMotor extends HttpServlet {
 		
 		int press = module.press;
 		PrintWriter out = response.getWriter();
-		System.out.println("returnMotor press: "+press);
+		//System.out.println("returnMotor press: "+press);
 		//arduino에서 알코올 값 받아오기
 		if (request.getParameter("alcohol") != null) {
 			int alcohol = Integer.parseInt(request.getParameter("alcohol"));
@@ -36,6 +36,9 @@ public class returnMotor extends HttpServlet {
 		if(press>0&&motor==1) {
 			System.out.println("아두이노로 1 간다");
 			out.print("1");
+		} else if (motor == 2 ) {
+			System.out.println("아두이노로 2 간다");
+			out.print("2");
 		}
 	}	
 
