@@ -1,3 +1,4 @@
+<%@page import="com.smhrd.module.module"%>
 <%@page import="com.smhrd.domain.Member"%>
 <%@page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
@@ -21,6 +22,17 @@
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="appkit-landing-v2.3/assets/css/styles.css">
     <link id="theme-style" rel="stylesheet" href="appkit-landing-v2.3/assets/css/other.css">
+    
+    <link id="theme-style" rel="stylesheet" href="appkit-landing-v2.3/assets/css/other.css">
+	<script type="text/javascript">
+	$(document).ready(function () {
+		
+		if(<%=module.shock%> == 1) {
+			sos();
+		} 
+		
+	})
+	</script>
     
 </head>
 
