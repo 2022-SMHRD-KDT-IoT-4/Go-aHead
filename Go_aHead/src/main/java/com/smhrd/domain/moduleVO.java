@@ -11,6 +11,7 @@ public class moduleVO {
 	String gps_lat;
 	String gps_long;
 	int motor;
+	int shock;
 	
 	
 	public moduleVO(String hel_number,String gps_lat, String gps_long) {

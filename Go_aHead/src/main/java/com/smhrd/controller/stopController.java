@@ -12,6 +12,7 @@ import javax.servlet.http.HttpSession;
 
 import com.google.gson.Gson;
 import com.smhrd.dao.UseDAO;
+import com.smhrd.domain.HelmetVO;
 import com.smhrd.domain.UseVO;
 
 
@@ -27,6 +28,18 @@ public class stopController extends HttpServlet {
 		String mem_id = request.getParameter("mem_id");
 		
 		UseDAO dao = new UseDAO();
+		UseVO result = dao.useList(mem_id);
+		
+		String hel_number = result.getHel_number();
+		HelmetVO helVO = dao.startGPS(hel_number);
+		
+		int use_number = result.getUse_number();
+		String end_loc_lat = helVO.getHel_loc_lat();
+		String end_loc_long = helVO.getHel_loc_long();
+		
+		UseVO vo = new UseVO(use_number, end_loc_lat, end_loc_long);
+		dao.stopGPS(vo);
+		
 		int row = dao.stop(mem_id);
 		
 		System.out.println("stopController json성공!");

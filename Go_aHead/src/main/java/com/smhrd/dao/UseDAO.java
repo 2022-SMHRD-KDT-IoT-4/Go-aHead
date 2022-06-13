@@ -5,6 +5,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.smhrd.domain.AccVO;
+import com.smhrd.domain.HelmetVO;
 import com.smhrd.domain.UseVO;
 
 public class UseDAO {
@@ -24,11 +25,11 @@ public class UseDAO {
 		return row;
 	}
 	
-	public AccVO accView(String hel_num) {
+	public AccVO accView(String hel_number) {
 		AccVO vo = null;
 		try {
 			sqlSession = sqlSessionFactory.openSession(true);
-			vo = (AccVO)sqlSession.selectOne("com.smhrd.dao.UseDAO.accSelectOne", hel_num);
+			vo = (AccVO)sqlSession.selectOne("com.smhrd.dao.UseDAO.accSelectOne", hel_number);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -72,7 +73,31 @@ public class UseDAO {
 		}
 		
 		return row;
-		
-		
+	}
+	
+	public HelmetVO startGPS(String hel_number) {
+		HelmetVO vo = null;
+		try {
+			sqlSession = sqlSessionFactory.openSession(true);
+			vo = sqlSession.selectOne("com.smhrd.dao.UseDAO.helSelectOne", hel_number);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		return vo;
+	}
+	
+	public int stopGPS(UseVO vo) {
+		int row = 0;
+		try {
+			sqlSession = sqlSessionFactory.openSession(true);
+			row = sqlSession.update("com.smhrd.dao.UseDAO.stopGPS", vo);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		return row;
 	}
 }
