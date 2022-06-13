@@ -18,4 +18,12 @@ public class HelmetVO {
    private String hel_check;
    private String hel_loc_lat;
    private String hel_loc_long;
+
+   public HelmetVO(String hel_number, String hel_loc_lat, String hel_loc_long) {
+		this.hel_number = hel_number;
+		this.hel_loc_lat = hel_loc_lat;
+		this.hel_loc_long = hel_loc_long;
+   }
+   
+   
 }
