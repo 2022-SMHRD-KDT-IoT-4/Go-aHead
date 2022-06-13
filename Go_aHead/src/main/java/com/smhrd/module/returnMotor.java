@@ -26,14 +26,14 @@ public class returnMotor extends HttpServlet {
 		//arduino에서 알코올 값 받아오기
 		if (request.getParameter("alcohol") != null) {
 			int alcohol = Integer.parseInt(request.getParameter("alcohol"));
-		    System.out.println(alcohol);
+		    System.out.println("alcohol : "+alcohol);
 		}
 		
 		//motor값 받아오기
 		int motor = moduleController.motor;
 		System.out.println("motor값 :" +motor);
-		
-		if(press>0&&motor==1) {
+	// press>0&&	
+		if(motor==1) {
 			System.out.println("아두이노로 1 간다");
 			out.print("1");
 		} else if (motor == 2 ) {

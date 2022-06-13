@@ -33,6 +33,7 @@ public class module extends HttpServlet {
 			hel_number_shock = request.getParameter("helmetNum1");
 			System.out.println("shock:"+shock);
 			System.out.println("helmetNum1:"+hel_number_shock);
+			
 		}
 		// GPS 위도
 		if(request.getParameter("gps_lat") != null&&request.getParameter("gps_long") != null) {
@@ -42,7 +43,7 @@ public class module extends HttpServlet {
 			System.out.println("gps_long:"+gps_long);
 			hel_number_gps = request.getParameter("helmetNum");
 			moduleVO gps_vo = new moduleVO(hel_number_gps,gps_lat,gps_long);
-			dao.updateGPS(gps_vo);
+		//	dao.updateGPS(gps_vo);
 		}
 		
 
