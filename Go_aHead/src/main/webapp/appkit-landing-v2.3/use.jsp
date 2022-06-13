@@ -41,6 +41,7 @@ $(document).ready(function() {
 	
 	$('#stop-btn').click(function() {
 		kickStop();
+		motorStop();
 	})
 
 })
@@ -71,6 +72,18 @@ function motorStart() {
 		url : "moduleController",
 		type : "get",
 		data : {"motor" : 1},
+		success : console.log("success"),
+		error : function(){
+			alert('error');
+		}
+	})
+}
+
+function motorStop() {
+	$.ajax({
+		url : "moduleController",
+		type : "get",
+		data : {"motor" : 2},
 		success : console.log("success"),
 		error : function(){
 			alert('error');
