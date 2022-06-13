@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.smhrd.domain.moduleVO;
 
 @SuppressWarnings("serial")
 @WebServlet("/returnMotor")
@@ -38,7 +37,6 @@ public class returnMotor extends HttpServlet {
 			System.out.println("아두이노로 1 간다");
 			out.print("1");
 		}
-		
-	}
+	}	
 
 }

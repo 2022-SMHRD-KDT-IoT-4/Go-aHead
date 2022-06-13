@@ -22,6 +22,7 @@ public class moduleController extends HttpServlet {
 		System.out.println("moduleController motor data : " + motor);
 
 		response.sendRedirect("returnMotor");
+
 	}
 
 }
