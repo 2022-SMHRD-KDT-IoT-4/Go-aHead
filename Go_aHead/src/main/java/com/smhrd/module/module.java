@@ -40,7 +40,7 @@ public class module extends HttpServlet {
 		// 압력 센서
 		if(request.getParameter("press") != null) {
 			press = Integer.parseInt(request.getParameter("press"));
-		//	System.out.println("press:"+press);
+			System.out.println("press:"+press);
 		}
 		// 마그네틱 센서
 		if(request.getParameter("magnetic") != null) {

@@ -14,25 +14,14 @@ import com.smhrd.domain.moduleVO;
 
 @WebServlet("/moduleController")
 public class moduleController extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HttpSession session = request.getSession();
-		int motor = Integer.parseInt(request.getParameter("motor"));
-		System.out.println("moduleController motor data : " + motor);
-		
-		moduleVO vo = new moduleVO(motor);
-		int motorState = vo.getMotor();
-		
-		while (true) {
-			if (motorState == 1) {
-				session.setAttribute("motorState", motorState);
-			} else if (motorState == 0) {
-				session.setAttribute("motorState", motorState);
-				break;
-			}
-			
-		}
+	public static int motor=0;
 
+	protected void service(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		motor = Integer.parseInt(request.getParameter("motor"));
+		System.out.println("moduleController motor data : " + motor);
+
+		response.sendRedirect("returnMotor");
 	}
 
 }
