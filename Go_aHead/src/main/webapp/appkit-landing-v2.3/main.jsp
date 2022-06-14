@@ -80,12 +80,14 @@
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='logout.do'">로그아웃</a></li>            
                     </ul><!--//nav-->
                     
-                    <%} else {%>
+                    <%} else {
+                    
+                    %>
                     
                     <!-- user 로그인 -->
                     
                      <ul class="nav navbar-nav">
-                        <li class="nav-item"><a class="nav-link scrollto" href="마이페이지">마이페이지</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='usinglist.do?mem_id=<%=member.getMem_id()%>'">마이페이지</a></li>
                         <li class="nav-item">
                               <div class="dropdown nav-link scrollt ">
                           <p class="head-kick">킥보드</p>

@@ -21,7 +21,6 @@ public class LogoutController implements Controller {
 		HttpSession session = request.getSession();
 		session.invalidate();
 		moduleController.motor = 0;
-	
 	return "main";
 }
 
