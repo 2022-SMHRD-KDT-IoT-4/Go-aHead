@@ -1,11 +1,14 @@
 package com.smhrd.dao;
 
+import java.util.ArrayList;
+
 import org.apache.coyote.http11.upgrade.UpgradeServletOutputStream;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.smhrd.domain.AccVO;
 import com.smhrd.domain.HelmetVO;
+import com.smhrd.domain.Member;
 import com.smhrd.domain.UseVO;
 
 public class UseDAO {
@@ -128,6 +131,21 @@ public class UseDAO {
 		}
 		
 		return row;
+		
+		
+	}
+
+		public ArrayList<UseVO> usinglist(String mem_id) {
+			ArrayList<UseVO> list = new ArrayList<UseVO>();
+			try {
+				sqlSession = sqlSessionFactory.openSession(true);
+				list = (ArrayList)sqlSession.selectList("com.smhrd.dao.UseDAO.usinglist", mem_id);
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				sqlSession.close();
+			}
+			return list;
 		
 		
 	}
