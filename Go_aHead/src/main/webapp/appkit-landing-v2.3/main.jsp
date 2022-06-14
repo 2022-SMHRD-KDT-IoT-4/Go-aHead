@@ -41,12 +41,13 @@
 <body class="main-body">
 
     <!-- header 상단바 부분 --> 
-    <header id="header" class="header">  
-        <div class="container">       
+    <header id="header" class="header" >  
+        <div class="container" >       
             <h1 class="logo">
                 <a class="scrollto" onclick='location.href="viewMain.do"'>
-                    <span class="logo-icon-wrapper"><img class="logo-icon" src="appkit-landing-v2.3/assets/images/kick_icon_F.png" alt="iccon" style=" width: 40px; height: 40px;"></span>
-                    <span class="text"><span class="highlight">GO</span>AHEAD</span></a>
+                    <span class="logo-icon-wrapper"><img class="logo-icon" src="appkit-landing-v2.3/assets/images/kick_icon_F.png" alt="iccon"></span>
+                    <span class="text" ><span class="highlight">GO</span>AHEAD</span></a>
+                
             </h1><!--//logo-->
 
             <nav class="main-nav navbar-expand-md float-right navbar-inverse" role="navigation">
@@ -74,20 +75,22 @@
                     <ul class="nav navbar-nav">
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='memberlist.do'">회원정보관리</a></li>
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewUlocation.do'">고객위치확인</a></li>
-                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewHlocation.do'">킥보드위치</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewHlocation.do'">헬멧위치확인</a></li>
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='faq.do'">고객센터</a></li>            
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='logout.do'">로그아웃</a></li>            
                     </ul><!--//nav-->
                     
-                    <%} else {%>
+                    <%} else {
+                    
+                    %>
                     
                     <!-- user 로그인 -->
                     
                      <ul class="nav navbar-nav">
-                        <li class="nav-item"><a class="nav-link scrollto" href="마이페이지">마이페이지</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='usinglist.do?mem_id=<%=member.getMem_id()%>'">마이페이지</a></li>
                         <li class="nav-item">
                               <div class="dropdown nav-link scrollt ">
-                          <p>킥보드</p>
+                          <p class="head-kick">킥보드</p>
                           <div class="dropdown-content">
                      <a href="viewUse.do">이용시작</a>
                      <a href="blackbox">블랙박스 확인</a>
@@ -128,13 +131,20 @@
          <div class="carousel-inner">
              
             <div class="carousel-item item-1 active">
-               <div class="item-content container">
-                   <div class="item-content-inner">
-                        
-                        <h2 class="heading">GO AHEAD<br class="d-none d-md-block"></h2>
-                        <p class="intro">
-                        <br>
-                        <br></p>
+               <div class="item-content container"  >
+                   <div class="item-content-inner" style="text-shadow: 1px 1px black ">
+           
+                   	<br>
+                	<br>
+           			<br>
+                    <h2>고어헤드란? </h2>
+                    <br>
+                    <h4>스마트한 안전헬멧을 착용함으로써, </h4>
+                   
+                    <h4>안전한 킥보드 사용문화에 앞서 나가자! </h4>
+                    <br>
+                    <br>
+                   
                          <%if (member == null) {%>
                         <a class="btn btn-primary btn-cta" href="viewLogin.do" target="_blank">시작하기</a>
                         <%} else {%>
@@ -144,15 +154,19 @@
                </div><!--//item-content-->
             </div><!--//item-->
             
-            <div class="carousel-item item-2">
+            <div class="carousel-item item-2" >
                <div class="item-content container">
-                  <div class="item-content-inner">
-                        
-                        <h2 class="heading">GO AHEAD<br class="d-none d-md-block"></h2>
-                        <p class="intro">
-                        <br>
-                        <br>
-                        </p>
+                  <div class="item-content-inner" style="margin-left : 370px; text-shadow: 1px 1px black " >
+                    <br>    
+                	<br>
+           			<br>
+                    <h2>고어헤드란? </h2>
+                    <br>
+                    <h4>스마트한 안전헬멧을 착용함으로써, </h4>
+                   
+                    <h4>안전한 킥보드 사용문화에 앞서 나가자! </h4>
+                    <br>
+                    <br>
                          <%if (member == null) {%>
                         <a class="btn btn-primary btn-cta" href="viewLogin.do" target="_blank">시작하기</a>
                         <%} else {%>
@@ -164,10 +178,16 @@
             
             <div class="carousel-item item-3">
                <div class="item-content container">
-                  <div class="item-content-inner">
-                       <h2 class="haunted-text" class="heading" data-haunted-text>GO AHEAD</h2>
-                        <p class="intro">
-                        <br><br></p>
+                  <div class="item-content-inner" style="margin-left : 900px; width: 1000px; text-shadow: 1px 1px black  "> 
+                	<br>
+           			<br>
+                    <h2>고어헤드란? </h2>
+                    <br>
+                    <h4>스마트한 안전헬멧을 착용함으로써, </h4>
+                   
+                    <h4>안전한 킥보드 사용문화에 앞서 나가자! </h4>
+                    <br>
+                    <br>
                          <%if (member == null) {%>
                         <a class="btn btn-primary btn-cta" href="viewLogin.do" target="_blank">시작하기</a>
                         <%} else {%>
@@ -204,7 +224,7 @@
                 <div class="item col-md-4 col-12">
                     <div class="item-inner">
                         <div class="figure-holder">
-                            <img class="figure-image" src="appkit-landing-v2.3/assets/images/KICK3.png" alt="image" style="width: 300px">
+                            <img class="figure-image" src="appkit-landing-v2.3/assets/images/lost.png" alt="image" style="width: 300px">
                         </div><!--//figure-holder-->
                         <h3 class="item-title">분실 방지</h3>
                         <div class="item-desc mb-3">
@@ -216,8 +236,12 @@
                 <div class="item col-md-4 col-12">
                     <div class="item-inner">
                         <div class="figure-holder">
-                            <img class="figure-image" src="appkit-landing-v2.3/assets/images/KICK2.png" alt="image" style="width: 300px">
+                        	<br>
+                        	<br>
+                        	<br>
+                            <img class="figure-image" src="appkit-landing-v2.3/assets/images/sos.png" alt="image" style="width: 300px">
                         </div><!--//figure-holder-->
+                        <br>
                         <h3 class="item-title">SOS </h3>
                         <div class="item-desc mb-3">
                            헬멧을 통해 사고를 감지하여 일정 시간내 반응이 없을시 가입시 입력한 비상연락망과 119에 도움을 요청합니다!
@@ -228,7 +252,9 @@
                 <div class="item col-md-4 col-12">
                     <div class="item-inner">
                         <div class="figure-holder">
-                            <img class="figure-image" src="appkit-landing-v2.3/assets/images/KICK1.png" alt="image" style="width: 300px">
+                        	<br>
+                        	<br>
+                            <img class="figure-image" src="appkit-landing-v2.3/assets/images/blackbox.jpg" alt="image" style="width: 200px">
                         </div><!--//figure-holder-->
                         <h3 class="item-title">블랙박스</h3>
                         <div class="item-desc mb-3">
@@ -242,19 +268,7 @@
     </div><!--//about-section-->
     
     
-    <div id="features" class="features-section" style="background-color: pink">
-        <div class="container text-center">
-            <h2 class="section-title">GO AHEAD 이용하기!</h2>
-            <p class="intro">GO AHEAD의 대표적 기능</p>
-            
-            <section id="safety" class="s-safety target-section"  >
-      
-              <div class="section-content" style=" padding-bottom: 100px; border-radius: 1rem">
-                  <div class="content-item"><span style="margin-right: 40px">✔ 사고 감지</span></div>
-                  <div class="content-item">✔ sos 상태확인</div>
-                  <div class="content-item">✔ 블랙 박스</div>
-                  <div class="content-item">✔ 착용 감지</div>
-              </div>
+    
       
           </section>
            
@@ -270,88 +284,9 @@
         </div><!--//container-->
     </div><!--//features-->
     
-    <div class="team-section" id="team">
-        <div class="container text-center">
-            <h2 class="section-title">GO AHEAD Team</h2>
-            <div class="story">
-                <p><strong>▶우리는 빠르게 성장하고 발전합니다 -</strong>
-               그래서 매일 조금씩 더 나아지기 위해 노력합니다.<br><br>
-               <strong>▷우리는 모두 리더입니다 -</strong>
-               내가 시작한 작은 행동이 우리의 모습을 만듭니다.<br><br>
-               <strong>▶우리는 전문가입니다 -</strong>
-               치밀하게 일하는 섬세함이 우리의 경쟁력입니다.<br><br>
-               <strong>▷우리는 서로 이해하기 위해 소통합니다 -</strong>
-               의견을 말할 때 이유와 대안을 충분히 설명합니다.<br><br>
-               <strong>▶우리는 동료와 함께 일합니다 -</strong>
-               혼자 할 수 없는 일도 팀으로는 가능합니다.<br><br>
-               <strong>▷우리는 빠르게 실행합니다 -</strong>
-               깊게 고민했다면 즉시 공유하고 움직입니다.<br><br>
-               <strong>▶우리는 모두 리더입니다 -</strong>
-               GO AHEAD와 라이더님의 행복을 위해 노력합니다.</p>
-            </div>
-            <div class="members-wrapper row">
-                <div class="item col-md-6 col-12">
-                    <div class="item-inner">
-                        <div class="profile mb-2">
-                            <img class="profile-image" src="appkit-landing-v2.3/assets/images/team-1.png" alt="Xiaoying Riley" />
-                        </div>
-                        
-                        <div class="member-content">
-                            <h3 class="member-name">Xiaoying Riley</h3>
-                            <div class="member-title">Full-Stack Designer</div>
-                            <ul class="social list-inline">
-                                <li class="list-inline-item"><a class="twitter" href="https://twitter.com/3rdwave_themes" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                                
-                                <li class="list-inline-item"><a class="facebook" href="https://www.facebook.com/3rdwavethemes/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                                <li class="list-inline-item"><a class="github" href="https://github.com/xriley" target="_blank"><i class="fab fa-github"></i></a></li>
-                                <li class="list-inline-item"><a class="dribbble" href="https://dribbble.com/Xiaoying" target="_blank"><i class="fab fa-dribbble"></i></a></li>
-                               <li class="list-inline-item"><a class="medium" href="https://uk.linkedin.com/in/xiaoying" target="_blank"><i class="fab fa-medium-m"></i></a></li>
-                                
-                            </ul>
-                            <div class="member-desc">
-                               <p>Xiaoying is the UX/UI designer behind AppKit Landing. She makes <a href="https://themes.3rdwavemedia.com/bootstrap-templates/free/" target="_blank">free Bootstrap themes</a> for developers. You can find her sharing useful UX and webdev related content on <a href="https://twitter.com/3rdwave_themes" target="_blank">Twitter</a> and <a href="https://www.facebook.com/3rdwavethemes/" target="_blank">Facebook</a>. Follow her if you like what she does!</p>
-                            </div><!--//member-desc-->
-                        </div><!--//member-content-->
-                    </div><!--//item-inner-->
-                </div><!--//item-->
-                <div class="item col-md-6 col-12">
-                    <div class="item-inner">
-                        <div class="profile mb-2">
-                            <img class="profile-image" src="appkit-landing-v2.3/assets/images/team-2.png" alt="Tom Najdek" />
-                        </div>
-                        
-                        <div class="member-content">
-                            <h3 class="member-name">Tomasz Najdek</h3>
-                            <div class="member-title">Full-Stack Developer</div>
-                            <ul class="social list-inline">
-                                <li class="list-inline-item"><a class="twitter" href="http://twitter.com/tnajdek" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                                <li class="list-inline-item"><a href="https://www.doppnet.com/" target="_blank"><i class="fas fa-globe"></i></a></li>
-                                <li class="list-inline-item"><a class="github" href="https://github.com/tnajdek" target="_blank"><i class="fab fa-github"></i></a></li>
-                               
-                                
-                            </ul>
-                            <div class="member-desc">
-                                <p>Tom is a full-stack developer specialising in building large, scalable and user-friendly web apps. Follow him on <a href="https://twitter.com/tnajdek" target="_blank">Twitter</a> for fresh developer tips and check out his <a href="https://github.com/tnajdek" target="_blank">Github</a> for useful open-source tools.
-</p>
-                            </div><!--//member-desc-->
-                        </div><!--//member-content-->
-                    </div><!--//item-inner-->
-                </div><!--//item-->
-            </div><!--//members-wrapper-->
-            <div class="text-center mt-5">
-               <a class="btn btn-cta btn-primary" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/appkit-landing-free-bootstrap-theme-for-developers-and-startups/" target="_blank">Contact Us</a>
-            </div>
-        </div>
-    </div><!--//team-section-->
+  
     
-    <footer class="footer text-center">
-        <div class="container">
-            <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
-            <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a href="https://themes.3rdwavemedia.com/" target="_blank">GO AHEAD TEAM</a> for users</small>
-            
-            
-        </div><!--//container-->
-    </footer>
+   
      
     <!-- Javascript -->          
     <script type="text/javascript" src="appkit-landing-v2.3/assets/plugins/jquery-3.4.1.min.js"></script>

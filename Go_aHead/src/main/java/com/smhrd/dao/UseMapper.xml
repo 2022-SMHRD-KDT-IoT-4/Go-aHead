@@ -42,6 +42,9 @@
 		insert into acc_list(acc_num, use_number, acc_loc_lat, acc_loc_long) values(acc_seq.NEXTVAL, #{use_number}, #{acc_loc_lat}, #{acc_loc_long})
 	</insert>
 	
+	<select id="usinglist" resultType="UseVO" parameterType="String">
+		select * from used_list where kick_using = 2 and mem_id = #{mem_id}
+	</select>
 	
 	
 	

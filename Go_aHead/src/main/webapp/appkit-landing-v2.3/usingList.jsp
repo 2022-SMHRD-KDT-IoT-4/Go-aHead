@@ -1,3 +1,6 @@
+<%@page import="java.util.Date"%>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="com.smhrd.domain.UseVO"%>
 <%@page import="com.smhrd.domain.Member"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.smhrd.dao.MemberDAO"%>
@@ -31,71 +34,98 @@
 
 <body>
 <%
-ArrayList<Member> list = (ArrayList)request.getAttribute("list");
+ArrayList<UseVO> list = (ArrayList)request.getAttribute("list");
 %>
 
-<!-- 어드민!!!!!! header 상단바 부분 --> 
-    <header id="header" class="header ad-header" >  
-        <div class="container" >       
+ <!-- header 상단바 부분 --> 
+    <header id="header" class="header">  
+        <div class="container">       
             <h1 class="logo">
-                <a class="scrollto" onclick='location.href="viewMain.do"'>
-                    <span class="logo-icon-wrapper"><img class="logo-icon" src="appkit-landing-v2.3/assets/images/kick_icon_F.png" alt="iccon"></span>
-                    <span class="text" ><span class="highlight">GO</span>AHEAD</span></a>
+                <a class="scrollto" href="#hero">
+                    <span class="logo-icon-wrapper"><img class="logo-icon" src="appkit-landing-v2.3/assets/images/kick_icon_F.png" alt="iccon" style=" width: 40px; height: 40px;"></span>
+                    <span class="text"><span class="highlight">GO</span>AHEAD</span></a>
             </h1><!--//logo-->
 
             <nav class="main-nav navbar-expand-md float-right navbar-inverse" role="navigation">
                 
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button><!--//nav-toggle-->
                 
-                <div id="navbar-collapse">
-                    
-                    <ul class="nav navbar-nav header-ul">
+ 				<div id="navbar-collapse">
+                    <ul class="nav navbar-nav">
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='memberlist.do'">회원정보관리</a></li>
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewUlocation.do'">고객위치확인</a></li>
-                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewHlocation.do'">헬멧위치확인</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewHlocation.do'">킥보드위치</a></li>
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='faq.do'">고객센터</a></li>            
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='logout.do'">로그아웃</a></li>            
                     </ul><!--//nav-->
-                </div><!--//navabr-collapse-->     
+                </div><!--//navabr-collapse-->         
             </nav><!--//main-nav-->                     
         </div><!--//container-->
     </header><!--//header-->
 
 
 <div class="container memlist">
-  <h2>GO AHEAD 회원정보관리</h2>
+  <h2>GO AHEAD 고객정보조회</h2>
   <table class="table">
     <thead class="thead-dark">
       <tr>
-       	<th>ID</th>
-        <th>NAME</th>
-        <th>GENDER</th>
-        <th>B_TYPE</th>
-        <th>PHONE</th>
-        <th>SUBPHONE</th>
-        <th>DRIVENUM</th>
+        <th>아이디</th>
+       	<th>이용번호</th>
+        <th>킥보드 번호</th>
+        <th>헬멧 번호</th>
+        <th>이용시작시간</th>
+        <th>이용종료시간</th>
+        <th>이용시간</th>
       </tr>
     </thead>
     <tbody>
 
 
 	<%
-	for(Member vo : list){
+	
+	//String a_date = "2022-03-19";
+    //String b_date = "2022-02-10";
+    
+    //SimpleDateFormat format = new SimpleDateFormat("yyyy-mm-dd");
+    
+    //Date a_parseDate = format.parse(a_date);
+    //Date b_parseDate = format.parse(b_date);
+    
+    // 밀리세컨드 단위로 차이 결과 도출
+   
+   
+    SimpleDateFormat format = new SimpleDateFormat("YYYYMMddHHmm");
+    
+	for(UseVO vo : list){
+		
+		String a_date = vo.getStart_time();
+	    String b_date = vo.getEnd_time();			   
+	    
+	    Date a_parseDate = format.parse(a_date);
+	    Date b_parseDate = format.parse(b_date);
+	    
+	    long resultTime = b_parseDate.getTime() - a_parseDate.getTime();
+	    
+	    int a=(int)(resultTime / 1000); 
+	    int b=(int)(resultTime / (60*1000));
+	    int c=(int)(resultTime / (60*60*1000));
+	    
 		%>
+	
 	 <tr>
 	  <td><%=vo.getMem_id() %></td>
-	 <td><%=vo.getMem_name() %></td>
-	 <td><%=vo.getMem_gender() %></td>
-	 <td><%=vo.getMem_blood() %></td>
-	 <td><%=vo.getMem_phone() %></td>
-	 <td><%=vo.getMem_subphone() %></td>
-	 <td><%=vo.getDrivenum() %></td>
-
+	  <td><%=vo.getUse_number() %></td>
+	  <td><%=vo.getKick_number() %></td>
+	  <td><%=vo.getHel_number() %></td>
+	  <td><%=vo.getStart_time() %></td>
+	  <td><%=vo.getEnd_time()%></td>
+	  <td><%=vo.getUsing_time()+"분"%></td>
+	  
       </tr>
 	
 	<%} %>
@@ -105,7 +135,7 @@ ArrayList<Member> list = (ArrayList)request.getAttribute("list");
   </table>    
   
 
-		<a href="main.do" class="button next scrolly">되돌아가기</a>
+		
 
 	</div>
 

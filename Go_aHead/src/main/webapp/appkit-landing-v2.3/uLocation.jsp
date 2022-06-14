@@ -24,12 +24,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   	<script src="http://code.jquery.com/jquery-latest.js"></script>
-    
 
-    <style >
-	
-	
-    </style>
     
     <script type="text/javascript">
     
@@ -76,7 +71,7 @@
 		console.log(lat)
 		console.log(long)
 		
-		alert( data.mem_id +'님의 위치 확인');
+		alert( data.mem_id +' 님의 위치 확인');
 		lat = data.hel_loc_lat;
 		long = data.hel_loc_long;
 		console.log(lat)
@@ -85,15 +80,14 @@
 		
 		mapload();
 		
-		var list = "<table style = 'margin-left:25px; width:100px;'>";
+		var list = "<table class='ulocation-list'>";
 	
 			list += "<tr>"
-				list += "<td>아이디</td>"
-				list += "<td>"+data.mem_id+"</td>"
+				list += "<th colspan='2'>"+data.mem_id+ "님의 현재 위치 입니다</td>"
 			list += "</tr>"
-			
+
 			list += "<tr>"
-				list += "<td> 헬멋번호</td>"
+				list += "<th> 사용중인 헬멋번호 : </th>"
 				list += "<td>"+data.hel_number+"</td>"
 			list += "</tr>"
 
@@ -107,28 +101,30 @@
 </head>
 
 <body>
-	 <!-- header 상단바 부분 --> 
+<!-- 어드민!!!!!! header 상단바 부분 --> 
     <header id="header" class="header lo-header" >  
-        <div class="container">       
+        <div class="container" >       
             <h1 class="logo">
-                <a class="scrollto" href="#hero">
-                    <span class="logo-icon-wrapper"><img class="logo-icon" src="appkit-landing-v2.3/assets/images/kick_icon_F.png" alt="iccon" style=" width: 40px; height: 40px;"></span>
-                    <span class="text"><span class="highlight">GO</span>AHEAD</span></a>
+                <a class="scrollto" onclick='location.href="viewMain.do"'>
+                    <span class="logo-icon-wrapper"><img class="logo-icon" src="appkit-landing-v2.3/assets/images/kick_icon_F.png" alt="iccon"></span>
+                    <span class="text" ><span class="highlight">GO</span>AHEAD</span></a>
             </h1><!--//logo-->
+
             <nav class="main-nav navbar-expand-md float-right navbar-inverse" role="navigation">
                 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button><!--//nav-toggle-->
                 
- 				<div id="navbar-collapse">
-                    <ul class="nav navbar-nav">
-                       <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='#회원정보관리'">회원정보관리</a></li>
+                <div id="navbar-collapse">
+                    
+                    <ul class="nav navbar-nav header-ul">
+                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='memberlist.do'">회원정보관리</a></li>
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewUlocation.do'">고객위치확인</a></li>
-                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewHlocation.do'">킥보드위치</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewHlocation.do'">헬멧위치확인</a></li>
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='faq.do'">고객센터</a></li>            
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='logout.do'">로그아웃</a></li>            
                     </ul><!--//nav-->
@@ -136,7 +132,6 @@
             </nav><!--//main-nav-->                     
         </div><!--//container-->
     </header><!--//header-->
-    
     
     <div id="map"></div>
     

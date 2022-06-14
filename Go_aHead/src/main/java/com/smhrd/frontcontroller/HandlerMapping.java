@@ -10,6 +10,7 @@ import com.smhrd.controller.LogoutController;
 import com.smhrd.controller.MemberlistController;
 import com.smhrd.controller.UlocationController;
 import com.smhrd.controller.UseController;
+import com.smhrd.controller.UsinglistController;
 import com.smhrd.controller.ViewHlocationController;
 import com.smhrd.controller.FAQController;
 import com.smhrd.controller.ViewJoinController;
@@ -38,6 +39,7 @@ public class HandlerMapping {
 	mappings.put("/logout.do", new LogoutController());
 	mappings.put("/viewHlocation.do", new ViewHlocationController());
 	mappings.put("/acc.do", new AccController());
+	mappings.put("/usinglist.do", new UsinglistController());
 
 	}
 	
