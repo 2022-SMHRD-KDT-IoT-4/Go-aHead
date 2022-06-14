@@ -38,20 +38,25 @@ public class module extends HttpServlet {
 		}
 		// GPS 위도
 		if(request.getParameter("gps_lat") != null&&request.getParameter("gps_long") != null) {
+			
 			gps_lat = request.getParameter("gps_lat");
-			System.out.println("gps_lat:"+gps_lat);
 			gps_long = request.getParameter("gps_long");
-			System.out.println("gps_long:"+gps_long);
-			hel_number_gps = request.getParameter("helmetNum");
-			moduleVO gps_vo = new moduleVO(hel_number_gps,gps_lat,gps_long);
-		//	dao.updateGPS(gps_vo);
+			System.out.println("gps,압력 wifi 연결중");
+			if(!gps_lat.equals("")&&!gps_long.equals("")) {
+				System.out.println("gps_lat:"+gps_lat);
+				System.out.println("gps_long:"+gps_long);
+				hel_number_gps = request.getParameter("helmetNum");
+				moduleVO gps_vo = new moduleVO(hel_number_gps,gps_lat,gps_long);
+				dao.updateGPS(gps_vo);
+				System.out.println(" GPS DB저장 완료");
+			}
 		}
 		
 
 		// 압력 센서
 		if(request.getParameter("press") != null) {
 			press = Integer.parseInt(request.getParameter("press"));
-			System.out.println("press:"+press);
+			System.out.println("press: " +press);
 		}
 		// 마그네틱 센서
 		if(request.getParameter("magnetic") != null) {
