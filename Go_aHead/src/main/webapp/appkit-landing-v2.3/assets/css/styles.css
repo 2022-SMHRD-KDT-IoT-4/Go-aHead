@@ -59,8 +59,8 @@ a:focus {
 }
 
 .btn-primary {
-  background: #40babd;
-  border: 1px solid #40babd;
+  background-color: #7eb2c7;
+  border: 1px;
   color: #fff;
 }
 
@@ -164,7 +164,7 @@ a:focus {
 }
 
 .header.header-scrolled .logo {
-  color: #40babd;
+  color: skyblue;
   padding-top: 12px;
 }
 
@@ -379,8 +379,7 @@ a:focus {
 }
 
 .hero-carousel .carousel-inner .item-1 {
-  /*background-image: url("../images/hero-1.jpg");*/
-  background-color : skyblue;
+  background-image: url("../images/kick_sec_8.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -388,15 +387,15 @@ a:focus {
 }
 
 .hero-carousel .carousel-inner .item-2 {
-   background: linear-gradient(rgb(135, 235, 230),lightCyan);
-  -webkit-background-size: cover;
+ background-image: url("../images/kick_sec_7.jpg");
+-webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 
 .hero-carousel .carousel-inner .item-3 {
-   background-color : skyblue;
+ background-image: url("../images/kick_sec_6.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -971,8 +970,8 @@ a:focus {
     z-index: 40;
   }
   .header.header-scrolled .main-nav .nav .nav-link.active {
-    color: #40babd;
-    border: none;
+	background-color:skyblue;
+	border: none;
   }
   .main-nav .navbar-collapse .nav-item {
     margin-right: 0;

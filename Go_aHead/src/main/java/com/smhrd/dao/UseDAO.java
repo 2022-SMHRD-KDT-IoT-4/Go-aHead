@@ -56,6 +56,21 @@ public class UseDAO {
 		
 	}
 
+	
+	public UseVO useList2(String hel_number) {
+		UseVO result = new UseVO();
+		try {
+			sqlSession = sqlSessionFactory.openSession(true);
+			result = sqlSession.selectOne("com.smhrd.dao.UseDAO.useList2", hel_number);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			sqlSession.close();
+		}
+		return result;
+	}
+	
+	
 	public int stop(String mem_id) {
 		
 		int row = 0;
@@ -99,5 +114,21 @@ public class UseDAO {
 			sqlSession.close();
 		}
 		return row;
+	}
+
+	public int accList(AccVO accvo) {
+		int row = 0;
+		try {
+			sqlSession = sqlSessionFactory.openSession(true);
+			row = sqlSession.insert("com.smhrd.dao.UseDAO.accList", accvo);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		
+		return row;
+		
+		
 	}
 }

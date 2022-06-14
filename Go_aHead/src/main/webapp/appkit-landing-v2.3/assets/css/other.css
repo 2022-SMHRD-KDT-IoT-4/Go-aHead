@@ -1,10 +1,21 @@
 /*전체바디*/
-@import
-	url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
 
 * {
-	font-family: 'Do Hyeon', sans-serif;
+	font-family: 'S-Core Dream 5', sans-serif;
 }
+
+.logo-icon{
+	width: 40px!important; 
+	height: 40px!important;
+}
+
+
+.scrollto {
+	
+	cursor: pointer!important;
+}
+
 
 body {
 	background-color: skyblue !important;
@@ -19,9 +30,11 @@ body {
     */
 }
 
-.main-body {
-	background-color: white!important;
+.header{
+	
+	color: white;
 }
+
 /*join.jsp*/
 .input-form {
 	max-width: 500px !important;
@@ -37,6 +50,7 @@ body {
 .join_title {
 	font-size: 2rem;
 	padding-top: 43px;
+	font-family: 'S-Core Dream 9', sans-serif; 
 }
 
 .btncolor {
@@ -44,7 +58,18 @@ body {
 	border: none !important;
 }
 
+.input-form-backgroud{
+	margin-bottom: 100px;	
+	
+}
+
 /*login.jsp css*/
+.goJoin:hover{
+	
+	color: skyblue!important;
+	
+}
+
 .input-form {
 	max-width: 500px !important;
 	min-width: 500px !important;
@@ -64,6 +89,8 @@ body {
 	background-color: white !important;
 	color: black !important;
 	margin-top: 50px;
+	border-radius: 1rem;
+	border: 0px;
 }
 
 .text-white-50 {
@@ -72,6 +99,11 @@ body {
 
 .text-white {
 	color: black !important;
+}
+
+.fw-bold{
+	
+	font-family: 'S-Core Dream 9', sans-serif; 
 }
 
 /*ulocation.jsp & hlocation css*/
@@ -120,7 +152,15 @@ body {
 }
 
 
-/* c-main.jsp css*/
+/* main.jsp css*/
+.btn-cta {
+	background-color: btn-cta!important;
+}
+
+.main-body{
+	background-color: white!important;
+}
+
 .dropbtn {
   background-color: #4CAF50;
   color: white;
@@ -185,6 +225,12 @@ body {
 	margin-left:400px;
 }
 
+.btn-success:hover {
+    color: #fff;
+    background-color:#43b4e3;
+    border-color: #43b4e3;
+}
+
 .background {
   position: fixed;
   top: 0;
@@ -240,13 +286,13 @@ body {
  #start-btn{
     border-radius: 0px;
     position: relative;
-    left: 189px;
+    left: 220px;
     bottom: 76px;
     height: 77px;
     }
 
  .start-input{
- 	width: 200px!important;
+ 	width: 250px!important;
  }
  
  .start-section{
@@ -268,6 +314,8 @@ body {
     color: #fff;
     background-color: skyblue;
     border-color: skyblue;
+    border-top-right-radius: 10px!important;
+    border-bottom-right-radius: 10px!important;
   
   }
   
@@ -282,3 +330,18 @@ body {
   width: 72%;
   height: 600px;
   }
+  
+  /*faq.jsp css*/
+ 
+ .faqnav{
+	
+    float: right!important;
+}
+
+.faq-section {
+	
+	margin-top: 80px;
+	font-size: 20px;
+	
+}
+
