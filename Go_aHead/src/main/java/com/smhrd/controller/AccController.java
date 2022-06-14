@@ -24,28 +24,23 @@ public class AccController implements Controller {
 //      String hel_number = module.hel_number_shock;
 //      int shock = module.shock;
       
-      String hel_number = "1";
       int shock = 1;
-      
-      UseDAO dao = new UseDAO();
-      
-      AccVO vo = dao.accView(hel_number);
-     
-      UseVO usevo = dao.useList2(hel_number);
-      int  use_number = usevo.getUse_number();
-      
-      HelmetVO helmetvo = dao.startGPS(hel_number);
-      String acc_loc_lat = helmetvo.getHel_loc_lat();
-      String acc_loc_long = helmetvo.getHel_loc_long();
-      
-      
-      AccVO accvo = new AccVO(use_number, acc_loc_lat, acc_loc_long);
-      
-      
+      String hel_number = "2";
       String moveURL = "";
-
+      
       if(shock == 1) {
-    	  int row = dao.accList(accvo);
+	      UseDAO dao = new UseDAO();
+	      
+	      AccVO vo = dao.accView(hel_number);
+	      UseVO usevo = dao.useList2(hel_number);
+	      HelmetVO helmetvo = dao.startGPS(hel_number);
+	      
+	      int  use_number = usevo.getUse_number();
+	      String acc_loc_lat = helmetvo.getHel_loc_lat();
+	      String acc_loc_long = helmetvo.getHel_loc_long();
+	      
+	      AccVO accvo = new AccVO(use_number, acc_loc_lat, acc_loc_long);
+    	  dao.accList(accvo);
 	      
     	  if (vo != null) {
 	         System.out.println("success");
