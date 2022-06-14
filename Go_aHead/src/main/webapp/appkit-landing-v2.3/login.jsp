@@ -51,13 +51,13 @@
 	</script>
 	
 	
-	 <!-- header 상단바 부분 --> 
-    <header id="header" class="header">  
-        <div class="container">       
+   <!-- header 상단바 부분 --> 
+  <header id="header" class="header ad-header" >  
+        <div class="container" >       
             <h1 class="logo">
                 <a class="scrollto" onclick='location.href="viewMain.do"'>
                     <span class="logo-icon-wrapper"><img class="logo-icon" src="appkit-landing-v2.3/assets/images/kick_icon_F.png" alt="iccon"></span>
-                    <span class="text"><span class="highlight">GO</span>AHEAD</span></a>
+                    <span class="text" ><span class="highlight">GO</span>AHEAD</span></a>
             </h1><!--//logo-->
 
             <nav class="main-nav navbar-expand-md float-right navbar-inverse" role="navigation">
@@ -70,9 +70,8 @@
                     </button><!--//nav-toggle-->
                 
                 <div id="navbar-collapse">
-                   
-                    <!-- 로그인 전 -->
-                    <ul class="nav navbar-nav">
+                    
+                    <ul class="nav navbar-nav header-ul">
                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewJoin.do'">회원가입</a></li>
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewLogin.do'">로그인</a></li>
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='faq.do'">고객센터</a></li>            
