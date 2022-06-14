@@ -22,8 +22,9 @@
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="appkit-landing-v2.3/assets/css/styles.css">
     <link id="theme-style" rel="stylesheet" href="appkit-landing-v2.3/assets/css/other.css">
-    
     <link id="theme-style" rel="stylesheet" href="appkit-landing-v2.3/assets/css/other.css">
+	<!-- font -->
+	 <link rel="stylesheet" href="appkit-landing-v2.3/assets/font/stylesheet.css">
 	<script type="text/javascript">
 	$(document).ready(function () {
 		
@@ -43,7 +44,7 @@
     <header id="header" class="header">  
         <div class="container">       
             <h1 class="logo">
-                <a class="scrollto" href="#hero">
+                <a class="scrollto" onclick='location.href="viewMain.do"'>
                     <span class="logo-icon-wrapper"><img class="logo-icon" src="appkit-landing-v2.3/assets/images/kick_icon_F.png" alt="iccon" style=" width: 40px; height: 40px;"></span>
                     <span class="text"><span class="highlight">GO</span>AHEAD</span></a>
             </h1><!--//logo-->
@@ -111,7 +112,6 @@
               <div class="container">
                   <div class="row justify-content-end">
                       <div class="figure-holder">
-                           <img class="figure-image img-fluid" src="appkit-landing-v2.3/assets/images/Img_Home.png" alt="image" style="width: 1000px" />
                         </div><!--//figure-holder-->
                   </div><!--//row-->
               </div><!--//container-->
@@ -135,8 +135,11 @@
                         <p class="intro">
                         <br>
                         <br></p>
-                        <a class="btn btn-primary btn-cta" href="if(로그인==바로대여.java) else if (로그인!= 로그인페이지.java) /" target="_blank">대여하기</a>
-                        
+                         <%if (member == null) {%>
+                        <a class="btn btn-primary btn-cta" href="viewLogin.do" target="_blank">시작하기</a>
+                        <%} else {%>
+                        <a class="btn btn-primary btn-cta" href="viewUse.do" target="_blank">시작하기</a>
+                        <%} %>
                    </div><!--//item-content-inner-->
                </div><!--//item-content-->
             </div><!--//item-->
@@ -150,7 +153,11 @@
                         <br>
                         <br>
                         </p>
-                     <a class="btn btn-primary btn-cta" href="if(로그인==바로대여.java) else if (로그인!= 로그인페이지.java)/" target="_blank">대여하기</a>                        
+                         <%if (member == null) {%>
+                        <a class="btn btn-primary btn-cta" href="viewLogin.do" target="_blank">시작하기</a>
+                        <%} else {%>
+                        <a class="btn btn-primary btn-cta" href="viewUse.do" target="_blank">시작하기</a>
+                        <%} %>	
                    </div><!--//item-content-inner-->
                </div>
             </div><!--//item-->
@@ -161,8 +168,11 @@
                        <h2 class="haunted-text" class="heading" data-haunted-text>GO AHEAD</h2>
                         <p class="intro">
                         <br><br></p>
-                        <a class="btn btn-primary btn-cta" href="if(로그인==바로대여.java) else if (로그인!= 로그인페이지.java)/" target="_blank">대여하기</a>
-                        
+                         <%if (member == null) {%>
+                        <a class="btn btn-primary btn-cta" href="viewLogin.do" target="_blank">시작하기</a>
+                        <%} else {%>
+                        <a class="btn btn-primary btn-cta" href="viewUse.do" target="_blank">시작하기</a>
+                        <%} %>                        
                    </div><!--//item-content-inner-->
                </div>
             </div><!--//item-->

@@ -1,10 +1,16 @@
 /*전체바디*/
-@import
-	url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
 
 * {
-	font-family: 'Do Hyeon', sans-serif;
+	font-family: 'S-Core Dream 5', sans-serif;
 }
+
+
+
+.scrollto {
+	
+	cursor: pointer!important;
+}
+
 
 body {
 	background-color: skyblue !important;
@@ -17,6 +23,11 @@ body {
       background: -o-linear-gradient(bottom left, #92b5db 0%, #1d466c 100%);
       background: linear-gradient(to top right, #a8ecf7 0%, #76d8d0 100%);
     */
+}
+
+.header{
+	
+	color: white;
 }
 
 .main-body {
@@ -120,7 +131,11 @@ body {
 }
 
 
-/* c-main.jsp css*/
+/* main.jsp css*/
+.btn-cta {
+	background-color: btn-cta!important;
+}
+
 .dropbtn {
   background-color: #4CAF50;
   color: white;
