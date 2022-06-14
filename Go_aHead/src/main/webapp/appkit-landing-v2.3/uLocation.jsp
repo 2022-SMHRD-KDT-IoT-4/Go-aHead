@@ -24,12 +24,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   	<script src="http://code.jquery.com/jquery-latest.js"></script>
-    
 
-    <style >
-	
-	
-    </style>
     
     <script type="text/javascript">
     
@@ -76,7 +71,7 @@
 		console.log(lat)
 		console.log(long)
 		
-		alert( data.mem_id +'님의 위치 확인');
+		alert( data.mem_id +' 님의 위치 확인');
 		lat = data.hel_loc_lat;
 		long = data.hel_loc_long;
 		console.log(lat)
@@ -85,15 +80,14 @@
 		
 		mapload();
 		
-		var list = "<table style = 'margin-left:25px; width:100px;'>";
+		var list = "<table class='ulocation-list'>";
 	
 			list += "<tr>"
-				list += "<td>아이디</td>"
-				list += "<td>"+data.mem_id+"</td>"
+				list += "<th colspan='2'>"+data.mem_id+ "님의 현재 위치 입니다</td>"
 			list += "</tr>"
-			
+
 			list += "<tr>"
-				list += "<td> 헬멋번호</td>"
+				list += "<th> 사용중인 헬멋번호 : </th>"
 				list += "<td>"+data.hel_number+"</td>"
 			list += "</tr>"
 
@@ -112,7 +106,7 @@
         <div class="container">       
             <h1 class="logo">
                 <a class="scrollto" href="#hero">
-                    <span class="logo-icon-wrapper"><img class="logo-icon" src="appkit-landing-v2.3/assets/images/kick_icon_F.png" alt="iccon" style=" width: 40px; height: 40px;"></span>
+                    <span class="logo-icon-wrapper"><img class="logo-icon" src="appkit-landing-v2.3/assets/images/kick_icon_F.png" alt="iccon"></span>
                     <span class="text"><span class="highlight">GO</span>AHEAD</span></a>
             </h1><!--//logo-->
             <nav class="main-nav navbar-expand-md float-right navbar-inverse" role="navigation">

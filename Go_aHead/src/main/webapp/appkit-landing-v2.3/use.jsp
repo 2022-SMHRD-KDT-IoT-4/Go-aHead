@@ -98,7 +98,7 @@ function motorStop() {
 
 		document.querySelector(".background").className = "background show";
 		
-		var list = "<table>";
+		var list = "<table class='use-list-table'>";
 		
 		list += "<tr>"
 			list += "<td>이용시작 시간</td>"
@@ -151,26 +151,29 @@ function motorStop() {
 
 
 
- <body>
-<!-- header 상단바 부분 --> 
-    <header id="header" class="header lo-header">  
-        <div class="container">       
+ <body > 
+
+    <!-- header 상단바 부분 --> 
+    <header id="header" class="header lo-header" >  
+        <div class="container" >       
             <h1 class="logo">
                 <a class="scrollto" onclick='location.href="viewMain.do"'>
-                    <span class="logo-icon-wrapper"><img class="logo-icon" src="appkit-landing-v2.3/assets/images/kick_icon_F.png" ></span>
-                    <span class="text"><span class="highlight">GO</span>AHEAD</span></a>
+                    <span class="logo-icon-wrapper"><img class="logo-icon" src="appkit-landing-v2.3/assets/images/kick_icon_F.png" alt="iccon" style=" width: 40px; height: 40px;"></span>
+                    <span class="text" ><span class="highlight">GO</span>AHEAD</span></a>
+                
             </h1><!--//logo-->
-            
+
             <nav class="main-nav navbar-expand-md float-right navbar-inverse" role="navigation">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button><!--//nav-toggle-->
-                
                 <div id="navbar-collapse">
-                    <ul class="nav navbar-nav">
+                                       
+                    <!-- user 로그인 -->
+                     <ul class="nav navbar-nav">
                         <li class="nav-item"><a class="nav-link scrollto" href="마이페이지">마이페이지</a></li>
                         <li class="nav-item">
                               <div class="dropdown nav-link scrollt ">
@@ -178,13 +181,15 @@ function motorStop() {
                           <div class="dropdown-content">
                      <a href="viewUse.do">이용시작</a>
                      <a href="blackbox">블랙박스 확인</a>
-                    </div></div></a></li>
+                    </div></div></li>
+                       <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='faq.do'">고객센터</a></li>     
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='logout.do'">로그아웃</a></li>                        
                     </ul><!--//nav-->
                 </div><!--//navabr-collapse-->     
             </nav><!--//main-nav-->                     
         </div><!--//container-->
     </header><!--//header-->
+    
     
 <!-- ------------------------------------------------------------------------------------------------------------------ -->
 

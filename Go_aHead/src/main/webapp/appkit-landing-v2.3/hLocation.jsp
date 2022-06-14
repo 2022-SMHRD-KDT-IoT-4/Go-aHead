@@ -79,25 +79,25 @@
 		
 		mapload();
 		
-		var list = "<table style = 'margin-left:25px; width:100px;'>";
+		var list = "<table class='ulocation-list'>";
 	
 			list += "<tr>"
-				list += "<td>헬멋번호</td>"
+				list += "<th>헬멋번호: </th>"
 				list += "<td>"+data.hel_number+"</td>"
 			list += "</tr>"
 			
 			list += "<tr>"
-				list += "<td>헬멧 분실여부</td>"
+				list += "<th>헬멧 분실여부:</th>"
 				list += "<td>"+data.hel_lost+"</td>"
 			list += "</tr>"			
 
 			list += "<tr>"
-				list += "<td>헬멋 파손여부</td>"
+				list += "<th>헬멋 파손여부:</th>"
 				list += "<td>"+data.hel_damage+"</td>"
 			list += "</tr>"
 				
 			list += "<tr>"
-				list += "<td>헬멋 점검날짜</td>"
+				list += "<th>헬멋 점검날짜:</th>"
 				list += "<td>"+data.hel_check+"</td>"
 			list += "</tr>"
 
@@ -156,6 +156,7 @@
 			<div id="list"></div>
     	</div>
 	</div>	
+
 
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=cf65f305eeffb142807ebc9a6025b896"></script>
 	<script>
