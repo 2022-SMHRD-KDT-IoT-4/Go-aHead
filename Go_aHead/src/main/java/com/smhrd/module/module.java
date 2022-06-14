@@ -16,9 +16,7 @@ public class module extends HttpServlet {
 
 	public static String hel_number_gps ="";
 	public static String hel_number_shock ="";
-	public static int alcohol = 0;
 	public static int press = 0;
-	public static int magnetic = 0;
 	public static String gps_lat= "";
 	public static String gps_long = "";
 	public static int shock= 0;
@@ -57,11 +55,7 @@ public class module extends HttpServlet {
 			press = Integer.parseInt(request.getParameter("press"));
 			System.out.println("press: " +press);
 		}
-		// 마그네틱 센서
-		if(request.getParameter("magnetic") != null) {
-			magnetic = Integer.parseInt(request.getParameter("magnetic"));
-			System.out.println("magnetic : "+magnetic);
-		}
+		
 	
 	}
 }

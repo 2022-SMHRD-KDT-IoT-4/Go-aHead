@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 @SuppressWarnings("serial")
 @WebServlet("/returnMotor")
 public class returnMotor extends HttpServlet {
+	public static int magnetic = 0;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -27,6 +28,13 @@ public class returnMotor extends HttpServlet {
 			int alcohol = Integer.parseInt(request.getParameter("alcohol"));
 			System.out.println("alcohol : " + alcohol);
 		}
+		
+		// 마그네틱 센서
+		if(request.getParameter("magnetic") != null) {
+			magnetic = Integer.parseInt(request.getParameter("magnetic"));
+			System.out.println("magnetic : "+magnetic);
+		}
+		
 
 		// motor값 받아오기
 		int motor = moduleController.motor;
@@ -39,7 +47,7 @@ public class returnMotor extends HttpServlet {
 			System.out.println("아두이노로 2 간다");
 			out.print("2");
 		}else if (motor==0){
-			System.out.println("아두이노로 1 간다");
+			System.out.println("아두이노로 0 간다");
 			out.print("0");
 		}
 	}
