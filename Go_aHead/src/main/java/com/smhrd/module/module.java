@@ -8,44 +8,55 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.smhrd.dao.moduleDAO;
+import com.smhrd.domain.moduleVO;
+
 @WebServlet("/module")
 public class module extends HttpServlet {
 
+	public static String hel_number_gps ="";
+	public static String hel_number_shock ="";
 	public static int alcohol = 0;
 	public static int press = 0;
 	public static int magnetic = 0;
-	public static String gps_lat = "";
+	public static String gps_lat= "";
 	public static String gps_long = "";
 	public static int shock= 0;
+
+	moduleDAO dao = new moduleDAO();
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-	//	//자이로
-	//	if(request.getParameter("shock") != null) {
-	//		shock = Integer.parseInt(request.getParameter("shock"));
-	//		System.out.println("shock:"+shock);
-	//	}
-	//	// GPS 위도
-	//	if(request.getParameter("gps_lat") != null) {
-	//		gps_lat = request.getParameter("gps_lat");
-	//		System.out.println("gps_lat:"+gps_lat);
-	//	}
-	//	
-	//	// GPS 경도
-	//	if(request.getParameter("gps_long") != null) {
-	//		gps_long = request.getParameter("gps_long");
-	//		System.out.println("gps_long:"+gps_long);
-	//	}
+		//자이로
+		if(request.getParameter("shock") != null) {
+			shock = Integer.parseInt(request.getParameter("shock"));
+			hel_number_shock = request.getParameter("helmetNum1");
+			
+			System.out.println("shock:"+shock);
+			System.out.println("helmetNum1:"+hel_number_shock);
+			
+		}
+		// GPS 위도
+		if(request.getParameter("gps_lat") != null&&request.getParameter("gps_long") != null) {
+			gps_lat = request.getParameter("gps_lat");
+			System.out.println("gps_lat:"+gps_lat);
+			gps_long = request.getParameter("gps_long");
+			System.out.println("gps_long:"+gps_long);
+			hel_number_gps = request.getParameter("helmetNum");
+			moduleVO gps_vo = new moduleVO(hel_number_gps,gps_lat,gps_long);
+		//	dao.updateGPS(gps_vo);
+		}
 		
+
 		// 압력 센서
 		if(request.getParameter("press") != null) {
 			press = Integer.parseInt(request.getParameter("press"));
-		//	System.out.println("press:"+press);
+			System.out.println("press:"+press);
 		}
 		// 마그네틱 센서
 		if(request.getParameter("magnetic") != null) {
 			magnetic = Integer.parseInt(request.getParameter("magnetic"));
-	//		System.out.println("magnetic : "+magnetic);
+			System.out.println("magnetic : "+magnetic);
 		}
 	
 	}

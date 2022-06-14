@@ -15,8 +15,10 @@ import org.apache.catalina.Session;
 import com.google.gson.Gson;
 import com.smhrd.dao.MemberDAO;
 import com.smhrd.dao.UseDAO;
+import com.smhrd.domain.HelmetVO;
 import com.smhrd.domain.UlocationVO;
 import com.smhrd.domain.UseVO;
+import com.smhrd.module.module;
 
 @WebServlet("/use.do")
 public class UseController extends HttpServlet {
@@ -32,13 +34,16 @@ public class UseController extends HttpServlet {
 		String kick_number = request.getParameter("kick_num");
 		String mem_id = (String)session.getAttribute("mem_id");
 		
-		UseVO vo = new UseVO(kick_number, hel_number, mem_id);
-		
 		UseDAO dao = new UseDAO();
+		HelmetVO helVO = dao.startGPS(hel_number);
+		
+		String start_loc_lat = helVO.getHel_loc_lat();
+		String start_loc_long = helVO.getHel_loc_long();
+		
+		UseVO vo = new UseVO(kick_number, hel_number, mem_id, start_loc_lat, start_loc_long);
 		dao.useInsert(vo);
 
 		UseVO result = dao.useList(mem_id);
-
 		
 		Gson g = new Gson();
 		String json = g.toJson(result);

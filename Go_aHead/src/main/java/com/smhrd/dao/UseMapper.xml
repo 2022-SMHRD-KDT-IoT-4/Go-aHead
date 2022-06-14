@@ -6,16 +6,16 @@
         
 <mapper namespace="com.smhrd.dao.UseDAO">
 	<insert id="useInsert" parameterType="UseVO">
-		INSERT INTO use_list(use_number, kick_number, hel_number, mem_id)
-		VALUES (use_seq.NEXTVAL, #{kick_number}, #{hel_number}, #{mem_id})
+		INSERT INTO use_list(use_number, kick_number, hel_number, mem_id, start_loc_lat, start_loc_long)
+		VALUES (use_seq.NEXTVAL, #{kick_number}, #{hel_number}, #{mem_id}, #{start_loc_lat}, #{start_loc_long})
 	</insert>
 	
 	<select id="accSelectOne" parameterType="String" resultType="AccVO">
-		SELECT * FROM acc_view WHERE hel_number = #{hel_num}
+		SELECT * FROM acc_view WHERE hel_number = #{hel_number}
 	</select>
 
 	<select id="useList" parameterType="String" resultType="UseVO">
-		SELECT kick_number, hel_number, mem_id, start_time  
+		SELECT use_number, kick_using, kick_number, hel_number, mem_id, start_time  
 		FROM use_list 
 		where mem_id = #{mem_id} and kick_using = 1
 	</select>
@@ -23,7 +23,15 @@
 	<update id="stop">
 	    UPDATE use_list set kick_using = 2 
         where mem_id =#{mem_id} AND kick_using = 1
+	</update>
 	
+	<select id="helSelectOne" parameterType="String" resultType="HelmetVO">
+		SELECT * FROM helmet WHERE hel_number = #{hel_number}
+	</select>
+	
+	<update id="stopGPS" parameterType="UseVO">
+		UPDATE use_list SET end_loc_lat = #{end_loc_lat}, end_loc_long = #{end_loc_long}, end_time = TO_CHAR(SYSDATE, 'YYYY-MM-DD, HH24:MI:SS')
+		WHERE use_number =  #{use_number}
 	</update>
 
 </mapper> 

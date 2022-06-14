@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.smhrd.controller.Controller;
 
+@SuppressWarnings("serial")
 @WebServlet("*.do")
 public class MemberFrontController extends HttpServlet {
 

@@ -17,7 +17,6 @@ import com.smhrd.controller.ViewLoginController;
 import com.smhrd.controller.ViewMainController;
 import com.smhrd.controller.ViewUlocationController;
 import com.smhrd.controller.ViewUseController;
-import com.smhrd.controller.moduleController;
 import com.smhrd.dao.moduleDAO;
 
 public class HandlerMapping {
@@ -36,10 +35,9 @@ public class HandlerMapping {
 	//mappings.put("/use.do", new UseController());
 	mappings.put("/viewUse.do", new ViewUseController());
 	mappings.put("/viewUlocation.do", new ViewUlocationController());
-	mappings.put("/acc.do", new AccController());
 	mappings.put("/logout.do", new LogoutController());
 	mappings.put("/viewHlocation.do", new ViewHlocationController());
-	mappings.put("/module.do", new moduleController());
+	mappings.put("/acc.do", new AccController());
 
 	}
 	
