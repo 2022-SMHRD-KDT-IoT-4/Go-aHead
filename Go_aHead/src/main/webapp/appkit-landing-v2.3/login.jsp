@@ -20,12 +20,37 @@
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="appkit-landing-v2.3/assets/css/styles.css">
     <link id="theme-style" rel="stylesheet" href="appkit-landing-v2.3/assets/css/other.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  	<script src="http://code.jquery.com/jquery-latest.js"></script>
 </head> 
 
 <body class="login_body">
 <%
 	Member vo = (Member)session.getAttribute("member");
 %>
+	
+	<script>
+		$(document).ready(function() {
+			$('#login-btn').click(function() {
+				
+			})
+		}
+		
+		function motorZero() {
+			$.ajax({
+				url : "moduleController",
+				type : "get",
+				data : {"motor" : 0},
+				success : console.log("motorZero success"),
+				error: function() {
+					alert('error');
+				}
+			})
+		}
+	
+	</script>
+	
+	
 	 <!-- header 상단바 부분 --> 
     <header id="header" class="header">  
         <div class="container">       
@@ -82,7 +107,7 @@
               </div>
 			
 
-              <button class="btn btn-outline-light btn-lg px-5 btncolor" type="submit">로그인</button>
+              <button id="login-btn" class="btn btn-outline-light btn-lg px-5 btncolor" type="submit">로그인</button>
 			</form>
 			
               <div class="d-flex justify-content-center text-center mt-4 pt-1">
