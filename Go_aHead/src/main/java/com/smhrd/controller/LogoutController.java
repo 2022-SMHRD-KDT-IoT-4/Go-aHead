@@ -10,6 +10,7 @@ import javax.servlet.http.HttpSession;
 
 import com.smhrd.dao.DAO;
 import com.smhrd.domain.Member;
+import com.smhrd.module.moduleController;
 
 public class LogoutController implements Controller {
 
@@ -19,6 +20,7 @@ public class LogoutController implements Controller {
 		
 		HttpSession session = request.getSession();
 		session.invalidate();
+		moduleController.motor = 0;
 	
 	return "main";
 }

@@ -14,7 +14,7 @@ import com.smhrd.domain.moduleVO;
 
 @WebServlet("/moduleController")
 public class moduleController extends HttpServlet {
-	public static int motor=0;
+	public static int motor = 0;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
