@@ -26,16 +26,18 @@
 <%
 	Member vo = (Member)session.getAttribute("member");
 %>
-	<header id="header" class="header">  
+	 <!-- header 상단바 부분 --> 
+    <header id="header" class="header">  
         <div class="container">       
             <h1 class="logo">
-                <a class="scrollto" href="#hero">
-                    <span class="logo-icon-wrapper"><img class="logo-icon" src="appkit-landing-v2.3/assets/images/kick_icon_F.png" alt="iccon" style=" width: 40px; height: 40px;"></span>
+                <a class="scrollto" onclick='location.href="viewMain.do"'>
+                    <span class="logo-icon-wrapper"><img class="logo-icon" src="appkit-landing-v2.3/assets/images/kick_icon_F.png" alt="iccon"></span>
                     <span class="text"><span class="highlight">GO</span>AHEAD</span></a>
             </h1><!--//logo-->
+
             <nav class="main-nav navbar-expand-md float-right navbar-inverse" role="navigation">
                 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -43,13 +45,14 @@
                     </button><!--//nav-toggle-->
                 
                 <div id="navbar-collapse">
+                   
+                    <!-- 로그인 전 -->
                     <ul class="nav navbar-nav">
-                        <li class="nav-item"><a class="nav-link scrollto" onclick='location.href="viewJoin.do"'>회원가입</a></li>
-                        <li class="nav-item"><a class="nav-link scrollto" onclick='location.href="viewLogin.do"'>로그인</a></li>
-                        <li class="nav-item"><a class="nav-link scrollto"onclick='location.href="faq.do"'>고객센터</a></li>                        
-
+                       <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewJoin.do'">회원가입</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewLogin.do'">로그인</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='faq.do'">고객센터</a></li>            
                     </ul><!--//nav-->
-                </div><!--//navabr-collapse-->
+                </div><!--//navabr-collapse-->     
             </nav><!--//main-nav-->                     
         </div><!--//container-->
     </header><!--//header-->
@@ -58,7 +61,7 @@
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-        <div class="card bg-dark text-white login_content" style="border-radius: 1rem;">
+        <div class="card bg-dark text-white login_content" >
           <div class="card-body p-5 text-center">
 
             <div class="mb-md-5 mt-md-4 pb-5">
@@ -66,8 +69,8 @@
               <h2 class="fw-bold mb-2 text-uppercase">로그인</h2>
               <p class="text-white-50 mb-5">아이디 비밀번호를 입력하세요!</p>
 
-              <div class="form-outline form-white mb-4">
                 <form action="login.do" method="post">
+              <div class="form-outline form-white mb-4">
                 <input type="text" name="mem_id" id="typeEmailX" class="form-control form-control-lg" />
                 
                 <label class="form-label" for="typeEmailX">아이디</label>
@@ -81,6 +84,7 @@
 
               <button class="btn btn-outline-light btn-lg px-5 btncolor" type="submit">로그인</button>
 			</form>
+			
               <div class="d-flex justify-content-center text-center mt-4 pt-1">
                 <a href="#!" class="text-white"><i class="fab fa-facebook-f fa-lg"></i></a>
                 <a href="#!" class="text-white"><i class="fab fa-twitter fa-lg mx-4 px-2"></i></a>
@@ -90,7 +94,7 @@
             </div>
 
             <div>
-              <p class="mb-0">Go Ahead 계정이 없으신가요?<a href="viewJoin.do" class="text-white-50 fw-bold"><br>회원가입 하러가기</a>
+              <p class="mb-0">Go Ahead 계정이 없으신가요?<a href="viewJoin.do" class="text-white-50 fw-bold goJoin"><br>회원가입 하러가기</a>
               </p>
             </div>
 

@@ -16,58 +16,33 @@
 
 <!-- 헤드바 css -->
 <link id="theme-style" rel="stylesheet" href="appkit-landing-v2.3/assets/css/styles.css">
+<link id="theme-style" rel="stylesheet" href="appkit-landing-v2.3/assets/css/other.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 
-<style>
-.header {
-   
-   position: static;
-   }
-   
-   .title {
-   
-   background-color: skyblue;
-   position: absolute;
-   top: 0px;
-   left: 0px
-   
-   }
-   
-    .title2 {
-    font-size: 30px;
-    font-weight: bolder;
-    
-    }
 
-</style>
+
 </head>
 
-<body style="background-color: skyblue;">
+ <body>
+
     <!-- header 상단바 부분 --> 
-    <header id="header" class="header">  
+    <header id="header" class="header lo-header">  
         <div class="container">       
             <h1 class="logo">
-                <a class="scrollto" href="#hero">
-                    <span class="logo-icon-wrapper"><img class="logo-icon" src="appkit-landing-v2.3/assets/images/kick_icon_F.png" alt="iccon" style=" width: 40px; height: 40px;"></span>
+                <a class="scrollto" onclick='location.href="viewMain.do"'>
+                    <span class="logo-icon-wrapper"><img class="logo-icon" src="appkit-landing-v2.3/assets/images/kick_icon_F.png" alt="iccon"></span>
                     <span class="text"><span class="highlight">GO</span>AHEAD</span></a>
             </h1><!--//logo-->
 
             <nav class="main-nav navbar-expand-md float-right navbar-inverse" role="navigation">
                 
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button><!--//nav-toggle-->
-                
                 <div id="navbar-collapse">
                     <% Member member = (Member)session.getAttribute("member"); %>
                     <%if (member == null) {%>
                     <!-- 로그인 전 -->
-                    <ul class="nav navbar-nav">
+                    <ul class="nav navbar-nav faqnav">
                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewJoin.do'">회원가입</a></li>
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewLogin.do'">로그인</a></li>
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='faq.do'">고객센터</a></li>            
@@ -76,7 +51,7 @@
                     <%} else if (member.getMem_num() == 1) { %>
                     
                     <!-- admin 로그인 -->
-                    <ul class="nav navbar-nav">
+                    <ul class="nav navbar-nav faqnav">
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='memberlist.do'">회원정보관리</a></li>
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewUlocation.do'">고객위치확인</a></li>
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewHlocation.do'">킥보드위치</a></li>
@@ -88,7 +63,7 @@
                     
                     <!-- user 로그인 -->
                     
-                     <ul class="nav navbar-nav">
+                     <ul class="nav navbar-nav faqnav">
                         <li class="nav-item"><a class="nav-link scrollto" href="마이페이지">마이페이지</a></li>
                         <li class="nav-item">
                               <div class="dropdown nav-link scrollt ">
@@ -97,6 +72,7 @@
                      <a href="viewUse.do">이용시작</a>
                      <a href="blackbox">블랙박스 확인</a>
                     </div></div></a></li>
+                    	<li class="nav-item"><a class="nav-link scrollto" onclick="location.href='faq.do'">고객센터</a></li>     
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='logout.do'">로그아웃</a></li>                        
                     </ul><!--//nav-->
                     
@@ -106,11 +82,11 @@
             </nav><!--//main-nav-->                     
         </div><!--//container-->
     </header><!--//header-->
-
+    
 	<!--FAQ 시작 -->
-	<div class="container">
+	<div class="container faq-section">
 		<div class="col-md-4">
-			<ul class="list-group help-group">
+			<ul class="list-group help-group ">
 				<div class="faq-list list-group nav nav-tabs">
 					<a href="#tab1" class="list-group-item active" role="tab"data-toggle="tab">이용안내</a>
 					<a href="#tab2"	class="list-group-item active" role="tab" data-toggle="tab">안전수칙</a>
@@ -333,5 +309,7 @@
 				<script
 					src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
 				<script src="appkit-landing-v2.3/assets/js/faq.js"></script>
+				<script src="appkit-landing-v2.3/assets/js/other.js"></script>
+				<script src="appkit-landing-v2.3/assets/js/main.js"></script>
 </body>
 </html>
