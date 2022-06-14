@@ -129,21 +129,20 @@
          <div class="carousel-inner">
              
             <div class="carousel-item item-1 active">
-               <div class="item-content container" style="margin-left : 100px">
-                   <div class="item-content-inner">
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                      
-                        <p class="intro">
-                        <br>
-                    <span class="intro" ">스마트한 안전헬멧을 착용함으로써, </span>
+               <div class="item-content container"  >
+                   <div class="item-content-inner" style="text-shadow: 1px 1px black ">
+           
+                   	<br>
+                	<br>
+           			<br>
+                    <h2>고어헤드란? </h2>
                     <br>
-                    <span>안전한 킥보드 사용문화에 앞서 나가자! </span>
+                    <h4>스마트한 안전헬멧을 착용함으로써, </h4>
+                   
+                    <h4>안전한 킥보드 사용문화에 앞서 나가자! </h4>
                     <br>
                     <br>
-                        </p>
+                   
                          <%if (member == null) {%>
                         <a class="btn btn-primary btn-cta" href="viewLogin.do" target="_blank">시작하기</a>
                         <%} else {%>
@@ -153,15 +152,19 @@
                </div><!--//item-content-->
             </div><!--//item-->
             
-            <div class="carousel-item item-2">
+            <div class="carousel-item item-2" >
                <div class="item-content container">
-                  <div class="item-content-inner">
-                        
-                        <h2 class="heading">GO AHEAD<br class="d-none d-md-block"></h2>
-                        <p class="intro">
-                        <br>
-                        <br>
-                        </p>
+                  <div class="item-content-inner" style="margin-left : 370px; text-shadow: 1px 1px black " >
+                    <br>    
+                	<br>
+           			<br>
+                    <h2>고어헤드란? </h2>
+                    <br>
+                    <h4>스마트한 안전헬멧을 착용함으로써, </h4>
+                   
+                    <h4>안전한 킥보드 사용문화에 앞서 나가자! </h4>
+                    <br>
+                    <br>
                          <%if (member == null) {%>
                         <a class="btn btn-primary btn-cta" href="viewLogin.do" target="_blank">시작하기</a>
                         <%} else {%>
@@ -173,10 +176,16 @@
             
             <div class="carousel-item item-3">
                <div class="item-content container">
-                  <div class="item-content-inner">
-                       <h2 class="haunted-text" class="heading" data-haunted-text>GO AHEAD</h2>
-                        <p class="intro">
-                        <br><br></p>
+                  <div class="item-content-inner" style="margin-left : 900px; width: 1000px; text-shadow: 1px 1px black  "> 
+                	<br>
+           			<br>
+                    <h2>고어헤드란? </h2>
+                    <br>
+                    <h4>스마트한 안전헬멧을 착용함으로써, </h4>
+                   
+                    <h4>안전한 킥보드 사용문화에 앞서 나가자! </h4>
+                    <br>
+                    <br>
                          <%if (member == null) {%>
                         <a class="btn btn-primary btn-cta" href="viewLogin.do" target="_blank">시작하기</a>
                         <%} else {%>
@@ -241,7 +250,9 @@
                 <div class="item col-md-4 col-12">
                     <div class="item-inner">
                         <div class="figure-holder">
-                            <img class="figure-image" src="appkit-landing-v2.3/assets/images/blackbox.jpg" alt="image" style="width: 300px">
+                        	<br>
+                        	<br>
+                            <img class="figure-image" src="appkit-landing-v2.3/assets/images/blackbox.jpg" alt="image" style="width: 200px">
                         </div><!--//figure-holder-->
                         <h3 class="item-title">블랙박스</h3>
                         <div class="item-desc mb-3">
