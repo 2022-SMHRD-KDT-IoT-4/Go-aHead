@@ -31,13 +31,14 @@
     <header id="header" class="header">  
         <div class="container">       
             <h1 class="logo">
-                <a class="scrollto" href="viewMain.do">
-                    <span class="logo-icon-wrapper"><img class="logo-icon" src="appkit-landing-v2.3/assets/images/kick_icon_F.png" alt="iccon" style=" width: 40px; height: 40px;"></span>
+                <a class="scrollto" onclick='location.href="viewMain.do"'>
+                    <span class="logo-icon-wrapper"><img class="logo-icon" src="appkit-landing-v2.3/assets/images/kick_icon_F.png" alt="iccon" ></span>
                     <span class="text"><span class="highlight">GO</span>AHEAD</span></a>
             </h1><!--//logo-->
+
             <nav class="main-nav navbar-expand-md float-right navbar-inverse" role="navigation">
                 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -45,13 +46,14 @@
                     </button><!--//nav-toggle-->
                 
                 <div id="navbar-collapse">
+                   
+                    <!-- 로그인 전 -->
                     <ul class="nav navbar-nav">
-                        <li class="nav-item"><a class="nav-link scrollto" onclick='location.href="viewJoin.do"'>회원가입</a></li>
-                        <li class="nav-item"><a class="nav-link scrollto" onclick='location.href="viewLogin.do"'>로그인</a></li>
-                        <li class="nav-item"><a class="nav-link scrollto" onclick='location.href="faq.do"'>고객센터</a></li>                        
-
+                       <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewJoin.do'">회원가입</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewLogin.do'">로그인</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='faq.do'">고객센터</a></li>            
                     </ul><!--//nav-->
-                </div><!--//navabr-collapse-->
+                </div><!--//navabr-collapse-->     
             </nav><!--//main-nav-->                     
         </div><!--//container-->
     </header><!--//header-->
@@ -147,14 +149,11 @@
           <div class="mb-4"></div>
           <button class="btn btn-primary btn-lg btn-block btncolor" type="submit">가입 완료</button>
           
-          
+	        </form>
           </div>
-		
-
-        </form>
       </div>
     </div>
-  </div>
+    
   <script>
     window.addEventListener('load', () => {
       const forms = document.getElementsByClassName('validation-form');

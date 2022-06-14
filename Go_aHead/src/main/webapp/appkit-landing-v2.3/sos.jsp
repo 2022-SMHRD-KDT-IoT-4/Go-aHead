@@ -124,7 +124,7 @@
 	  			
 	  			<tr>
 					<th>비상연락망  </th>	  		
-					<td><%= vo.getMem_subphone() %>)</td>	  		
+					<td><%= vo.getMem_subphone() %></td>	  		
 	  			</tr>
 						  		
 	  			<tr>
