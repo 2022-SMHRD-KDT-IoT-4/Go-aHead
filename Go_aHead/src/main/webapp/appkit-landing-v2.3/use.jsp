@@ -149,40 +149,37 @@ function motorStop() {
 
 </script>
 
+ <body> 
 
-
- <body > 
-
-    <!-- header 상단바 부분 --> 
+  <!-- 유저!!!!!!!!!!!!!!!!!!!!!!!!!! header 상단바 부분 --> 
     <header id="header" class="header lo-header" >  
         <div class="container" >       
             <h1 class="logo">
                 <a class="scrollto" onclick='location.href="viewMain.do"'>
                     <span class="logo-icon-wrapper"><img class="logo-icon" src="appkit-landing-v2.3/assets/images/kick_icon_F.png" alt="iccon" style=" width: 40px; height: 40px;"></span>
                     <span class="text" ><span class="highlight">GO</span>AHEAD</span></a>
-                
             </h1><!--//logo-->
 
             <nav class="main-nav navbar-expand-md float-right navbar-inverse" role="navigation">
+                
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button><!--//nav-toggle-->
+                
                 <div id="navbar-collapse">
-                                       
-                    <!-- user 로그인 -->
-                     <ul class="nav navbar-nav">
+                     <ul class="nav navbar-nav header-ul">
                         <li class="nav-item"><a class="nav-link scrollto" href="마이페이지">마이페이지</a></li>
                         <li class="nav-item">
                               <div class="dropdown nav-link scrollt ">
-                          <p>킥보드</p>
+                          <p class="head-kick">킥보드</p>
                           <div class="dropdown-content">
                      <a href="viewUse.do">이용시작</a>
                      <a href="blackbox">블랙박스 확인</a>
-                    </div></div></li>
-                       <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='faq.do'">고객센터</a></li>     
+                    </div></div></a></li>
+                    	<li class="nav-item"><a class="nav-link scrollto" onclick="location.href='faq.do'">고객센터</a></li>     
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='logout.do'">로그아웃</a></li>                        
                     </ul><!--//nav-->
                 </div><!--//navabr-collapse-->     

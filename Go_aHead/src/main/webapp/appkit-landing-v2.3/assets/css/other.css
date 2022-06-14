@@ -21,7 +21,7 @@
 }
 
 body {
-	background-color: skyblue !important;
+	background-color: #ededed !important;
 
 	/*
        min-height: 100vh;
@@ -390,16 +390,36 @@ body {
 	top: 0px;
 	
 }
+
+/* 헤더부분 색!!!!!!!!!!!!!!!!!!!!!!!!!*/
+.header-ul li a {
+	color: #505050!important;
+}
+
+.header-ul li div p {
+	color: #505050!important;
+}
     
 .faqnav li a {
-	color: black!important;
+	color: #505050!important;
 }
 
 .faqnav li div p {
-	color: black!important;
+	color: #505050!important;
 }
+  
 
 .faq-header .container .logo .scrollto span{
-	color: black;
+	color: #505050;
+	
+}
+
+.lo-header .container .logo .scrollto span{
+	color: #505050;
+	
+}
+
+.ad-header .container .logo .scrollto span{
+	color: #505050;
 	
 }

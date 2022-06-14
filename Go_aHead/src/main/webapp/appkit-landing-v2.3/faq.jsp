@@ -21,8 +21,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 
-
-
 </head>
 
  <body class="faq-body">
@@ -51,10 +49,10 @@
                     <%} else if (member.getMem_num() == 1) { %>
                     
                     <!-- admin 로그인 -->
-                    <ul class="nav navbar-nav faqnav">
+                   <ul class="nav navbar-nav faqnav header-ul">
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='memberlist.do'">회원정보관리</a></li>
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewUlocation.do'">고객위치확인</a></li>
-                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewHlocation.do'">킥보드위치</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewHlocation.do'">헬멧위치확인</a></li>
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='faq.do'">고객센터</a></li>            
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='logout.do'">로그아웃</a></li>            
                     </ul><!--//nav-->
@@ -62,7 +60,6 @@
                     <%} else {%>
                     
                     <!-- user 로그인 -->
-                    
                      <ul class="nav navbar-nav faqnav">
                         <li class="nav-item"><a class="nav-link scrollto" href="마이페이지">마이페이지</a></li>
                         <li class="nav-item">
