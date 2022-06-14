@@ -164,7 +164,7 @@ a:focus {
 }
 
 .header.header-scrolled .logo {
-  color: #40babd;
+  color: skyblue;
   padding-top: 12px;
 }
 
@@ -970,8 +970,8 @@ a:focus {
     z-index: 40;
   }
   .header.header-scrolled .main-nav .nav .nav-link.active {
-    color: #40babd;
-    border: none;
+	background-color:skyblue;
+	border: none;
   }
   .main-nav .navbar-collapse .nav-item {
     margin-right: 0;
