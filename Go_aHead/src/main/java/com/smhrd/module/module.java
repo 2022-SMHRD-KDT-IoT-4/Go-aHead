@@ -31,7 +31,6 @@ public class module extends HttpServlet {
 		if(request.getParameter("shock") != null) {
 			shock = Integer.parseInt(request.getParameter("shock"));
 			hel_number_shock = request.getParameter("helmetNum1");
-			
 			System.out.println("shock:"+shock);
 			System.out.println("helmetNum1:"+hel_number_shock);
 			

@@ -20,6 +20,10 @@
 		where mem_id = #{mem_id} and kick_using = 1
 	</select>
 	
+		<select id="useList2" parameterType="String" resultType="UseVO">
+		SELECT use_number from use_list where hel_number = #{hel_number} and kick_using = 1
+	</select>
+	
 	<update id="stop">
 	    UPDATE use_list set kick_using = 2 
         where mem_id =#{mem_id} AND kick_using = 1
@@ -28,11 +32,19 @@
 	<select id="helSelectOne" parameterType="String" resultType="HelmetVO">
 		SELECT * FROM helmet WHERE hel_number = #{hel_number}
 	</select>
-	
+
 	<update id="stopGPS" parameterType="UseVO">
 		UPDATE use_list SET end_loc_lat = #{end_loc_lat}, end_loc_long = #{end_loc_long}, end_time = TO_CHAR(SYSDATE, 'YYYY-MM-DD, HH24:MI:SS')
 		WHERE use_number =  #{use_number}
 	</update>
+	
+	<insert id="accList" parameterType="AccVO">
+		insert into acc_list(acc_num, use_number, acc_loc_lat, acc_loc_long) values(acc_seq.NEXTVAL, #{use_number}, #{acc_loc_lat}, #{acc_loc_long})
+	</insert>
+	
+	
+	
+	
 
 </mapper> 
 
