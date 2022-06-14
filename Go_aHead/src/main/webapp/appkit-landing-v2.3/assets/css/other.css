@@ -292,7 +292,7 @@ body {
     }
 
  .start-input{
- 	width: 250px!important;
+ 	width: 220px!important;
  }
  
  .start-section{
@@ -345,3 +345,7 @@ body {
 	
 }
 
+.start-input:focus {
+	border: none!important;
+   	color: white!important;
+}
