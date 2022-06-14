@@ -152,12 +152,12 @@ function motorStop() {
 
 
  <body>
-    <!-- header 상단바 부분 --> 
-    <header id="header" class="header" style = "position: static;">  
+<!-- header 상단바 부분 --> 
+    <header id="header" class="header lo-header">  
         <div class="container">       
             <h1 class="logo">
-                <a class="scrollto" href="#hero">
-                    <span class="logo-icon-wrapper"><img class="logo-icon" src="appkit-landing-v2.3/assets/images/kick_icon_F.png" alt="iccon" style=" width: 40px; height: 40px;"></span>
+                <a class="scrollto" onclick='location.href="viewMain.do"'>
+                    <span class="logo-icon-wrapper"><img class="logo-icon" src="appkit-landing-v2.3/assets/images/kick_icon_F.png" ></span>
                     <span class="text"><span class="highlight">GO</span>AHEAD</span></a>
             </h1><!--//logo-->
             
@@ -214,19 +214,7 @@ function motorStop() {
   </div>
 </div>
  
-
- 
- 
- 
- 
  </div>  
-
-<h3 class="use-title">킥보드 위치확인</h3>
-   
-   
-<div style="display: block; margin-top:30px" >
-
-</div>
       
 
 
