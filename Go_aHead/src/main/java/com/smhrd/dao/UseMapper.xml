@@ -43,7 +43,7 @@
 	</insert>
 	
 	<select id="usinglist" resultType="UseVO" parameterType="String">
-		select * from use_list where kick_using = 2 and mem_id = #{mem_id}
+		select * from used_list where kick_using = 2 and mem_id = #{mem_id}
 	</select>
 	
 	

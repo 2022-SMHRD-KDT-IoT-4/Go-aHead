@@ -19,8 +19,10 @@ public class UsinglistController implements Controller {
 			throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		
-		HttpSession session = request.getSession();
-		String mem_id = (String) session.getAttribute("mem_id");
+//		HttpSession session = request.getSession();
+//		String mem_id = (String) session.getAttribute("mem_id");
+
+		String mem_id = request.getParameter("mem_id");
 		
 		System.out.println(mem_id);
 		

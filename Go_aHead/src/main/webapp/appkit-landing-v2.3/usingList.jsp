@@ -1,3 +1,5 @@
+<%@page import="java.util.Date"%>
+<%@page import="java.text.SimpleDateFormat"%>
 <%@page import="com.smhrd.domain.UseVO"%>
 <%@page import="com.smhrd.domain.Member"%>
 <%@page import="java.util.ArrayList"%>
@@ -78,14 +80,43 @@ ArrayList<UseVO> list = (ArrayList)request.getAttribute("list");
         <th>헬멧 번호</th>
         <th>이용시작시간</th>
         <th>이용종료시간</th>
+        <th>이용시간</th>
       </tr>
     </thead>
     <tbody>
 
 
 	<%
+	
+	//String a_date = "2022-03-19";
+    //String b_date = "2022-02-10";
+    
+    //SimpleDateFormat format = new SimpleDateFormat("yyyy-mm-dd");
+    
+    //Date a_parseDate = format.parse(a_date);
+    //Date b_parseDate = format.parse(b_date);
+    
+    // 밀리세컨드 단위로 차이 결과 도출
+   
+   
+    SimpleDateFormat format = new SimpleDateFormat("YYYYMMddHHmm");
+    
 	for(UseVO vo : list){
+		
+		String a_date = vo.getStart_time();
+	    String b_date = vo.getEnd_time();			   
+	    
+	    Date a_parseDate = format.parse(a_date);
+	    Date b_parseDate = format.parse(b_date);
+	    
+	    long resultTime = b_parseDate.getTime() - a_parseDate.getTime();
+	    
+	    int a=(int)(resultTime / 1000); 
+	    int b=(int)(resultTime / (60*1000));
+	    int c=(int)(resultTime / (60*60*1000));
+	    
 		%>
+	
 	 <tr>
 	  <td><%=vo.getMem_id() %></td>
 	  <td><%=vo.getUse_number() %></td>
@@ -93,6 +124,8 @@ ArrayList<UseVO> list = (ArrayList)request.getAttribute("list");
 	  <td><%=vo.getHel_number() %></td>
 	  <td><%=vo.getStart_time() %></td>
 	  <td><%=vo.getEnd_time()%></td>
+	  <td><%=vo.getUsing_time()+"분"%></td>
+	  
       </tr>
 	
 	<%} %>

@@ -20,6 +20,8 @@ public class UseVO {
 	private String end_loc_lat;
 	private String end_loc_long;
 	private String end_time;
+	private String using_time;
+	
 	
 	public UseVO(String kick_number, String hel_number, String mem_id, String start_loc_lat, String start_loc_long) {
 		this.kick_number = kick_number;
@@ -36,7 +38,7 @@ public class UseVO {
 	}
 
 	public UseVO(String mem_id, int use_number, int kick_using, String kick_number, String hel_number, String start_time,
-			String end_time) {
+			String end_time, String using_time) {
 		this.mem_id = mem_id;
 		this.use_number = use_number;
 		this.kick_using = kick_using;
@@ -44,6 +46,7 @@ public class UseVO {
 		this.hel_number = hel_number;
 		this.start_time = start_time;
 		this.end_time = end_time;
+		this.using_time = using_time;
 	}
 	
 	
