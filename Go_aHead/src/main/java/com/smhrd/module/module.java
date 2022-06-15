@@ -48,7 +48,6 @@ public class module extends HttpServlet {
 				System.out.println(" GPS DB저장 완료");
 			}
 		}
-		
 
 		// 압력 센서
 		if(request.getParameter("press") != null) {

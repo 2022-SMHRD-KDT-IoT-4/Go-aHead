@@ -5,44 +5,4 @@ if(k&&j[k]&&(e||j[k].data)||void 0!==d||"string"!=typeof b)return k||(k=i?a[h]=c
 //# sourceMappingURL=jquery.min.map
 
 // sosAlert.jsp -> sos.js 모듈데이터 전송 -> alert  acc.do로 이동
-$(document).ready(function(){
-	sos();
-	
-})
 
-function sos() {
-
-	$.ajax({
-
-		url: "sosAlert",
-		type: "get",
-		dataType: "json",
-		data: {
-			"ex": 1
-		},
-		success: sosAlert,
-		error: function() {
-			alert('error');3
-		}
-
-	})
-
-}
-
-function sosAlert(data) {
-
-	console.log('성공');
-	console.log(data);
-	
-	if (data[0] == 1) {
-		
-		console.log(data)
-		alert('sos 발생!')
-		location.href='acc.do';
-		
-	}
-	
-	
-	
-	
-}

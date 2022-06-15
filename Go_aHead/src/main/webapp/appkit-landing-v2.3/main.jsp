@@ -25,27 +25,63 @@
     <link id="theme-style" rel="stylesheet" href="appkit-landing-v2.3/assets/css/other.css">
 	<!-- font -->
 	 <link rel="stylesheet" href="appkit-landing-v2.3/assets/font/stylesheet.css">
-	<script type="text/javascript">
+
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	  <script src="http://code.jquery.com/jquery-latest.js"></script>
 
 
-	</script>
     
 </head>
-<% while(true) {
-        
-        if(module.shock == 1) { %>
-        <script type="text/javascript">
-        function () {
-        
-        alert('낙상');
-        
-        }
-        </script>
-        <% 
-      break;
-        }
-        
-        } %>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	sos();
+})
+
+
+
+function sos() {
+
+	$.ajax({
+
+		url: "sosAlert",
+		type: "get",
+		dataType: "json",
+		data: {
+			"ex": 1
+		},
+		success: sosAlert,
+		error: function() {
+			alert('error');
+		}
+
+	})
+
+}
+
+function sosAlert(data) {
+
+	console.log('성공');
+	console.log(data);
+	
+	if (data[0] == 1) {
+		
+		console.log(data)
+		alert('sos 발생!')
+		location.href='acc.do';
+		
+	} else if (data[0] == 0) {
+		
+		 setTimeout(sos,5000); 
+		
+	}
+	
+	
+}
+
+
+</script>
+
 
 <body class="main-body">
 
@@ -351,6 +387,8 @@
     }
     
     
+    
     </script>
+  
 </body>
 </html>
