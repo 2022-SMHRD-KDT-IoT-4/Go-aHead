@@ -25,6 +25,7 @@ public class returnMotor extends HttpServlet {
 		// System.out.println("returnMotor press: "+press);
 		// arduino에서 알코올 값 받아오기
 		if (request.getParameter("alcohol") != null) {
+			System.out.println("motor,alcohol,piezo wifi연결 중");
 			int alcohol = Integer.parseInt(request.getParameter("alcohol"));
 			System.out.println("alcohol : " + alcohol);
 		}
