@@ -39,8 +39,5 @@ public class sosAlert extends HttpServlet {
 	// 임의값 넣어줌
 //	int shock = 1;
 //	int hel_number = 1;
-//
-//	int[] list = {shock, hel_number};
-	// System.out.println("json성공!");
 	}
 }

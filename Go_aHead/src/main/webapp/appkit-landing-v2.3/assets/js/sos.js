@@ -22,7 +22,7 @@ function sos() {
 		},
 		success: sosAlert,
 		error: function() {
-			alert('error');
+			alert('error');3
 		}
 
 	})
