@@ -21,11 +21,8 @@ public class AccController implements Controller {
 	   
       HttpSession session = request.getSession();
       
-//      String hel_number = module.hel_number_shock;
-//      int shock = module.shock;
-      
-      int shock = 1;
-      String hel_number = "1";
+      String hel_number = module.hel_number_shock;
+      int shock = module.shock;
       String moveURL = "";
       
       if(shock == 1) {
@@ -41,10 +38,14 @@ public class AccController implements Controller {
 	      
 	      AccVO accvo = new AccVO(use_number, acc_loc_lat, acc_loc_long);
     	  dao.accList(accvo);
+    	  AccVO accList = dao.accListView(use_number);
+    	  System.out.println("사고 장소 위도 : " + accList.getAcc_loc_lat());
+    	  System.out.println("사고 장소 경도 : " + accList.getAcc_loc_long());
 	      
     	  if (vo != null) {
 	         System.out.println("success");
 	         session.setAttribute("acc_vo", vo);
+	         session.setAttribute("acc_helmet", accList);
 	         moveURL = "sos";
 	      } else {
 	         System.out.println("false");

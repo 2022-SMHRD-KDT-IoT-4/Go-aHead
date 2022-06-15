@@ -46,7 +46,9 @@
 		select * from used_list where kick_using = 2 and mem_id = #{mem_id}
 	</select>
 	
-	
+	<select id="accListView" parameterType="int" resultType="AccVO">
+		SELECT * FROM acc_list WHERE use_number = #{use_number}
+	</select>
 	
 
 </mapper> 
