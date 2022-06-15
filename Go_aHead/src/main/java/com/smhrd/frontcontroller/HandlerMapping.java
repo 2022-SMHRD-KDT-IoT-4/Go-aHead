@@ -33,7 +33,7 @@ public class HandlerMapping {
 	mappings.put("/login.do", new LoginController());
 	mappings.put("/memberlist.do", new MemberlistController());
 	mappings.put("/faq.do", new FAQController());
-	//mappings.put("/use.do", new UseController());
+//	mappings.put("/use.do", new UseController());
 	mappings.put("/viewUse.do", new ViewUseController());
 	mappings.put("/viewUlocation.do", new ViewUlocationController());
 	mappings.put("/logout.do", new LogoutController());
