@@ -131,22 +131,31 @@ public class UseDAO {
 		}
 		
 		return row;
-		
-		
 	}
 
-		public ArrayList<UseVO> usinglist(String mem_id) {
-			ArrayList<UseVO> list = new ArrayList<UseVO>();
-			try {
-				sqlSession = sqlSessionFactory.openSession(true);
-				list = (ArrayList)sqlSession.selectList("com.smhrd.dao.UseDAO.usinglist", mem_id);
-			} catch (Exception e) {
-				e.printStackTrace();
-			} finally {
-				sqlSession.close();
-			}
-			return list;
-		
-		
+	public ArrayList<UseVO> usinglist(String mem_id) {
+		ArrayList<UseVO> list = new ArrayList<UseVO>();
+		try {
+			sqlSession = sqlSessionFactory.openSession(true);
+			list = (ArrayList)sqlSession.selectList("com.smhrd.dao.UseDAO.usinglist", mem_id);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		return list;
+	}
+	
+	public AccVO accListView(int use_number) {
+		AccVO vo = null;
+		try {
+			sqlSession = sqlSessionFactory.openSession(true);
+			vo = (AccVO)sqlSession.selectOne("com.smhrd.dao.UseDAO.", use_number);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		return vo;
 	}
 }
