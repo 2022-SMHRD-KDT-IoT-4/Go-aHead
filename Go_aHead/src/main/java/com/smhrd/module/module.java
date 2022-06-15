@@ -19,7 +19,7 @@ public class module extends HttpServlet {
 	public static int press = 0;
 	public static String gps_lat= "";
 	public static String gps_long = "";
-	public static int shock= 1;
+	public static int shock= 0;
 
 	moduleDAO dao = new moduleDAO();
 	

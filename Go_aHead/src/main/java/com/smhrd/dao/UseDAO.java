@@ -64,7 +64,7 @@ public class UseDAO {
 		UseVO result = new UseVO();
 		try {
 			sqlSession = sqlSessionFactory.openSession(true);
-			result = sqlSession.selectOne("com.smhrd.dao.UseDAO.useList2", hel_number);
+			result = (UseVO)sqlSession.selectOne("com.smhrd.dao.UseDAO.useList2", hel_number);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}finally {
@@ -150,7 +150,7 @@ public class UseDAO {
 		AccVO vo = null;
 		try {
 			sqlSession = sqlSessionFactory.openSession(true);
-			vo = (AccVO)sqlSession.selectOne("com.smhrd.dao.UseDAO.", use_number);
+			vo = (AccVO)sqlSession.selectOne("com.smhrd.dao.UseDAO.accListView", use_number);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
