@@ -24,16 +24,16 @@ public class sosAlert extends HttpServlet {
 	int ex = Integer.parseInt(request.getParameter("ex"));
 	System.out.println(ex);
 	
-//	String shock = Integer.toString(module.shock);
-//	String hel_number = module.hel_number_shock;
+	String shock = Integer.toString(module.shock);
+	String hel_number = module.hel_number_shock;
 
-//	String[] list = {shock, hel_number};
-	
+	String[] list = {shock, hel_number};
+	System.out.println("list목록 , shock : "+ shock + ", hel_number : "+ hel_number);
 	// 임의값 넣어줌
-	int shock = 1;
-	int hel_number = 1;
-
-	int[] list = {shock, hel_number};
+//	int shock = 1;
+//	int hel_number = 1;
+//
+//	int[] list = {shock, hel_number};
 	
 	request.setCharacterEncoding("UTF-8");
 	response.setContentType("text/json;charset=utf-8");
