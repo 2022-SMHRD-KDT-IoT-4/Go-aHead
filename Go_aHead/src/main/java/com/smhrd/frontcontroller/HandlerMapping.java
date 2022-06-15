@@ -11,6 +11,7 @@ import com.smhrd.controller.MemberlistController;
 import com.smhrd.controller.UlocationController;
 import com.smhrd.controller.UseController;
 import com.smhrd.controller.UsinglistController;
+import com.smhrd.controller.ViewBlackboxController;
 import com.smhrd.controller.ViewHlocationController;
 import com.smhrd.controller.FAQController;
 import com.smhrd.controller.ViewJoinController;
@@ -40,6 +41,7 @@ public class HandlerMapping {
 	mappings.put("/viewHlocation.do", new ViewHlocationController());
 	mappings.put("/acc.do", new AccController());
 	mappings.put("/usinglist.do", new UsinglistController());
+	mappings.put("/viewBlackbox.do" , new ViewBlackboxController()) ;
 
 	}
 	

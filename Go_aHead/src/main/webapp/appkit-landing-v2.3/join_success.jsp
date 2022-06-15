@@ -20,7 +20,8 @@
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="appkit-landing-v2.3/assets/css/styles.css">
     <link id="theme-style" rel="stylesheet" href="appkit-landing-v2.3/assets/css/other.css">
-    
+
+
 </head>
 
 	

@@ -25,39 +25,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
     
-    <style>
-	*{
-	font-family: 'Jua', sans-serif;
-	}
-	
-	.header {
-	
-	position: static;
-	}
-	
-	.title {
-	
-	background-color: pink;
-	position: absolute;
-	top: 0px;
-	left: 0px
-	
-	}
-	
-	#map {
-	
-	margin-bottom: 50px;
-	position: fixed!important;
-	
-	}
-	
-	 .title2 {
-	 font-size: 30px;
-	 font-weight: bolder;
-	 
-	 }
-	 
-    </style>
+
 </head>
 <body>
 	
@@ -99,7 +67,7 @@
     <div>
 		<div class="input-group mb-3 search title"  style=" display:block; margin-top: 60px; height: 800px; width: 300px; background-color:#9b979757;" >
 	  		
-	  		<h4 style="margin-top: 30px; margin-left: 25px; font-weight: bold; font-size: 30px;">🚨SOS🚨<h4>
+	  		<h4 style="margin-top: 30px; margin-left: 25px; font-weight: bold; font-size: 30px;">🚨SOS🚨</h4>
 	  		<br><br>
 	  		<table style='margin-left: 25px; height: 600px'>
 	  			
@@ -138,9 +106,7 @@
 			  	
 			</div>
 	  		
-	  		
 		</div>
-    </div>
 		
 
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=cf65f305eeffb142807ebc9a6025b896"></script>

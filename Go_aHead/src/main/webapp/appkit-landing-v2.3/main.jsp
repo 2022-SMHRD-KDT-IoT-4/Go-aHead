@@ -26,13 +26,8 @@
 	<!-- font -->
 	 <link rel="stylesheet" href="appkit-landing-v2.3/assets/font/stylesheet.css">
 	<script type="text/javascript">
-	$(document).ready(function () {
-		
-		if(<%=module.shock%> == 1) {
-			sos();
-		} 
-		
-	})
+
+
 	</script>
     
 </head>
@@ -70,6 +65,9 @@
                     </ul><!--//nav-->
                     
                     <%} else if (member.getMem_num() == 1) { %>
+                    
+                    <!-- sos function -->
+                     <script type="text/javascript" src="appkit-landing-v2.3/assets/js/sos.js"></script>
                     
                     <!-- admin 로그인 -->
                     <ul class="nav navbar-nav">

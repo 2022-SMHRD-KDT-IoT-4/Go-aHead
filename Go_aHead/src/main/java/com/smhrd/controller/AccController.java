@@ -25,7 +25,7 @@ public class AccController implements Controller {
 //      int shock = module.shock;
       
       int shock = 1;
-      String hel_number = "2";
+      String hel_number = "1";
       String moveURL = "";
       
       if(shock == 1) {

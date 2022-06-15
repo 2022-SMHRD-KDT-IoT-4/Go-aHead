@@ -20,7 +20,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
-
 </head>
 
  <body class="faq-body">
@@ -49,6 +48,9 @@
                     <%} else if (member.getMem_num() == 1) { %>
                     
                     <!-- admin 로그인 -->
+					<!-- alert function -->
+					 <script type="text/javascript" src="appkit-landing-v2.3/assets/js/sos.js"></script>              
+					        
                    <ul class="nav navbar-nav faqnav header-ul">
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='memberlist.do'">회원정보관리</a></li>
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewUlocation.do'">고객위치확인</a></li>

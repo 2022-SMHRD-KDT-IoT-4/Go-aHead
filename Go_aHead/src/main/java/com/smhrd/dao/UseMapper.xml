@@ -11,7 +11,7 @@
 	</insert>
 	
 	<select id="accSelectOne" parameterType="String" resultType="AccVO">
-		SELECT * FROM acc_view WHERE hel_number = #{hel_number}
+		SELECT * FROM acc_view WHERE hel_number = #{hel_number} and kick_using = 1
 	</select>
 
 	<select id="useList" parameterType="String" resultType="UseVO">

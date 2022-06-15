@@ -24,6 +24,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   	<script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!-- alert function -->
+  <script type="text/javascript" src="appkit-landing-v2.3/assets/js/sos.js"></script>
     
     <script type="text/javascript">
     $(document).ready(function() {
