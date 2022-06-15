@@ -21,11 +21,8 @@ public class AccController implements Controller {
 	   
       HttpSession session = request.getSession();
       
-//      String hel_number = module.hel_number_shock;
-//      int shock = module.shock;
-      
-      int shock = 1;
-      String hel_number = "1";
+      String hel_number = module.hel_number_shock;
+      int shock = module.shock;
       String moveURL = "";
       
       if(shock == 1) {
@@ -45,6 +42,7 @@ public class AccController implements Controller {
     	  if (vo != null) {
 	         System.out.println("success");
 	         session.setAttribute("acc_vo", vo);
+	         session.setAttribute("acc_helmet", accvo);
 	         moveURL = "sos";
 	      } else {
 	         System.out.println("false");
