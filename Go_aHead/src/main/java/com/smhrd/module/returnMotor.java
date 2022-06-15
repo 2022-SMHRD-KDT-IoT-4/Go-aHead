@@ -46,7 +46,7 @@ public class returnMotor extends HttpServlet {
 		} else if (motor == 2) {
 			System.out.println("아두이노로 2 간다");
 			out.print("2");
-		}else if (motor==0){
+		} else if (motor==0) {
 			System.out.println("아두이노로 0 간다");
 			out.print("0");
 		}
