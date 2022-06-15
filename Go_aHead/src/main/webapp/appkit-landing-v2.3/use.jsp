@@ -24,7 +24,7 @@
   	<script src="http://code.jquery.com/jquery-latest.js"></script>
 	<!-- map java script -->
 	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=17b3f4afc77e1401ad704210c028726b"></script>
-	<script type="text/javascript" src="appkit-landing-v2.3/assets/js/map.js"></script> 	
+	<script type="text/javascript" src="appkit-landing-v2.3/assets/js/usemap.js"></script> 	
 </head>
 
  <% Member member = (Member)session.getAttribute("member"); %>

@@ -2,6 +2,11 @@
     	mapload();
     	})
     	
+    	
+  
+  function mapload(){
+	
+
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div  
     mapOption = { 
         center: new kakao.maps.LatLng(35.110494, 126.877761), // 지도의 중심좌표
@@ -38,4 +43,4 @@ for (var i = 0; i < positions.length; i ++) {
     });
 }
 
-
+}  	
