@@ -7,19 +7,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Bootstrap FAQ example with tabs and accordions</title>
-
-
-<link rel='stylesheet prefetch'	href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
-<link rel='stylesheet prefetch'	href='https://files.krve.io/f/eyespot.css'>
-<link rel='stylesheet prefetch'	href='https://cdn.cloudcache.dk/materialdesignicons/1.6.50/css/materialdesignicons.min.css'>
-<link rel="stylesheet" href="appkit-landing-v2.3/assets/css/faq.css">
-
-<!-- 헤드바 css -->
-<link id="theme-style" rel="stylesheet" href="appkit-landing-v2.3/assets/css/styles.css">
-<link id="theme-style" rel="stylesheet" href="appkit-landing-v2.3/assets/css/other.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+	<link rel='stylesheet prefetch'	href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+	<link rel="stylesheet" href="appkit-landing-v2.3/assets/css/faq.css">
+	<!-- 헤드바 css -->
+	<link id="theme-style" rel="stylesheet" href="appkit-landing-v2.3/assets/css/styles.css">
+	<link id="theme-style" rel="stylesheet" href="appkit-landing-v2.3/assets/css/other.css">
 </head>
 
  <body class="faq-body">
@@ -304,6 +296,7 @@
 				</div>
 			</div>
 						
+				<!-- java script 영역 -->		
 				<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
 				<script
 					src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>

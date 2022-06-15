@@ -28,8 +28,8 @@
   	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
  
- <!-- alert function -->
-  <script type="text/javascript" src="appkit-landing-v2.3/assets/js/sos.js"></script> 	
+	<!-- alert function -->
+	<script type="text/javascript" src="appkit-landing-v2.3/assets/js/sos.js"></script> 	
   	
 </head>
 
@@ -109,7 +109,7 @@ ArrayList<Member> list = (ArrayList)request.getAttribute("list");
   </table>    
   
 
-		<a href="main.do" class="button next scrolly">되돌아가기</a>
+		<a href="viewMain.do" class="button next scrolly">되돌아가기</a>
 
 	</div>
 
@@ -120,10 +120,6 @@ ArrayList<Member> list = (ArrayList)request.getAttribute("list");
     <script type="text/javascript" src="appkit-landing-v2.3/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="appkit-landing-v2.3/assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>     
     <script type="text/javascript" src="appkit-landing-v2.3/assets/js/main.js"></script> 
-    <script src="appkit-landing-v2.3/assets/js/jquery.min.js"></script>
-	<script src="appkit-landing-v2.3/assets/js/skel.min.js"></script>
-	<script src="appkit-landing-v2.3/assets/js/util.js"></script>
-	<!—[if lte IE 8]><script src="appkit-landing-v2.3/assets/js/ie/respond.min.js"></script><![endif]—>
 	<script src="appkit-landing-v2.3/assets/js/main.js"></script>
       
        
