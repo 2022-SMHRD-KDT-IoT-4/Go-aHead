@@ -14,6 +14,7 @@ public class HelmetVO {
 
    private String hel_number;
    private String hel_lost;
+
    private String hel_damage;
    private String hel_check;
    private String hel_loc_lat;

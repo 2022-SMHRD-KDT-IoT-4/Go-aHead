@@ -27,4 +27,17 @@ public class moduleDAO {
 		return row;
 		
 	}
+	
+	public int updateLost(String hel_number) {
+		int row = 0;
+		try {
+			sqlSession = sqlSessionFactory.openSession(true);
+			row = sqlSession.update("com.smhrd.dao.moduleDAO.updateLost", hel_number);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		return row;
+	}
 }
