@@ -31,7 +31,21 @@
 	</script>
     
 </head>
-
+<% while(true) {
+        
+        if(module.shock == 1) { %>
+        <script type="text/javascript">
+        function () {
+        
+        alert('낙상');
+        
+        }
+        </script>
+        <% 
+      break;
+        }
+        
+        } %>
 
 <body class="main-body">
 
