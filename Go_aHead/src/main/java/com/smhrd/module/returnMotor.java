@@ -33,7 +33,7 @@ public class returnMotor extends HttpServlet {
 		// 마그네틱 센서
 		if(request.getParameter("magnetic") != null) {
 			magnetic = Integer.parseInt(request.getParameter("magnetic"));
-			System.out.println("magnetic : "+magnetic);
+			System.out.println("magnetic : "+ magnetic);
 		}
 		
 
