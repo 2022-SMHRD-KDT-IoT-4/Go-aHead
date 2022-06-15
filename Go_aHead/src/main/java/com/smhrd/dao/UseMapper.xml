@@ -20,7 +20,7 @@
 		where mem_id = #{mem_id} and kick_using = 1
 	</select>
 	
-		<select id="useList2" parameterType="String" resultType="UseVO">
+	<select id="useList2" parameterType="String" resultType="UseVO">
 		SELECT use_number from use_list where hel_number = #{hel_number} and kick_using = 1
 	</select>
 	

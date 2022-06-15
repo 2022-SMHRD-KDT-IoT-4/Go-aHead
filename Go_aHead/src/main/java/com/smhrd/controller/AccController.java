@@ -33,6 +33,7 @@ public class AccController implements Controller {
 	      HelmetVO helmetvo = dao.startGPS(hel_number);
 	      
 	      int  use_number = usevo.getUse_number();
+	      System.out.println();
 	      String acc_loc_lat = helmetvo.getHel_loc_lat();
 	      String acc_loc_long = helmetvo.getHel_loc_long();
 	      
