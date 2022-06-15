@@ -22,6 +22,7 @@ public class AccController implements Controller {
       HttpSession session = request.getSession();
       
       String hel_number = module.hel_number_shock;
+      System.out.println(hel_number);
       int shock = module.shock;
       String moveURL = "";
       
@@ -30,6 +31,7 @@ public class AccController implements Controller {
 	      
 	      AccVO vo = dao.accView(hel_number);
 	      UseVO usevo = dao.useList2(hel_number);
+	      System.out.println(usevo.getUse_number());
 	      HelmetVO helmetvo = dao.startGPS(hel_number);
 	      
 	      int  use_number = usevo.getUse_number();
