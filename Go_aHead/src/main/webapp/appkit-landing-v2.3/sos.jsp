@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="appkit-landing-v2.3/assets/plugins/bootstrap/css/bootstrap.min.css">   
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="appkit-landing-v2.3/assets/css/styles.css">
+    <link id="theme-style" rel="stylesheet" href="appkit-landing-v2.3/assets/css/other.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
@@ -65,7 +66,7 @@
     <div id="map" style=" width :100%;height:800px; "></div>
     
     <div>
-		<div class="input-group mb-3 search title"  style=" display:block; margin-top: 60px; height: 800px; width: 300px; background-color:#9b979757;" >
+		<div class="input-group search title left-box">
 	  		
 	  		<h4 style="margin-top: 30px; margin-left: 25px; font-weight: bold; font-size: 30px;">🚨SOS🚨</h4>
 	  		<br><br>

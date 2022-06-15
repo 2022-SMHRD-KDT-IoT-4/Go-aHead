@@ -30,7 +30,7 @@ public class sosAlert extends HttpServlet {
 //	String[] list = {shock, hel_number};
 	
 	// 임의값 넣어줌
-	int shock = 1;
+	int shock = 2;
 	int hel_number = 1;
 
 	int[] list = {shock, hel_number};

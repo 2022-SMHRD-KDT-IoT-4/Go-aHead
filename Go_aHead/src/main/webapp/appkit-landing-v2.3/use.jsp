@@ -5,8 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
-<title>Bootstrap 4 theme for developers and startups</title>
+    <title>GO AHEAD - 킥보드에 안전을 더하다</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,11 +20,11 @@
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="appkit-landing-v2.3/assets/css/styles.css">
     <link id="theme-style" rel="stylesheet" href="appkit-landing-v2.3/assets/css/other.css">
-    <link rel="stylesheet" href="appkit-landing-v2.3/assets/startmodal.scss">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<!-- map java script -->
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=17b3f4afc77e1401ad704210c028726b"></script>
+	<script type="text/javascript" src="appkit-landing-v2.3/assets/js/map.js"></script> 	
 </head>
 
  <% Member member = (Member)session.getAttribute("member"); %>
@@ -187,81 +186,33 @@ function motorStop() {
         </div><!--//container-->
     </header><!--//header-->
     
-    
 <!-- ------------------------------------------------------------------------------------------------------------------ -->
 
-
-
 <div id="map"></div>
- <div class="start-section">
+<div class="start-section">
 
-<div class ="start-tag">
-   		<input type="text" class="form-control start-input" id ="kick_num_input" placeholder="킥보드 번호를 입력하세요." name="kick_num">
-   		<input type="text" class="form-control start-input" id ="het_num_input" placeholder="헬멧 번호를 입력하세요." name="hel_num">
-   		<input type="hidden" id="mem_id" value=<%=member.getMem_id()%>>
-   		<button  type="button" class="btn btn-success" id ="start-btn">이용시작</button>           
-</div>
- 
- 
- 
-<div class="background">
-  <div class="window">
-    <div class="popup">
-	
-	<div id ="useListTable">
+	<div class ="start-tag">
+	   		<input type="text" class="form-control start-input" id ="kick_num_input" placeholder="킥보드 번호를 입력하세요." name="kick_num">
+	   		<input type="text" class="form-control start-input" id ="het_num_input" placeholder="헬멧 번호를 입력하세요." name="hel_num">
+	   		<input type="hidden" id="mem_id" value=<%=member.getMem_id()%>>
+	   		<button  type="button" class="btn btn-success" id ="start-btn">이용시작</button>           
 	</div>
-	
-     <button type="submit" class="btn btn-success" id ="stop-btn" >이용종료</button>  
-    </div>
-  </div>
-</div>
- 
- </div>  
-      
-
+	 
+	<div class="background">
+	  <div class="window">
+	    <div class="popup">
+		
+		<div id ="useListTable">
+		</div>
+		
+	     <button type="submit" class="btn btn-success" id ="stop-btn" >이용종료</button>  
+	    </div>
+	  </div>
+	</div>
+	 
+</div>  
 
    
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=17b3f4afc77e1401ad704210c028726b"></script>
-<script>
-var mapContainer = document.getElementById('map'), // 지도를 표시할 div  
-    mapOption = { 
-        center: new kakao.maps.LatLng(35.110494, 126.877761), // 지도의 중심좌표
-        level: 3 // 지도의 확대 레벨
-    };
 
-var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
- 
-// 마커를 표시할 위치와 title 객체 배열입니다 
-var positions = [
-    {
-        title: '킥보드01', 
-        latlng: new kakao.maps.LatLng(35.110494, 126.877761)
-    }
-];
-
-// 마커 이미지의 이미지 주소입니다
-var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png"; 
-    
-for (var i = 0; i < positions.length; i ++) {
-    
-    // 마커 이미지의 이미지 크기 입니다
-    var imageSize = new kakao.maps.Size(24, 35); 
-    
-    // 마커 이미지를 생성합니다    
-    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize); 
-    
-    // 마커를 생성합니다
-    var marker = new kakao.maps.Marker({
-        map: map, // 마커를 표시할 지도
-        position: positions[i].latlng, // 마커를 표시할 위치
-        title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
-        image : markerImage // 마커 이미지 
-    });
-}
-
-
-
-
-</script>
 </body>
 </html>

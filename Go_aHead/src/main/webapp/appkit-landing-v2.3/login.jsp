@@ -34,7 +34,7 @@
 			$('#login-btn').click(function() {
 				
 			})
-		}
+		})
 		
 		function motorZero() {
 			$.ajax({
