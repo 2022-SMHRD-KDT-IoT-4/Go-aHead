@@ -64,11 +64,14 @@ function sosAlert(data) {
 	console.log('성공');
 	console.log(data);
 	
-	if (data[0] == 1) {
+	var shock = data[0];
+	
+	if (shock == 1) {
 		
 		console.log(data);
 		alert('sos 발생!');
 		location.href='acc.do';
+		shock = 0;
 		
 	} else if (data[0] == 0) {
 		
