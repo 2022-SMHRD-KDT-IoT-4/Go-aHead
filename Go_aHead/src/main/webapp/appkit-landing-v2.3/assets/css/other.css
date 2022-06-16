@@ -349,11 +349,10 @@ body {
 	box-shadow: none!important;
 }
 
-#use-list-table{
+#useListTable{
    
-    position: relative;
-    top: 20%;
-    left: 30%;
+	position: relative;
+	top: 30%;
 	
 }
   /*faq.jsp css*/
