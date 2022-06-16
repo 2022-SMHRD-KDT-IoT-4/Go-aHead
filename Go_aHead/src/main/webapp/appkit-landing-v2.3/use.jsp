@@ -97,7 +97,7 @@ function motorStop() {
 
 		document.querySelector(".background").className = "background show";
 		
-		var list = "<table class='use-list-table'>";
+		var list = "<table style ='position: relative; top: 40%; left: 30%;'>";
 		
 		list += "<tr>"
 			list += "<td>이용시작 시간</td>"
