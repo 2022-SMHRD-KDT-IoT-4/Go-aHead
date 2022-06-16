@@ -41,10 +41,10 @@ public class returnMotor extends HttpServlet {
 		int motor = moduleController.motor;
 		System.out.println("motor값 :" + motor);
 		// press>0&&
-		if (module.press > 0 && motor == 1) {
+		if (motor == 1) {
 			out.print("1");
 			System.out.println("아두이노로 1 간다");
-		} else if (motor == 2) {
+		} else if (motor == 2||module.shock==1) {
 			System.out.println("아두이노로 2 간다");
 			out.print("2");
 		} else if (motor==0) {
