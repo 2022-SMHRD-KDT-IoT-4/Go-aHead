@@ -34,11 +34,6 @@
 </head>
 
 <script type="text/javascript">
-$(document).ready(function(){
-	sos();
-})
-
-
 
 function sos() {
 
@@ -119,6 +114,13 @@ function sosAlert(data) {
                     
                     <%} else if (member.getMem_num() == 1) { %>
                     
+                    <script type="text/javascript">
+                    $(document).ready(function(){
+                    	sos();
+                    })
+
+                    
+                    </script>
                     <!-- sos function -->
                      <script type="text/javascript" src="appkit-landing-v2.3/assets/js/sos.js"></script>
                     
@@ -257,9 +259,12 @@ function sosAlert(data) {
     <div id="about" class="about-section">
         <div class="container text-center">
             <h2 class="section-title">킥보드에 안전을 더하다</h2>
-            <p class="intro">이동의 패러다임을 바꾸는 GO AHEAD<br>가고 싶은 곳으로 언제든 갈 수 있도록, 하고 싶었던 것을 언제든 할 수 있도록👌<br>
-            다양한 공유킥보드가 나왔지만 GO AHEAD는 더욱 안전을 위해👌<br>교통혼잡, 대기오염, 주차공간 부족과 같은 문제 개선에 적극 기여하며 <br>
-사람과 도시를 연결하기 위하여 오늘도 노력합니다.<br> 우리는 이동을 통해 아낀 시간이 우리의 삶을 조금 더 나아지게 할 수 있다고 믿습니다.</p>
+            <p class="intro">이동의 패러다임을 바꾸는 GO AHEAD
+            <p>가고 싶은 곳으로 언제든 갈 수 있도록, 하고 싶었던 것을 언제든 할 수 있도록👌</p>
+            <p>다양한 공유킥보드가 나왔지만 GO AHEAD는 더욱 안전을 위해👌</p>
+            <p>교통혼잡, 대기오염, 주차공간 부족과 같은 문제 개선에 적극 기여하며</p>
+			<p>사람과 도시를 연결하기 위하여 오늘도 노력합니다.</p>
+			<p>우리는 이동을 통해 아낀 시간이 우리의 삶을 조금 더 나아지게 할 수 있다고 믿습니다.</p></p>
            
            
             <!-- 필요여부 확인해볼게요 
