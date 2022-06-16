@@ -65,7 +65,7 @@ function sosAlert(data) {
 		
 		console.log(data);
 		alert('sos 발생!');
-		location.href='acc.do';
+		location.href="acc.do";
 		shock = 0;
 		
 	} else if (data[0] == 0) {

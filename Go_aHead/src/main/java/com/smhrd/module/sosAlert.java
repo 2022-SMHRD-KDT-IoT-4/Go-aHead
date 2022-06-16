@@ -28,7 +28,7 @@ public class sosAlert extends HttpServlet {
 	
 	String shock = Integer.toString(module.shock);
 	String hel_number = module.hel_number_shock;
-		
+	
 	String[] list = {shock, hel_number};
 	System.out.println("list목록 , shock : "+ shock + ", hel_number : "+ hel_number);
 		

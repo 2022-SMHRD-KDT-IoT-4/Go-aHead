@@ -20,6 +20,7 @@ public class AccController implements Controller {
          throws ServletException, IOException {
 	   
       HttpSession session = request.getSession();
+      System.out.println("acc.do로 가기 성공");
       
       String hel_number = module.hel_number_shock;
       System.out.println(hel_number);

@@ -39,6 +39,7 @@
     	$('#inputbtn').click(function() {
 			uLocationView();
 		})
+		sos();
 	})
 		//실행확인됨    
     	//function uLocationView() {
@@ -99,6 +100,48 @@
 		
 		$('#list').html(list);
 			
+	}
+	
+	function sos() {
+
+		$.ajax({
+
+			url: "sosAlert",
+			type: "get",
+			dataType: "json",
+			data: {
+				"ex": 1
+			},
+			success: sosAlert,
+			error: function() {
+				alert('error');
+			}
+
+		})
+
+	}
+
+	function sosAlert(data) {
+
+		console.log('성공');
+		console.log(data);
+		
+		var shock = data[0];
+		
+		if (shock == 1) {
+			
+			console.log(data);
+			alert('sos 발생!');
+			location.href="acc.do";
+			shock = 0;
+			
+		} else if (data[0] == 0) {
+			
+			 setTimeout(sos,5000); 
+			
+		}
+		
+		
 	}
 
     </script>

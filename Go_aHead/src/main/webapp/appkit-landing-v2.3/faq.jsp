@@ -12,7 +12,59 @@
 	<!-- 헤드바 css -->
 	<link id="theme-style" rel="stylesheet" href="appkit-landing-v2.3/assets/css/styles.css">
 	<link id="theme-style" rel="stylesheet" href="appkit-landing-v2.3/assets/css/other.css">
+	<!-- ajax jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	
 </head>
+
+<script type="text/javascript">
+
+
+function sos() {
+
+	$.ajax({
+
+		url: "sosAlert",
+		type: "get",
+		dataType: "json",
+		data: {
+			"ex": 1
+		},
+		success: sosAlert,
+		error: function() {
+			alert('error');
+		}
+
+	})
+
+}
+
+function sosAlert(data) {
+
+	console.log('성공');
+	console.log(data);
+	
+	var shock = data[0];
+	
+	if (shock == 1) {
+		
+		console.log(data);
+		alert('sos 발생!');
+		location.href="acc.do";
+		shock = 0;
+		
+	} else if (data[0] == 0) {
+		
+		 setTimeout(sos,5000); 
+		
+	}
+	
+	
+}
+
+
+</script>
 
  <body class="faq-body">
 
@@ -38,7 +90,12 @@
                     </ul><!--//nav-->
                     
                     <%} else if (member.getMem_num() == 1) { %>
-                    
+           
+           			<script type="text/javascript">
+                    $(document).ready(function(){
+					sos();
+					})
+           			</script>         
                     <!-- admin 로그인 -->
 					<!-- alert function -->
 					 <script type="text/javascript" src="appkit-landing-v2.3/assets/js/sos.js"></script>              

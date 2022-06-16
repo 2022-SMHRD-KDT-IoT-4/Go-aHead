@@ -31,7 +31,6 @@ public class module extends HttpServlet {
 			hel_number_shock = request.getParameter("helmetNum1");
 			System.out.println("shock:"+shock);
 			System.out.println("helmetNum1:"+hel_number_shock);
-			shock =0;
 			
 		}
 		// GPS 위도
