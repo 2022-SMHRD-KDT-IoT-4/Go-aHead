@@ -1,3 +1,5 @@
+<%@page import="com.smhrd.module.returnMotor"%>
+<%@page import="com.smhrd.module.module"%>
 <%@page import="com.smhrd.domain.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -31,10 +33,20 @@
 
 <script>
 	
+<% int alcohol = returnMotor.alcoholYES; %>
+
+var alcohol = <%=alcohol%>;
 $(document).ready(function() {
+	console.log(alcohol);
 	$('#start-btn').click(function() {
-		kickStart();
-		motorStart();
+		
+		if(alcohol == 1) {
+			alert('🚨혈중 알코올 농도 초과🚨\n     운행이 불가합니다')
+			
+		} else {
+			kickStart();
+			motorStart();
+		}
 		
 	})
 	
@@ -45,106 +57,112 @@ $(document).ready(function() {
 
 })
 
-
-function kickStart() {
-
-	$.ajax({
-		url : "use.do",
-		type : "get",
-		dataType : "json",
-		data : {
-			"kick_num" : $('#kick_num_input').val(),
-			"hel_num" : $('#het_num_input').val()
-		},
-		
-		success : useList, 
-		error: function () {
-			alert('error');
-		}
-		
-	})
 	
-}
+	function kickStart() {
 
-function motorStart() {
-	$.ajax({
-		url : "moduleController",
-		type : "get",
-		data : {"motor" : 1},
-		success : console.log("success"),
-		error : function(){
-			alert('error');
-		}
-	})
-}
+		$.ajax({
+			url : "use.do",
+			type : "get",
+			dataType : "json",
+			data : {
+				"kick_num" : $('#kick_num_input').val(),
+				"hel_num" : $('#het_num_input').val()
+			},
+			
+			success : useList, 
+			error: function () {
+				alert('error');
+			}
+			
+		})
+		
+	}
 
-function motorStop() {
-	$.ajax({
-		url : "moduleController",
-		type : "get",
-		data : {"motor" : 2},
-		success : console.log("success"),
-		error : function(){
-			alert('error');
-		}
-	})
-}
+	function motorStart() {
+		$.ajax({
+			url : "moduleController",
+			type : "get",
+			data : {"motor" : 1},
+			success : console.log("success"),
+			error : function(){
+				alert('error');
+			}
+		})
+	}
 
-	function useList(data) {
-		
-		console.log("성공")
-		console.log(data)
+	function motorStop() {
+		$.ajax({
+			url : "moduleController",
+			type : "get",
+			data : {"motor" : 2},
+			success : console.log("success"),
+			error : function(){
+				alert('error');
+			}
+		})
+	}
+	
 
-		document.querySelector(".background").className = "background show";
-		
-		var list = "<table style ='position: relative; top: 40%; left: 30%;'>";
-		
-		list += "<tr>"
-			list += "<td>이용시작 시간</td>"
-			list += "<td>"+data.start_time+"</td>"
-		list += "</tr>"
-		
-		list += "<tr>"
-			list += "<td>헬멧번호</td>"
-			list += "<td>"+data.hel_number+"</td>"
-		list += "</tr>"
-		
+		function useList(data) {
+			
+			console.log("성공")
+			console.log(data)
+
+			document.querySelector(".background").className = "background show";
+			
+			var list = "<table style ='position: relative; top: 40%; left: 30%;'>";
+			
 			list += "<tr>"
-				list += "<td>아이디</td>"
-				list += "<td>"+data.mem_id+"</td>"
+				list += "<td>이용시작 시간</td>"
+				list += "<td>"+data.start_time+"</td>"
 			list += "</tr>"
+			
+			list += "<tr>"
+				list += "<td>헬멧번호</td>"
+				list += "<td>"+data.hel_number+"</td>"
+			list += "</tr>"
+			
+				list += "<tr>"
+					list += "<td>아이디</td>"
+					list += "<td>"+data.mem_id+"</td>"
+				list += "</tr>"
 
-		list +="</table>"
-	
-		$('#useListTable').html(list)
-
+			list +="</table>"
 		
-	}
+			$('#useListTable').html(list)
+
+			
+		}
 
 
-	function kickStop() {
-		   
-		   $.ajax({
-		      url : "stop.do",
-		      type : "get",
-		      data : {
-		         "mem_id" : $('#mem_id').val()
-		      },
-		      dataType : "json",
-		      success : stop, 
-		      error: function () {
-		         alert('error');
-		      }
-		      
-		   })
-		   
+		function kickStop() {
+			   
+			   $.ajax({
+			      url : "stop.do",
+			      type : "get",
+			      data : {
+			         "mem_id" : $('#mem_id').val()
+			      },
+			      dataType : "json",
+			      success : stop, 
+			      error: function () {
+			         alert('error');
+			      }
+			      
+			   })
+			   
+			}
+		
+		
+		function stop () { 
+			console.log('종료완료');
+		  	document.querySelector(".background").className = "background";
 		}
 	
 	
-	function stop () { 
-		console.log('종료완료');
-	  	document.querySelector(".background").className = "background";
-	}
+
+
+
 
 </script>
 

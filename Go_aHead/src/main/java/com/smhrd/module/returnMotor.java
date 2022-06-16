@@ -14,7 +14,8 @@ import javax.servlet.http.HttpSession;
 @WebServlet("/returnMotor")
 public class returnMotor extends HttpServlet {
 	public static int magnetic = 0;
-
+	public static int alcoholYES = 1;
+	
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.setContentType("text/html; charset=UTF-8");
@@ -28,6 +29,10 @@ public class returnMotor extends HttpServlet {
 			System.out.println("motor,alcohol,piezo wifi연결 중");
 			int alcohol = Integer.parseInt(request.getParameter("alcohol"));
 			System.out.println("alcohol : " + alcohol);
+			if(alcohol>650) {
+				alcoholYES=1;
+				
+			}
 		}
 		
 		// 마그네틱 센서
@@ -50,6 +55,7 @@ public class returnMotor extends HttpServlet {
 		} else if (motor==0) {
 			System.out.println("아두이노로 0 간다");
 			out.print("0");
+			alcoholYES=0;
 		}
 	}
 
