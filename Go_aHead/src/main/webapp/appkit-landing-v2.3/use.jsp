@@ -34,21 +34,33 @@
 <script>
 	
 <% int alcohol = returnMotor.alcoholYES; %>
+<% int press = module.press; %>
 
+var press = <%=press%>;
 var alcohol = <%=alcohol%>;
 $(document).ready(function() {
 	console.log(alcohol);
 	$('#start-btn').click(function() {
-		
-		if(alcohol == 0) {
-			alert('🚨혈중 알코올 농도 초과🚨\n     운행이 불가합니다')
+		if(press == 0) {
+			console.log('헬멧펑션');
+			alert('🚨헬멧 미착용🚨\n     운행이 불가합니다');
 			
 		} else {
-			kickStart();
-			motorStart();
+			
+			if(alcohol == 0) {
+				alert('　　🚨혈중 알코올 농도 초과🚨\n운행이 불가합니다')
+				
+			} else {
+				kickStart();
+				motorStart();
+			}
+			
 		}
 		
+
+		
 	})
+	
 	
 	$('#stop-btn').click(function() {
 		kickStop();
@@ -56,6 +68,9 @@ $(document).ready(function() {
 	})
 
 })
+
+
+
 
 	
 	function kickStart() {
@@ -125,7 +140,7 @@ $(document).ready(function() {
 			list += "</tr>"		
 			
 			list += "<tr>"
-				list += "<td>"+data.hel_numbe+"</td>"
+				list += "<td>"+data.hel_number+"</td>"
 			list += "</tr>"
 			
 			list += "<tr>"
