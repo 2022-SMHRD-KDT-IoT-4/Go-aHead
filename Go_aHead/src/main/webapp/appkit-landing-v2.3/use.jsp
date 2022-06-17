@@ -40,7 +40,7 @@ $(document).ready(function() {
 	console.log(alcohol);
 	$('#start-btn').click(function() {
 		
-		if(alcohol == 1) {
+		if(alcohol == 0) {
 			alert('🚨혈중 알코올 농도 초과🚨\n     운행이 불가합니다')
 			
 		} else {
@@ -110,22 +110,31 @@ $(document).ready(function() {
 
 			document.querySelector(".background").className = "background show";
 			
-			var list = "<table style ='position: relative; top: 40%; left: 30%;'>";
+			var list = "<table style ='position: relative; left: 35%; text-align: center; height:200px;'>";
 			
 			list += "<tr>"
 				list += "<td>이용시작 시간</td>"
+			list += "</tr>"		
+			
+			list += "<tr>"
 				list += "<td>"+data.start_time+"</td>"
 			list += "</tr>"
 			
 			list += "<tr>"
 				list += "<td>헬멧번호</td>"
-				list += "<td>"+data.hel_number+"</td>"
+			list += "</tr>"		
+			
+			list += "<tr>"
+				list += "<td>"+data.hel_numbe+"</td>"
 			list += "</tr>"
 			
-				list += "<tr>"
-					list += "<td>아이디</td>"
-					list += "<td>"+data.mem_id+"</td>"
-				list += "</tr>"
+			list += "<tr>"
+				list += "<td>아이디</td>"
+			list += "</tr>"		
+			
+			list += "<tr>"
+				list += "<td>"+data.mem_id+"</td>"
+			list += "</tr>"
 
 			list +="</table>"
 		
@@ -220,11 +229,15 @@ $(document).ready(function() {
 	<div class="background">
 	  <div class="window">
 	    <div class="popup">
+	    
+	    <div>
+	    <br><br>
+	   	<p class="stop-ti ti-1">이용이 시작되었습니다.</p>
+		<br>
+		<p class="stop-ti ti-2">이용 정보</p>
+	    </div>
 		
 		<div id ="useListTable">
-		<p>이용이 시작되었습니다.</p>
-		<br>
-		<p>이용 정보</p>
 		</div>
 		
 	     <button type="submit" class="btn btn-success" id ="stop-btn" >이용종료</button>  
