@@ -104,6 +104,7 @@ function sosAlert(data) {
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='memberlist.do'">회원정보관리</a></li>
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewUlocation.do'">고객위치확인</a></li>
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewHlocation.do'">헬멧위치확인</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewBlackbox.do'">실시간블랙박스</a></li>                   
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='faq.do'">고객센터</a></li>            
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='logout.do'">로그아웃</a></li>            
                     </ul><!--//nav-->
@@ -112,24 +113,22 @@ function sosAlert(data) {
                     
                     <!-- user 로그인 -->
                      <ul class="nav navbar-nav faqnav">
-                     <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='usinglist.do?mem_id=<%=member.getMem_id()%>'">이용내역</a></li>
-                        <li class="nav-item">
+                       <li class="nav-item">
                               <div class="dropdown nav-link scrollt ">
                           <p class="head-kick">킥보드</p>
                           <div class="dropdown-content">
                      <a href="viewUse.do">이용시작</a>
-                     <a href="viewBlackbox.do">블랙박스 확인</a>
-                    </div></div></a></li>
+                     <a href='usinglist.do?mem_id=<%=member.getMem_id()%>'>나의이용내역</a>
+                    </div></div></li>
                     	<li class="nav-item"><a class="nav-link scrollto" onclick="location.href='faq.do'">고객센터</a></li>     
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='logout.do'">로그아웃</a></li>                        
                     </ul><!--//nav-->
-                    
                     <%} %>
-                    
                 </div><!--//navabr-collapse-->     
             </nav><!--//main-nav-->                     
         </div><!--//container-->
     </header><!--//header-->
+
     
 	<!--FAQ 시작 -->
 	<div class="container faq-section">

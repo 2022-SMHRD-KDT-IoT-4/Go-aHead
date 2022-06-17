@@ -27,12 +27,12 @@
 </head>
 
 <body>
-	 <!-- 유저!!!!!!!!!!!!!!!!!!!!!!!!!! header 상단바 부분 --> 
+	<!-- 어드민!!!!!! header 상단바 부분 --> 
     <header id="header" class="header lo-header" >  
         <div class="container" >       
             <h1 class="logo">
                 <a class="scrollto" onclick='location.href="viewMain.do"'>
-                    <span class="logo-icon-wrapper"><img class="logo-icon" src="appkit-landing-v2.3/assets/images/kick_icon_F.png" alt="iccon" style=" width: 40px; height: 40px;"></span>
+                    <span class="logo-icon-wrapper"><img class="logo-icon" src="appkit-landing-v2.3/assets/images/kick_icon_F.png" alt="iccon"></span>
                     <span class="text" ><span class="highlight">GO</span>AHEAD</span></a>
             </h1><!--//logo-->
 
@@ -46,18 +46,14 @@
                     </button><!--//nav-toggle-->
                 
                 <div id="navbar-collapse">
-                     <ul class="nav navbar-nav header-ul">
-                      <% Member member = (Member)session.getAttribute("member"); %>
-                     <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='usinglist.do?mem_id=<%=member.getMem_id()%>'">이용내역</a></li>
-                        <li class="nav-item">
-                              <div class="dropdown nav-link scrollt ">
-                          <p class="head-kick">킥보드</p>
-                          <div class="dropdown-content">
-                     <a href="viewUse.do">이용시작</a>
-                     <a href="viewBlackbox.do">블랙박스 확인</a>
-                    </div></div></a></li>
-                    	<li class="nav-item"><a class="nav-link scrollto" onclick="location.href='faq.do'">고객센터</a></li>     
-                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='logout.do'">로그아웃</a></li>                        
+                    
+                    <ul class="nav navbar-nav header-ul">
+                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='memberlist.do'">회원정보관리</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewUlocation.do'">고객위치확인</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewHlocation.do'">헬멧위치확인</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewBlackbox.do'">실시간블랙박스</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='faq.do'">고객센터</a></li>            
+                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='logout.do'">로그아웃</a></li>            
                     </ul><!--//nav-->
                 </div><!--//navabr-collapse-->     
             </nav><!--//main-nav-->                     
@@ -67,7 +63,7 @@
 <!-- ------------------------------------------------------------------------------------------------------------------ -->
 	<div class="container bbox-sec">
 	
-	<h1 class="bbox-title">블랙박스 영상보기</h1>
+	<h1 class="bbox-title">실시간 블랙박스 영상확인</h1>
 	<br>
 	</div>
 	<div class ="bboxdiv">

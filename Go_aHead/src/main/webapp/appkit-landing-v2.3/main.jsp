@@ -125,6 +125,7 @@ function sosAlert(data) {
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='memberlist.do'">회원정보관리</a></li>
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewUlocation.do'">고객위치확인</a></li>
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewHlocation.do'">헬멧위치확인</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='viewBlackbox.do'">실시간블랙박스</a></li>
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='faq.do'">고객센터</a></li>            
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='logout.do'">로그아웃</a></li>            
                     </ul><!--//nav-->
@@ -136,13 +137,12 @@ function sosAlert(data) {
                     <!-- user 로그인 -->
                     
                      <ul class="nav navbar-nav">
-                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='usinglist.do?mem_id=<%=member.getMem_id()%>'">나의이용내역</a></li>
                         <li class="nav-item">
                               <div class="dropdown nav-link scrollt ">
                           <p class="head-kick">킥보드</p>
                           <div class="dropdown-content">
                      <a href="viewUse.do">이용시작</a>
-                     <a href="viewBlackbox.do">블랙박스 확인</a>
+                     <a href='usinglist.do?mem_id=<%=member.getMem_id()%>'>나의이용내역</a>
                     </div></div></li>
                     	<li class="nav-item"><a class="nav-link scrollto" onclick="location.href='faq.do'">고객센터</a></li>     
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='logout.do'">로그아웃</a></li>                        
@@ -261,41 +261,37 @@ function sosAlert(data) {
                 <div class="item col-md-4 col-12">
                     <div class="item-inner">
                         <div class="figure-holder">
-                            <img class="figure-image fimg-1" src="appkit-landing-v2.3/assets/images/lost.png" alt="image" style="width: 300px">
+                            <img class="figure-image fimg-1 main-img-se" src="appkit-landing-v2.3/assets/images/lost.png" alt="image">
                         </div><!--//figure-holder-->
                         <h3 class="item-title">분실 방지</h3>
                         <div class="item-desc mb-3">
-                            GPS를 이용해 헬멧 분실시 고객센터 문의를 통해 위치를 찾아 낼 수 있습니다!
+                            GPS를 이용하고 있기 때문에 <br>헬멧 분실시 고객센터 문의를 통해 <br>위치를 찾아 낼 수 있습니다!
                         </div><!--//item-desc-->
                       <!--  <a class="btn btn-primary" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/appkit-landing-free-bootstrap-theme-for-developers-and-startups/" target="_blank">Find out more</a>-->
                     </div><!--//item-inner-->
                 </div><!--//item-->
+                
                 <div class="item col-md-4 col-12">
                     <div class="item-inner">
                         <div class="figure-holder">
-                        	<br>
-                        	<br>
-                        	<br>
-                            <img class="figure-image" src="appkit-landing-v2.3/assets/images/sos.png" alt="image" style="width: 300px">
+                            <img class="figure-image fimg-2 main-img-se" src="appkit-landing-v2.3/assets/images/sos.png" alt="image">
                         </div><!--//figure-holder-->
-                        <br>
                         <h3 class="item-title">SOS </h3>
                         <div class="item-desc mb-3">
-                           헬멧을 통해 사고를 감지하여 일정 시간내 반응이 없을시 가입시 입력한 비상연락망과 119에 도움을 요청합니다!
+                           헬멧을 통해 사고를 감지하기 때문에 <br> 일정 시간 내 반응이 없을 시 <br> 입력된 비상연락망과 119에 도움을 요청합니다!
                             </div><!--//item-desc-->
                         <!-- <a class="btn btn-primary" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/appkit-landing-free-bootstrap-theme-for-developers-and-startups/" target="_blank">Find out more</a> -->
                     </div><!--//item-inner-->
                 </div><!--//item-->
+                
                 <div class="item col-md-4 col-12">
                     <div class="item-inner">
                         <div class="figure-holder">
-                        	<br>
-                        	<br>
-                            <img class="figure-image" src="appkit-landing-v2.3/assets/images/blackbox.jpg" alt="image" style="width: 200px">
+                            <img class="figure-image fimg-3 main-img-se" src="appkit-landing-v2.3/assets/images/blackbox.jpg" alt="image">
                         </div><!--//figure-holder-->
                         <h3 class="item-title">블랙박스</h3>
                         <div class="item-desc mb-3">
-                            사고 발생 시 사용자가 홈페이지에서 SD카드에 자동 저장되는 블랙박스를 확인하여 처리 할 수 있습니다!
+                            사고 발생 시,<br> 관리자가 실시간 블랙박스 영상을 통해 사고 영상을 확인할 수 있습니다!
                             </div><!--//item-desc-->
                        <!-- <a class="btn btn-primary" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/appkit-landing-free-bootstrap-theme-for-developers-and-startups/" target="_blank">Find out more</a> -->
                     </div><!--//item-inner-->
