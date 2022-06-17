@@ -33,6 +33,7 @@
     
 </head>
 
+<!-- sos alert -->
 <script type="text/javascript">
 
 function sos() {
@@ -73,16 +74,12 @@ function sosAlert(data) {
 		 setTimeout(sos,5000); 
 		
 	}
-	
-	
 }
-
 
 </script>
 
 
 <body class="main-body">
-
     <!-- header 상단바 부분 --> 
     <header id="header" class="header" >  
         <div class="container" >       
@@ -90,7 +87,6 @@ function sosAlert(data) {
                 <a class="scrollto" onclick='location.href="viewMain.do"'>
                     <span class="logo-icon-wrapper"><img class="logo-icon" src="appkit-landing-v2.3/assets/images/kick_icon_F.png" alt="iccon"></span>
                     <span class="text" ><span class="highlight">GO</span>AHEAD</span></a>
-                
             </h1><!--//logo-->
 
             <nav class="main-nav navbar-expand-md float-right navbar-inverse" role="navigation">
@@ -147,13 +143,11 @@ function sosAlert(data) {
                           <div class="dropdown-content">
                      <a href="viewUse.do">이용시작</a>
                      <a href="blackbox">블랙박스 확인</a>
-                    </div></div></a></li>
+                    </div></div></li>
                     	<li class="nav-item"><a class="nav-link scrollto" onclick="location.href='faq.do'">고객센터</a></li>     
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='logout.do'">로그아웃</a></li>                        
                     </ul><!--//nav-->
-                    
                     <%} %>
-                    
                 </div><!--//navabr-collapse-->     
             </nav><!--//main-nav-->                     
         </div><!--//container-->
@@ -190,11 +184,10 @@ function sosAlert(data) {
                    	<br>
                 	<br>
            			<br>
-                    <h2>고어헤드란? </h2>
+                    <h2>고어헤드</h2>
                     <br>
                     <h4>스마트한 안전헬멧을 착용함으로써, </h4>
-                   
-                    <h4>안전한 킥보드 사용문화에 앞서 나가자! </h4>
+                    <h4>안전한 킥보드 사용문화에 앞서 나가자 </h4>
                     <br>
                     <br>
                    
@@ -213,11 +206,11 @@ function sosAlert(data) {
                     <br>    
                 	<br>
            			<br>
-                    <h2>고어헤드란? </h2>
+                    <h2>고어헤드 </h2>
                     <br>
                     <h4>스마트한 안전헬멧을 착용함으로써, </h4>
                    
-                    <h4>안전한 킥보드 사용문화에 앞서 나가자! </h4>
+                    <h4>안전한 킥보드 사용문화에 앞서 나가자 </h4>
                     <br>
                     <br>
                          <%if (member == null) {%>
@@ -234,11 +227,10 @@ function sosAlert(data) {
                   <div class="item-content-inner" style="margin-left : 900px; width: 1000px; text-shadow: 1px 1px black  "> 
                 	<br>
            			<br>
-                    <h2>고어헤드란? </h2>
+                    <h2>고어헤드? </h2>
                     <br>
                     <h4>스마트한 안전헬멧을 착용함으로써, </h4>
-                   
-                    <h4>안전한 킥보드 사용문화에 앞서 나가자! </h4>
+                    <h4>안전한 킥보드 사용문화에 앞서 나가자 </h4>
                     <br>
                     <br>
                          <%if (member == null) {%>
@@ -250,7 +242,6 @@ function sosAlert(data) {
                </div>
             </div><!--//item-->
          </div><!--//carousel-inner-->
-
       </div><!--//carousel-->
     </div><!--//hero-->
     
@@ -266,16 +257,6 @@ function sosAlert(data) {
 			<p>사람과 도시를 연결하기 위하여 오늘도 노력합니다.</p>
 			<p>우리는 이동을 통해 아낀 시간이 우리의 삶을 조금 더 나아지게 할 수 있다고 믿습니다.</p></p>
            
-           
-            <!-- 필요여부 확인해볼게요 
-            <ul class="technologies list-inline">
-                <li class="list-inline-item"></li>
-                <li class="list-inline-item"></li>
-                <li class="list-inline-item"></li>
-                <li class="list-inline-item"></li>
-                <li class="list-inline-item"></li>
-            </ul> -->
-            
             <div class="items-wrapper row">
                 <div class="item col-md-4 col-12">
                     <div class="item-inner">
@@ -314,7 +295,7 @@ function sosAlert(data) {
                         </div><!--//figure-holder-->
                         <h3 class="item-title">블랙박스</h3>
                         <div class="item-desc mb-3">
-                            사고 발생 시 사용자가 홈페이지에서 SD카드에 자동 저장되는 블랙박스를 확인하여 처리 할 수 있다!
+                            사고 발생 시 사용자가 홈페이지에서 SD카드에 자동 저장되는 블랙박스를 확인하여 처리 할 수 있습니다!
                             </div><!--//item-desc-->
                        <!-- <a class="btn btn-primary" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/appkit-landing-free-bootstrap-theme-for-developers-and-startups/" target="_blank">Find out more</a> -->
                     </div><!--//item-inner-->
@@ -322,27 +303,6 @@ function sosAlert(data) {
             </div><!--//items-wrapper-->
         </div><!--//container-->
     </div><!--//about-section-->
-    
-    
-    
-      
-          </section>
-           
-            
-            
-            <div class="tabbed-area row">
-                
-     
-
-                
-            </div><!--//tabbed-area-->
-            
-        </div><!--//container-->
-    </div><!--//features-->
-    
-  
-    
-   
      
     <!-- Javascript -->          
     <script type="text/javascript" src="appkit-landing-v2.3/assets/plugins/jquery-3.4.1.min.js"></script>
@@ -355,10 +315,6 @@ function sosAlert(data) {
     var maxDuration = 2000;
     var maxDelay = 500;
     var minDuration = maxDuration - maxDelay;
-
-    $hauntedText.blast({
-      delimiter: 'character',
-    });
 
     setTimeout(function() {
       $hauntedText.find('.blast').each(function(i, el) {
@@ -393,8 +349,6 @@ function sosAlert(data) {
     var getRandomValue = function(min, max) {
       return Math.floor(Math.random() * (max - min + 1)) + min;
     }
-    
-    
     
     </script>
   

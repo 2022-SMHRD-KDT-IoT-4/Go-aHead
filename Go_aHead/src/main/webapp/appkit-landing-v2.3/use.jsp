@@ -221,6 +221,9 @@ $(document).ready(function() {
 	    <div class="popup">
 		
 		<div id ="useListTable">
+		<p>이용이 시작되었습니다.</p>
+		<br>
+		<p>이용 정보</p>
 		</div>
 		
 	     <button type="submit" class="btn btn-success" id ="stop-btn" >이용종료</button>  
