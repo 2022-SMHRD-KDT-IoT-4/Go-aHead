@@ -136,13 +136,13 @@ function sosAlert(data) {
                     <!-- user 로그인 -->
                     
                      <ul class="nav navbar-nav">
-                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='usinglist.do?mem_id=<%=member.getMem_id()%>'">마이페이지</a></li>
+                        <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='usinglist.do?mem_id=<%=member.getMem_id()%>'">나의이용내역</a></li>
                         <li class="nav-item">
                               <div class="dropdown nav-link scrollt ">
                           <p class="head-kick">킥보드</p>
                           <div class="dropdown-content">
                      <a href="viewUse.do">이용시작</a>
-                     <a href="blackbox">블랙박스 확인</a>
+                     <a href="viewBlackbox.do">블랙박스 확인</a>
                     </div></div></li>
                     	<li class="nav-item"><a class="nav-link scrollto" onclick="location.href='faq.do'">고객센터</a></li>     
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='logout.do'">로그아웃</a></li>                        
@@ -261,7 +261,7 @@ function sosAlert(data) {
                 <div class="item col-md-4 col-12">
                     <div class="item-inner">
                         <div class="figure-holder">
-                            <img class="figure-image" src="appkit-landing-v2.3/assets/images/lost.png" alt="image" style="width: 300px">
+                            <img class="figure-image fimg-1" src="appkit-landing-v2.3/assets/images/lost.png" alt="image" style="width: 300px">
                         </div><!--//figure-holder-->
                         <h3 class="item-title">분실 방지</h3>
                         <div class="item-desc mb-3">

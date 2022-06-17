@@ -1,3 +1,4 @@
+<%@page import="com.smhrd.domain.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -46,13 +47,14 @@
                 
                 <div id="navbar-collapse">
                      <ul class="nav navbar-nav header-ul">
-                        <li class="nav-item"><a class="nav-link scrollto" href="마이페이지">마이페이지</a></li>
+                      <% Member member = (Member)session.getAttribute("member"); %>
+                     <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='usinglist.do?mem_id=<%=member.getMem_id()%>'">이용내역</a></li>
                         <li class="nav-item">
                               <div class="dropdown nav-link scrollt ">
                           <p class="head-kick">킥보드</p>
                           <div class="dropdown-content">
                      <a href="viewUse.do">이용시작</a>
-                     <a href="blackbox">블랙박스 확인</a>
+                     <a href="viewBlackbox.do">블랙박스 확인</a>
                     </div></div></a></li>
                     	<li class="nav-item"><a class="nav-link scrollto" onclick="location.href='faq.do'">고객센터</a></li>     
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='logout.do'">로그아웃</a></li>                        
@@ -63,11 +65,13 @@
     </header><!--//header-->
     
 <!-- ------------------------------------------------------------------------------------------------------------------ -->
-	<div>
-	<h1>블랙박스 영상보기</h1>
+	<div class="container bbox-sec">
+	
+	<h1 class="bbox-title">블랙박스 영상보기</h1>
+	<br>
 	</div>
 	<div class ="bboxdiv">
-	 <img class ="bbox" src="http://192.168.137.90:81/stream"> </img>
+	 <img class ="bbox" src="http://192.168.137.31:80/stream"> </img>
 	</div>
 	</div>
 

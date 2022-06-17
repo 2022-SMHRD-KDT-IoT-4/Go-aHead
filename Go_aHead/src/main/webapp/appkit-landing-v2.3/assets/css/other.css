@@ -124,7 +124,7 @@ body {
 .left-box {
 	display: block;
 	margin-top: 60px;
-	height: 800px;
+	height: 1000px;
 	width: 300px;
 	background-color: #9b979757;
 	position: absolute;
@@ -157,6 +157,18 @@ body {
 
 
 /* main.jsp css*/
+.fimg-1{
+	
+}
+
+.fimg-2{
+	
+}
+
+.fimg-3{
+	
+}
+
 .btn-cta {
 	background-color: btn-cta!important;
 }
@@ -337,10 +349,13 @@ body {
       text-align: center;
       height: 1000px;
   }
-  
-  
+
+.bbox-sec {
+	margin-top: 150px;
+
+}
   .bbox {
-  width: 72%;
+  width: 77%;
   height: 600px;
   }
   

@@ -112,13 +112,13 @@ function sosAlert(data) {
                     
                     <!-- user 로그인 -->
                      <ul class="nav navbar-nav faqnav">
-                        <li class="nav-item"><a class="nav-link scrollto" href="마이페이지">마이페이지</a></li>
+                     <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='usinglist.do?mem_id=<%=member.getMem_id()%>'">이용내역</a></li>
                         <li class="nav-item">
                               <div class="dropdown nav-link scrollt ">
                           <p class="head-kick">킥보드</p>
                           <div class="dropdown-content">
                      <a href="viewUse.do">이용시작</a>
-                     <a href="blackbox">블랙박스 확인</a>
+                     <a href="viewBlackbox.do">블랙박스 확인</a>
                     </div></div></a></li>
                     	<li class="nav-item"><a class="nav-link scrollto" onclick="location.href='faq.do'">고객센터</a></li>     
                         <li class="nav-item"><a class="nav-link scrollto" onclick="location.href='logout.do'">로그아웃</a></li>                        
